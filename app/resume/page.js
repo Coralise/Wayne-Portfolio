@@ -5,16 +5,16 @@ export default function Resume() {
                 <div className="mt-24"></div>
                 <div className="text-center flex justify-center">
                     <div id="prof-pic-wrapper" className="relative flex">
-                        <div className="absolute bg-red bg-opacity-20 blur-3xl rounded-full w-72 h-72 -left-24 top-1/2 transform -translate-y-1/2 z-0 animate-fadeIn-75" />
+                        <div className="absolute bg-red bg-opacity-20 blur-3xl rounded-full w-72 h-72 -left-24 top-1/2 transform -translate-y-1/2 z-0" />
                         <img
                             id="prof-pic"
-                            className="z-10 h-72 rounded-full animate-slideRightFadeIn-100"
+                            className="z-10 h-72 rounded-full motion-preset-slide-right-md motion-duration-700"
                             src="images/prof.jpg"
                             alt=""
                         />
                     </div>
                     <div className="z-20 content-center -translate-x-10">
-                        <div id="prof-title" className="bg-white/15 backdrop-blur-md p-4 rounded-xl shadow-md animate-slideLeftFadeIn-75">
+                        <div id="prof-title" className="bg-white/15 backdrop-blur-md p-4 rounded-xl shadow-md motion-preset-blur-left-md motion-delay-100">
                             <h1 className="text-4xl font-bold text-red mb-2 text-shadow">
                                 Sean Wayne R. Gabule
                             </h1>
@@ -132,10 +132,10 @@ export default function Resume() {
                         <h2 className="mb-2 text-red font-bold text-2xl">Work Experience</h2>
                         <div className="border-b mb-4"></div>
                         <div className="flex gap-4">
-                            <div className="flex-1 flex flex-col items-end">
+                            <div className="flex flex-col items-end">
                             <div className="bg-red w-px h-full rounded-full -translate-x-0.5"></div>
                             </div>
-                            <div className="flex-29">
+                            <div className="flex-grow">
                             <div className="h-2"></div>
                             {[
                                 {
