@@ -6,6 +6,7 @@
   --background: #ffffff;
   --foreground: #171717;
   --highlighter: #f15a6e;
+  --highlight: #F13751;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -40,4 +41,15 @@ body {
     background: #F13751;
     width: 10px;
     border-radius: 10px 0 0 10px;  
+}
+
+/* Handle */
+.hidden-scrollbar::-webkit-scrollbar-thumb {
+    background: transparent;
+    width: 10px;
+    border-radius: 10px 0 0 10px;  
+}
+
+.perspective {
+  perspective: 1000px;
 }
