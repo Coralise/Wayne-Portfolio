@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion } from "motion/react";
 import { delay } from "motion";
 import Card3D from "./components/3d-card";
-import Card from "./components/hard";
+import Card from "./components/card";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import { useEffect, useMemo, useState } from "react";
