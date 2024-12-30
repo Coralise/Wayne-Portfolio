@@ -16,7 +16,7 @@ export default {
         sm: '1px 1px 2px rgba(0, 0, 0, 0.5)',
         lg: '4px 4px 6px rgba(0, 0, 0, 0.7)',
         none: 'none',
-      },
+      }
     },
   },
   plugins: [
@@ -34,6 +34,9 @@ export default {
         ".text-shadow-none": {
           textShadow: "none",
         },
+        ".box-shadow": {
+          boxShadow: "0px 5px 9px 0px rgba(0,0,0,0.1),0px 20px 35px 2px rgba(0,0,0,0.1),0px 9px 17px 12px rgba(0,0,0,0.1)"
+        }
       };
 
       addUtilities(newUtilities, ["responsive", "hover"]);

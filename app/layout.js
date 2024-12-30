@@ -1,6 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "./components/Header";
+import Header from "./components/header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,9 +21,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative overflow-hidden`}
       >
-        <div className="absolute w-full flex flex-col dbg" style={{
+        <div className="absolute w-full flex flex-col" style={{
           maxHeight: "100%",
           overflow: "hidden",
           gap: "40rem"

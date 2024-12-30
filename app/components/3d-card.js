@@ -9,7 +9,7 @@ export default function Card3D({ href, children, text }) {
             transition={{ duration: .5, ease: "backInOut" }}
             style={{ transform: "translate3d(0, 150px, 0) rotateX(80deg)" }}
         >
-            <div className="shadow-md w-full h-full rounded-2xl">
+            <div className="box-shadow w-full h-full rounded-2xl">
                 {children}
             </div>
             <div className="text-center group-hover:opacity-100 group-hover:translate-y-0 opacity-0 -z-10 -translate-y-10 transition-all duration-500 ease-out select-none">{text}</div>
