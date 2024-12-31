@@ -1,9 +1,11 @@
+import Card from "../components/card";
+
 export default function Resume() {
     return (
         <div className="p-6 w-fit">
             <div className="mt-24"></div>
-            <div className="text-center flex justify-center w-full">
-                <div id="prof-pic-wrapper" className="relative">
+            <div className="text-center flex max-md:flex-col max-md:gap-5 justify-center w-full">
+                <div id="prof-pic-wrapper" className="relative max-md:self-center">
                     <div className="absolute bg-red bg-opacity-20 blur-3xl rounded-full w-72 h-72 -left-24 top-1/2 transform -translate-y-1/2 z-0" />
                     <img
                         id="prof-pic"
@@ -12,7 +14,7 @@ export default function Resume() {
                         alt=""
                     />
                 </div>
-                <div className="z-20 content-center -translate-x-10">
+                <div className="z-20 content-center md:-translate-x-10">
                     <div id="prof-title" className="bg-white/15 backdrop-blur-md p-4 rounded-xl shadow-md motion-preset-blur-left-md motion-delay-100">
                         <h1 className="text-4xl font-bold text-red mb-2 text-shadow">
                             Sean Wayne R. Gabule
@@ -23,7 +25,7 @@ export default function Resume() {
                     </div>
                 </div>
             </div>
-            <div className="flex gap-8 items-start mt-6">
+            <div className="flex gap-8 items-start mt-6 max-md:flex-col">
             <div className="w-full">
                 <h2 className="text-2xl text-red font-bold mb-2">Contact</h2>
                 <div className="border-b mb-4"></div>
@@ -219,25 +221,28 @@ export default function Resume() {
                             link: "portfolio",
                         },
                         ].map((portfolio, index) => (
-                        <div
-                            key={index}
-                            id={portfolio.id}
-                            className="bg-white shadow-md hover:scale-105 transform transition rounded-lg p-4 flex flex-col items-center"
-                        >
-                            <div className="flex flex-1 items-center justify-center">
-                            <img
-                                src={portfolio.image}
-                                alt={portfolio.title}
-                                className="w-24 h-24 rounded-full object-cover"
-                            />
-                            </div>
-                            <h3 className="mt-4 text-lg text-center font-semibold">{portfolio.title}</h3>
-                            <button
-                            className="mt-4 bg-red text-white py-1 px-4 rounded-sm shadow-sm hover:bg-blue-700"
-                            >
-                            Visit
-                            </button>
-                        </div>
+                            <Card key={index} text={portfolio.title} href={portfolio.link}>
+                                <img src={portfolio.image} className="w-full h-full object-contain rounded-2xl" />
+                            </Card>
+                        // <div
+                        //     key={index}
+                        //     id={portfolio.id}
+                        //     className="bg-white shadow-md hover:scale-105 transform transition rounded-lg p-4 flex flex-col items-center"
+                        // >
+                        //     <div className="flex flex-1 items-center justify-center">
+                        //     <img
+                        //         src={portfolio.image}
+                        //         alt={portfolio.title}
+                        //         className="w-24 h-24 rounded-full object-cover"
+                        //     />
+                        //     </div>
+                        //     <h3 className="mt-4 text-lg text-center font-semibold">{portfolio.title}</h3>
+                        //     <button
+                        //     className="mt-4 bg-red text-white py-1 px-4 rounded-sm shadow-sm hover:bg-blue-700"
+                        //     >
+                        //     Visit
+                        //     </button>
+                        // </div>
                         ))}
                     </div>
                 </div>

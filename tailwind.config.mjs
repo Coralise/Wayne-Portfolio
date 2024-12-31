@@ -36,6 +36,12 @@ export default {
         },
         ".box-shadow": {
           boxShadow: "0px 5px 9px 0px rgba(0,0,0,0.1),0px 20px 35px 2px rgba(0,0,0,0.1),0px 9px 17px 12px rgba(0,0,0,0.1)"
+        },
+        ".box-shadow-glass": {
+          boxShadow: "inset 5px 5px 3px -4px rgba(255,255,255,1),0px 10px 13px -4px rgba(0,0,0,0.5)"
+        },
+        ".flex-2": {
+          flex: "2"
         }
       };
 

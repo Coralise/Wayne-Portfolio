@@ -21,9 +21,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased relative overflow-hidden`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative overflow-hidden overflow-x-hidden`}
       >
-        <div className="absolute w-full flex flex-col" style={{
+        <div className="absolute w-full flex flex-col min-h-screen" style={{
           maxHeight: "100%",
           overflow: "hidden",
           gap: "40rem"
@@ -34,8 +34,8 @@ export default function RootLayout({ children }) {
           <img src="images/Wave Line 3.svg" className="w-full"/>
         </div>
         <div className="container mx-auto relative">
-        <Header />
-        {children}
+          <Header />
+          {children}
         </div>
       </body>
     </html>

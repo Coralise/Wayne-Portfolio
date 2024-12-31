@@ -1,0 +1,89 @@
+{
+  "projects": [
+    {
+      "title": "Custom Bans Plus",
+      "subtitle": "Advanced Ban Management for Minecraft Servers",
+      "start-date": "February 2020",
+      "end-date": "Present",
+      "tags": [
+        "Java",
+        "MySQL"
+      ],
+      "description": "**Custom Bans Plus** is a plugin for **Minecraft servers**, offering robust tools to manage bans and kicks effectively. Widely adopted with over **22,000 downloads**, it ensures customization and efficiency for server administrators.\n\n### Key Features:\n- **Customizable Ban and Kick Pages:** Tailor ban and kick pages to match your server’s unique style.\n- **Ban Presets:** Pre-configured reasons and durations streamline ban management.\n- **Detailed Logging and Reporting:** Track bans, kicks, and appeals with transparency.\n- **Advanced Notifications:** Real-time customizable messages notify players and staff.\n\n### Technology Stack:\n- **Java**\n- **MySQL**\n- **MC Spigot API**",
+      "image": "images/cbp/CBP_Intro.gif",
+      "gallery": [
+        "video-link:https://www.youtube.com/embed/fxvxKAw0tWI?si=bbuoC5FJRbv_72li",
+        "image:images/cbp/ss1.jpeg",
+        "image:images/cbp/ss2.jpeg",
+        "image:images/cbp/ss3.jpeg",
+        "image:images/cbp/ss4.jpeg",
+        "image:images/cbp/ss5.jpeg"
+      ]
+    },
+    {
+      "title": "Mandog Driving",
+      "subtitle": "Driver's License Exam Reviewer (Japan)",
+      "start-date": "March 2024",
+      "end-date": "March 2024",
+      "tags": [
+        "Flutter",
+        "Dart",
+        "Google Firebase"
+      ],
+      "description": "An **online platform** built with **Flutter** and **Google Firebase**, designed to help users prepare for Japan's driver's license exam. It offers interactive tools and real-time feedback for effective learning.\n\n### Key Features:\n- **Dynamic Question Bank:** Covers traffic laws, road signs, and driving practices.\n- **Real-Time Feedback:** Provides instant scoring and explanations.\n- **Progress Tracking:** Tracks user progress across devices using Firebase.\n- **Responsive Design:** Optimized for mobile and web platforms.\n- **Configurable Tests:** Allows content customization for administrators.\n\n### Technology Stack:\n- **Frontend:** Flutter and Dart\n- **Backend:** Google Firebase\n\nNote: Gallery showcases dummy tests to protect actual exam content.",
+      "image": "images/mandog-driving/g1.png",
+      "gallery": [
+        "image:images/mandog-driving/g2.png",
+        "image:images/mandog-driving/g3.png",
+        "image:images/mandog-driving/g4.png",
+        "image:images/mandog-driving/g5.png",
+        "image:images/mandog-driving/g6.png",
+        "image:images/mandog-driving/g7.png",
+        "image:images/mandog-driving/g8.png"
+      ]
+    },
+    {
+      "title": "MyStore",
+      "subtitle": "Sari-Sari (Local Convenience) Store Mobile Point-of-Sales Inventory System",
+      "start-date": "November 2022",
+      "end-date": "December 2023",
+      "tags": [
+        "Flutter",
+        "Dart",
+        "SQLite"
+      ],
+      "description": "**MyStore** is a mobile **POS inventory system** for sari-sari store owners, using **Flutter** and **SQLite** for efficient management. It automates inventory processes with **OCR** for receipt scanning.\n\n### Key Features:\n- **Cross-Platform Development:** Seamlessly works on iOS and Android.\n- **OCR Functionality:** Scans receipts and extracts data automatically.\n- **SQLite Database:** Enables fast local data storage and retrieval.\n- **User-Friendly Interface:** Simple and intuitive for store owners.\n- **Automated Inventory Management:** Tracks inventory and sales trends efficiently.\n\n### Development Considerations:\n- **OCR Challenges:** Integrates **Google ML Kit** and **Tesseract OCR** for accuracy.\n- **Efficiency:** Optimized for modern devices to enhance performance.\n\n### Technology Stack:\n- **Frontend:** Flutter\n- **Backend:** SQLite\n- **OCR:** Google ML Kit and Tesseract OCR\n\n[Read the full thesis here.](https://drive.google.com/file/d/1HLQuVWYFySu3eL3rc-UyxquZFECV3JaW/view?usp=sharing)",
+      "image": "images/mystore/mystore.png",
+      "gallery": [
+        "image:images/mystore/1.png",
+        "image:images/mystore/2.png",
+        "image:images/mystore/3.png",
+        "image:images/mystore/4.png",
+        "image:images/mystore/5.png",
+        "image:images/mystore/6.png",
+        "image:images/mystore/7.png",
+        "image:images/mystore/8.png"
+      ]
+    },
+    {
+      "title": "UI Jobs",
+      "subtitle": "Minecraft Plugin - A Revolutionary Minecraft Server Plugin",
+      "start-date": "February 2022",
+      "end-date": "March 2022",
+      "tags": [
+        "Java",
+        "MySQL"
+      ],
+      "description": "**UI Jobs** redefines in-game economies for **Minecraft servers** by offering interactive jobs and anti-cheat measures. It creates an engaging and fair experience for players and server admins.\n\n### Key Features:\n- **Interactive Job System:** Offers immersive jobs via a custom inventory UI and maps.\n- **Anti-Cheat Mechanisms:** Prevents exploits to ensure fair gameplay.\n- **Custom Economy Integration:** Supports flexible, rewarding server economies.\n\n### Technology Stack:\n- **Java**\n- **MySQL**\n- **MC Spigot API**",
+      "image": "images/uij/uij.png",
+      "gallery": [
+        "image:images/uij/uij1.gif",
+        "image:images/uij/uij2.gif",
+        "image:images/uij/uij3.gif",
+        "image:images/uij/uij4.gif",
+        "image:images/uij/uij5.gif",
+        "image:images/uij/uij6.gif"
+      ]
+    }
+  ]
+}

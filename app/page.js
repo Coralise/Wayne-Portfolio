@@ -8,6 +8,7 @@ import Card from "./components/card";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import { useEffect, useMemo, useState } from "react";
+import Link from "next/link";
 
 export default function Home() {
 
@@ -144,7 +145,7 @@ export default function Home() {
         particlesLoaded={particlesLoaded}
         options={options}
       />
-      <div className="h-screen snap-center place-content-center">
+      <div className="h-screen snap-center place-content-center overflow-y-scroll">
         <div className="w-fit relative m-auto">
           <div className="bg-red h-28 w-96 m-auto blur-3xl bg-opacity-20 absolute z-0 -left-32 motion-preset-fade-lg" />
           <motion.div
@@ -203,7 +204,7 @@ export default function Home() {
             className="relative text-3xl z-10 motion-preset-blur-right">I'm <span className="text-red">Sean Wayne Gabule</span></motion.div>
         </div>
       </div>
-      <div className="h-screen snap-center flex gap-3 flex-col items-center justify-center">
+      <div className="h-screen snap-start flex gap-3 flex-col items-center overflow-y-scroll pt-32">
         <motion.div
           initial={{ opacity: 0, filter: "blur(5px)", y: -100 }}
           whileInView={{ opacity: 1, filter: "blur(0px)", y: 0,
@@ -243,13 +244,15 @@ export default function Home() {
             top: "calc(100% - 2rem)"
           }} />
         </motion.div>
-        <div className="md:hidden flex flex-col gap-4 w-full items-center">
-          <Card href="/portfolio" text="Programming">
-            <img src="images/programming.jpg" className="w-full h-full object-cover rounded-2xl" />
-          </Card>
-          <Card href="/portfolio" text="Motion Graphics">
-            <img src="images/Logo.gif" className="w-full h-full object-cover rounded-2xl" />
-          </Card>
+        <div className="md:hidden flex flex-col gap-7 w-full items-center">
+          <Link className="w-full" href={"/portfolio"}>
+            <img src="images/programming.jpg" className="w-full h-40 object-cover rounded-2xl" />
+            <p className="text-center">Programming</p>
+          </Link>
+          <Link className="w-full" href={"/portfolio"}>
+            <img src="images/Logo.gif" className="w-full h-40 object-cover rounded-2xl" />
+            <p className="text-center">Motion Graphics</p>
+          </Link>
         </div>
       </div>
     </div>

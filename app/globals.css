@@ -46,7 +46,7 @@ body {
 /* Handle */
 .hidden-scrollbar::-webkit-scrollbar-thumb {
     background: transparent;
-    width: 10px;
+    width: 0px;
     border-radius: 10px 0 0 10px;  
 }
 
