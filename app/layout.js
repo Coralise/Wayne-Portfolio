@@ -28,10 +28,10 @@ export default function RootLayout({ children }) {
           overflow: "hidden",
           gap: "40rem"
         }}>
-          <img src="images/Curve Line.svg" className="w-full" />
-          <img src="images/Wave Line.svg" className="w-full"/>
-          <img src="images/Wave Line 2.svg" className="w-full"/>
-          <img src="images/Wave Line 3.svg" className="w-full"/>
+          <img src="images/Curve_Line.svg" className="w-full" />
+          <img src="images/Wave_Line.svg" className="w-full"/>
+          <img src="images/Wave_Line_2.svg" className="w-full"/>
+          <img src="images/Wave_Line_3.svg" className="w-full"/>
         </div>
         <div className="container mx-auto relative">
           <Header />
