@@ -37,7 +37,7 @@ export default function Home() {
         }
       },
       "color": {
-        "value": "#ffffff"
+        "value": "#ff3b3f"
       },
       "shape": {
         "type": "circle",
@@ -138,6 +138,21 @@ export default function Home() {
     "retina_detect": true
   }), []);
 
+  const defaultTransition = {
+      duration: .5
+  }
+
+  const revealLeft = {
+    "rest": {
+      opacity: 0,
+      x: 40
+    },
+    "revealed": {
+      opacity: 1,
+      x: 0
+    }
+  }
+
   return (
     <div className="snap-y snap-mandatory h-screen overflow-y-scroll hidden-scrollbar">
       <Particles
@@ -146,8 +161,15 @@ export default function Home() {
         options={options}
       />
       <div className="h-screen snap-center place-content-center overflow-y-scroll">
-        <div className="w-fit relative m-auto">
-          <div className="bg-red h-28 w-96 m-auto blur-3xl bg-opacity-20 absolute z-0 -left-32 motion-preset-fade-lg" />
+        <motion.div
+        initial="rest"
+        whileHover="revealed"
+        transition={{...defaultTransition,
+          duration: .75,
+          staggerChildren: 0.01
+        }}
+        className="w-fit relative m-auto select-none">
+          <div className="bg-highlighter h-28 w-96 m-auto blur-3xl bg-opacity-20 absolute z-0 -left-32 motion-preset-fade-lg" />
           <motion.div
             initial={{
               x: -25,
@@ -174,35 +196,16 @@ export default function Home() {
             viewport={{
               once: true
             }}
-            className="relative text-7xl font-bold z-10 mb-3">'Sup?</motion.div>
+            className="relative text-7xl font-black z-10 mb-3 font-sour-gummy">Hey!</motion.div>
           <motion.div
-            initial={{
-              x: -25,
-              opacity: 0,
-              filter: "blur(5px)"
-              }}
-            animate={{
-              x: 0,
-              opacity: 1,
-              filter: "blur(0px)",
-              transition: {
-                default: {
-                  ease: "circOut",
-                  duration: 1
-                },
-                filter: {
-                  duration: .75
-                },
-                opacity: {
-                  duration: .75
-                }
-              }
-            }}
             viewport={{
               once: true
             }}
-            className="relative text-3xl z-10 motion-preset-blur-right">I'm <span className="text-red">Sean Wayne Gabule</span></motion.div>
-        </div>
+            className="relative text-3xl z-10 motion-preset-blur-right">I'm <span className="text-highlight font-extrabold">Sean <span>{ "Wayne Gabule".split("").map((c, i) => (
+              <motion.span key={i} variants={revealLeft} transition={{duration: .5, type: "spring"}} className={`inline-block ${c !== " " ? "" : "pl-2"}`}>{c}</motion.span>
+            )) }</span></span>
+          </motion.div>
+        </motion.div>
       </div>
       <div className="h-screen snap-start flex gap-3 flex-col items-center overflow-y-scroll pt-32">
         <motion.div
@@ -217,19 +220,12 @@ export default function Home() {
           viewport={{
             once: true
           }}
-          >Are you an employer? <span className="text-red">Great!</span></motion.div>
-        <motion.div
-          initial={{ opacity: 0, filter: "blur(5px)" }}
-          whileInView={{ opacity: 1, filter: "blur(0px)" }}
-          transition={{ delay: .75 }}
-          viewport={{
-            once: true
-          }}
+          className="text-foreground-2nd text-sm"
         >Which would you like to know about me?</motion.div>
         <motion.div
             initial={{ opacity: 0, transform: "translate3d(0, -100px, 0) rotateX(60deg)" }}
             whileInView={{ opacity: 1, transform: "translate3d(0, 0px, 0) rotateX(0deg)" }}
-            transition={{ duration: 1, delay: 1, ease: "easeOut" }}
+            transition={{ duration: 1, delay: .75, ease: "easeOut" }}
             viewport={{
               once: true
             }}
@@ -240,7 +236,7 @@ export default function Home() {
           <Card3D href="/portfolio" text="Motion Graphics">
             <img src="images/Logo.gif" className="w-full h-full object-cover rounded-2xl" />
           </Card3D>
-          <div className="absolute bg-red blur-3xl w-full h-12 rounded-full opacity-75" style={{
+          <div className="absolute bg-highlighter blur-3xl w-full h-12 rounded-full opacity-75" style={{
             top: "calc(100% - 2rem)"
           }} />
         </motion.div>

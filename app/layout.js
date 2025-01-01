@@ -1,15 +1,24 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Barlow, Barlow_Condensed, Sour_Gummy } from "next/font/google";
 import "./globals.css";
 import Header from "./components/header";
+import localFont from "next/font/local";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const barlow = Barlow({
+  variable: "--font-barlow",
   subsets: ["latin"],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const barlowCondensed = Barlow_Condensed({
+  variable: "--font-barlow-condensed",
   subsets: ["latin"],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+});
+
+const sourGummy = Sour_Gummy({
+  variable: "--font-sour-gummy",
+  subsets: ["latin"],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
 });
 
 export const metadata = {
@@ -21,7 +30,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased relative overflow-hidden overflow-x-hidden`}
+        className={`antialiased relative overflow-hidden overflow-x-hidden`}
       >
         <div className="absolute w-full flex flex-col min-h-screen" style={{
           maxHeight: "100%",
@@ -34,7 +43,7 @@ export default function RootLayout({ children }) {
           <img src="images/Wave_Line_3.svg" className="w-full"/>
         </div>
         <div className="container mx-auto relative">
-          <Header />
+        < Header />
           {children}
         </div>
       </body>

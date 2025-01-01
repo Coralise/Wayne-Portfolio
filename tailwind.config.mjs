@@ -10,7 +10,9 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        red: "#F13751",
+        "foreground-2nd": "var(--foreground-2nd)",
+        highlight: "var(--highlight)",
+        highlighter: "var(--highlighter)"
       },
       textShadow: {
         sm: '1px 1px 2px rgba(0, 0, 0, 0.5)',
@@ -42,6 +44,18 @@ export default {
         },
         ".flex-2": {
           flex: "2"
+        },
+        ".highlighter-shadow": {
+          boxShadow: "0px 0px 20px 1px var(--highlighter)"
+        },
+        ".font-barlow": {
+          fontFamily: "var(--font-barlow)"
+        },
+        ".font-barlow-condensed": {
+          fontFamily: "var(--font-barlow-condensed)"
+        },
+        ".font-sour-gummy": {
+          fontFamily: "var(--font-sour-gummy)"
         }
       };
 

@@ -1,18 +1,23 @@
 "use client";
 
-import { motion } from "motion/react";
+import React from 'react';
+import styled from 'styled-components';
 
-export default function Card({ href, children, text, key }) {
-    
+const Card = ({ children, card1Style, className }) => {
+
+    const defaultCard1Style = {
+        padding: "1rem",
+        backgroundColor: "var(--background)",
+        borderRadius: "20px",
+        transition: "all .2s",
+        backgroundColor: "transparent",
+        height: "fit-content"
+    }
+
     return (
-        <motion.a href={href} className="group relative z-10 w-full h-40 bg-transparent rounded-2xl" key={key}
-            whileHover={{ scale: 1.1 }}
-            transition={{ duration: .5, ease: "backOut" }}
-        >
-            <div className="absolute bg-black opacity-0 group-hover:opacity-40 w-full h-full transition-all rounded-2xl" />
+        <div style={{...defaultCard1Style, ...card1Style}} className={`${className} hover:rounded-2xl hover:highlighter-shadow border-2 border-transparent hover:border-highlighter`}>
             {children}
-            <div className="text-center select-none absolute top-3/4 w-full text-shadow-lg group-hover:opacity-100 opacity-0 transition-all">{text}</div>
-        </motion.a>
+        </div>
     );
-
 }
+export default Card;

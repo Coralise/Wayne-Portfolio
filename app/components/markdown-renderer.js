@@ -32,7 +32,7 @@ export default function MarkdownRenderer({ children }) {
           <a className="text-blue-500 hover:underline" {...props} />
         ),
         code: ({ node, ...props }) => (
-          <code className="bg-gray-200 text-red-500 px-1 rounded" {...props} />
+          <code className="bg-gray-200 text-highlight-500 px-1 rounded" {...props} />
         ),
       }}
     >

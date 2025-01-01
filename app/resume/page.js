@@ -1,53 +1,130 @@
+"use client";
+
 import Card from "../components/card";
-import { FaMobileAlt } from "react-icons/fa";
+import { FaDiscord, FaGithub, FaGithubAlt, FaLinkedinIn, FaMobileAlt } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { FaLinkedin } from "react-icons/fa";
+import { motion } from "motion/react";
+import ContactButton from "../components/contact-button";
 
 export default function Resume() {
+
+    const defaultTransition = {
+        duration: .5
+    }
+
+    const gradientHover = {
+        "rest": {
+            backgroundImage: "linear-gradient(135deg, var(--foreground) -20%, rgba(255,255,255,.75) -10%, var(--foreground) 0%)"
+        },
+        "hover": {
+            backgroundImage: "linear-gradient(135deg, var(--foreground) 100%, rgba(255,255,255,.75) 110%, var(--foreground) 120%)"
+        },
+    }
+
+    const beforeMail = {
+        "rest": {
+            width: "0%"
+        },
+        "hover": {
+            width: "100%"
+        }
+    }
+
     return (
-        <div className="p-6 w-fit">
-            <div className="mt-24"></div>
+        <div className="p-6 flex flex-col gap-5 w-fit">
+            <div className="mt-20"></div>
             <div className="text-center flex max-md:flex-col max-md:gap-5 justify-center w-full">
                 <div id="prof-pic-wrapper" className="relative max-md:self-center">
-                    <div className="absolute bg-red bg-opacity-20 blur-3xl rounded-full w-72 h-72 -left-24 top-1/2 transform -translate-y-1/2 z-0" />
-                    <img
+                    <div className="absolute bg-highlighter bg-opacity-20 blur-3xl rounded-full w-72 h-72 -left-24 top-1/2 transform -translate-y-1/2 z-0" />
+                    <motion.img
+                    initial={{
+                        x: -20
+                    }}
+                    animate={{
+                        x: 0
+                    }}
+                    transition={{...defaultTransition, duration: .7}}
                         id="prof-pic"
-                        className="z-10 size-72 rounded-full motion-preset-slide-right-md motion-duration-700 object-cover"
-                        src="images/prof.jpg"
+                        className="z-10 size-72 rounded-full object-cover object-top relative"
+                        src="images/illustration.jpg"
                         alt=""
                     />
                 </div>
-                <div className="z-20 content-center md:-translate-x-10">
-                    <div id="prof-title" className="bg-white/15 backdrop-blur-md p-4 rounded-xl shadow-md motion-preset-blur-left-md motion-delay-100">
-                        <h1 className="text-4xl font-bold text-red mb-2 text-shadow">
+                <div className="z-20 content-center md:-translate-x-5">
+                    <motion.div id="prof-title" className="relative bg-opacity-75 backdrop-blur-sm bg-gray-500/5 p-4 rounded-xl shadow-md z-20"
+                    initial={{
+                        x: 20
+                    }}
+                    animate={{
+                        x: 0
+                    }}
+                    transition={{...defaultTransition, duration: .75}}
+                    >
+                        <h1 className="text-4xl font-bold text-highlight mb-2 font-sour-gummy">
                             Sean Wayne R. Gabule
                         </h1>
                         <h3 className="text-lg">
-                            Programmer & Motion Graphic Designer
+                            Programmer & Motion Graphics Designer
                         </h3>
-                    </div>
+                    </motion.div>
+                </div>
+            </div>
+            <div className="flex gap-8">
+                <Card card1Style={{ padding: 0 }} className="flex-initial w-1/3 z-10 sticky top-1/4 max-h-screen">
+                    <motion.div whileHover="hover" initial="rest" className="p-4 flex flex-col gap-1">
+                        <motion.div
+                            variants={gradientHover}
+                            transition={{ duration: .3 }}
+                            className="font-extrabold text-3xl justify-center inline-block text-transparent bg-gradient bg-clip-text select-none">
+                                CONTACT ME
+                        </motion.div>
+                        <motion.div initial="rest" whileHover="hover" className="relative w-fit flex items-center h-6 mt-4">
+                            <motion.span variants={beforeMail} className="absolute bg-gradient-to-r from-highlighter to-background rounded-md h-full -z-10" />
+                            <a href="mailto:wayne@gabule.com" className="text-sm text-foreground-2nd w-fit mx-2 hover:text-foreground hover:font-semibold transition-all">wayne@gabule.com</a>
+                        </motion.div>
+                        <motion.div initial="rest" whileHover="hover" className="relative w-fit flex items-center h-6">
+                            <motion.span variants={beforeMail} className="absolute bg-gradient-to-r from-highlighter to-background rounded-md h-full -z-10" />
+                            <a href="tel:+639279734717" className="text-sm text-foreground-2nd w-fit mx-2 hover:text-foreground hover:font-semibold transition-all">(+63) 927 973 4717</a>
+                        </motion.div>
+                        <div className="mt-6 flex gap-2">
+                            <a href="https://discord.com/users/254225248889602048" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#7289da] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#7289da_0px_0px_5px_4px]">
+                                <FaDiscord className="size-6" />
+                            </a>
+                            <a href="https://github.com/Coralise" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#6e5494] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#6e5494_0px_0px_5px_4px]">
+                                <FaGithubAlt className="size-6" />
+                            </a>
+                            <a href="https://www.linkedin.com/in/sean-wayne-gabule-083a481a6/" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#0077B5] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#0077B5_0px_0px_5px_4px]">
+                                <FaLinkedinIn className="size-6" />
+                            </a>
+                        </div>
+                        <ContactButton className="mt-8" />
+                    </motion.div>
+                </Card>
+                <div className="grow w-full dbg" style={{ height: "300vh" }}>
+                    Hi
                 </div>
             </div>
             <div className="flex gap-8 items-start mt-6 max-md:flex-col">
-            <div className="w-full">
-                <h2 className="text-2xl text-red font-bold mb-2">Contact</h2>
+            <div className="w-full dbg">
+                <h2 className="text-2xl text-highlight font-bold mb-2">Contact</h2>
                 <div className="border-b mb-4"></div>
                 <div className="flex items-center gap-2">
-                <FaMobileAlt className="text-red" />
+                <FaMobileAlt className="text-highlight" />
                 <span className="flex-1">+63 927 973 4717</span>
                 </div>
                 <div className="h-2"></div>
                 <div className="flex items-center gap-2">
-                <IoMdMail className="text-red" />
+                <IoMdMail className="text-highlight" />
                 <span className="flex-1">waynegabule@gmail.com</span>
                 </div>
                 <div className="h-2"></div>
                 <div className="flex items-center gap-2">
-                <FaLinkedin className="text-red" />
+                <FaLinkedin className="text-highlight" />
                 <span className="flex-1">linkedin.com/in/sean-waynegabule-083a481a6/</span>
                 </div>
                 <div className="my-6"></div>
-                <h2 className="text-2xl text-red font-bold mb-2">Education</h2>
+                <h2 className="text-2xl text-highlight font-bold mb-2">Education</h2>
                 <div className="border-b mb-4"></div>
                 <div className="h-2"></div>
                 <div>
@@ -88,7 +165,7 @@ export default function Resume() {
                     </ul>
                 </div>
                 <div className="my-6"></div>
-                <h2 className="text-2xl text-red font-bold mb-2">Skills</h2>
+                <h2 className="text-2xl text-highlight font-bold mb-2">Skills</h2>
                 <div className="border-b mb-4"></div>
                 <div className="h-2"></div>
                 <ul className="list-disc pl-5">
@@ -108,7 +185,7 @@ export default function Resume() {
                 </ul>
             </div>
             <div className="grow">
-                <h2 className="text-2xl text-red font-bold mb-2">Profile</h2>
+                <h2 className="text-2xl text-highlight font-bold mb-2">Profile</h2>
                 <div className="border-b mb-4"></div>
                 <p>
                 I am a BS in Information
@@ -123,11 +200,11 @@ export default function Resume() {
                 definitely help me with my careers.
                 </p>
                 <div className="my-8">
-                    <h2 className="mb-2 text-red font-bold text-2xl">Work Experience</h2>
+                    <h2 className="mb-2 text-highlight font-bold text-2xl">Work Experience</h2>
                     <div className="border-b mb-4"></div>
                     <div className="flex gap-4">
                         <div className="flex flex-col items-end">
-                        <div className="bg-red w-px h-full rounded-full -translate-x-0.5"></div>
+                        <div className="bg-highlight w-px h-full rounded-full -translate-x-0.5"></div>
                         </div>
                         <div className="flex-grow">
                         <div className="h-2"></div>
@@ -177,7 +254,7 @@ export default function Resume() {
                         ].map((experience, index) => (
                             <div key={index} className="mb-6">
                             <div className="flex items-center relative">
-                                <div className="border-red bg-background border-2 -translate-x-6 w-3 h-3 rounded-full absolute"></div>
+                                <div className="border-highlight bg-background border-2 -translate-x-6 w-3 h-3 rounded-full absolute"></div>
                                 <h2 className="text-xl font-bold grow">{experience.company}</h2>
                                 <span className="text-gray-400">{experience.year}</span>
                             </div>
@@ -193,7 +270,7 @@ export default function Resume() {
                     </div>
                     </div>
                     <div className="my-8">
-                    <h2 className="mb-2 text-red font-bold text-2xl">Portfolios</h2>
+                    <h2 className="mb-2 text-highlight font-bold text-2xl">Portfolios</h2>
                     <div className="border-b mb-4"></div>
                     <div className="flex gap-6 justify-between">
                         {[
@@ -233,7 +310,7 @@ export default function Resume() {
                         //     </div>
                         //     <h3 className="mt-4 text-lg text-center font-semibold">{portfolio.title}</h3>
                         //     <button
-                        //     className="mt-4 bg-red text-white py-1 px-4 rounded-sm shadow-sm hover:bg-blue-700"
+                        //     className="mt-4 bg-highlight text-white py-1 px-4 rounded-sm shadow-sm hover:bg-blue-700"
                         //     >
                         //     Visit
                         //     </button>
