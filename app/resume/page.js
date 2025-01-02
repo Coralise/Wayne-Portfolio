@@ -4,9 +4,10 @@ import Card from "../components/card";
 import { FaDiscord, FaFacebookF, FaGithub, FaGithubAlt, FaLinkedinIn, FaMobileAlt } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { FaLinkedin } from "react-icons/fa";
-import { motion, useScroll, useTransform } from "motion/react";
+import { motion, useMotionValueEvent, useScroll, useTransform } from "motion/react";
 import ContactButton from "../components/contact-button";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import TimelineCard from "../components/timeline-card";
 
 export default function Resume() {
 
@@ -38,6 +39,11 @@ export default function Resume() {
         offset: ["start center", "end 75%"]
     });
     const draw = useTransform(scrollYProgress, [0, 1], [0, 1]);
+
+    const [maxDraw, setMaxDraw] = useState(0);
+    useMotionValueEvent(draw, "change", (val) => {
+        if (val > maxDraw) setMaxDraw(val);
+    });
 
     return (
         <div className="p-6 w-fit">
@@ -141,81 +147,73 @@ export default function Resume() {
                             I am a recent <span className="text-foreground font-semibold">BS in Information Technology</span> graduate from Ateneo de Davao University with freelance experience in <span className="text-foreground font-semibold">Java programming</span> and <span className="text-foreground font-semibold">video editing</span>. My work has exposed me to diverse environments, including online team collaboration, on-site event production, and management, where I developed both general and platform-specific skills to advance my career.
                         </motion.p>
                     </motion.div>
-                    <div className="mt-60 flex w-full justify-start">
-                        <div className="flex flex-col items-end pr-4 flex-1 font-bold text-2xl">
-                            WORK EXPERIENCE
+                    <div className="mt-60 flex w-full justify-start pb-8">
+                        <div className="flex flex-col items-end pr-4 flex-1">
+                            <div className="font-bold text-2xl">WORK EXPERIENCE</div>
+                            <TimelineCard drawProgress={maxDraw} drawPosition={0.15}
+                            className="mt-12" jobTitle="Associate Engineer 1" company="Orange & Bronze" date="July 2024 - Present" side="left">
+                                <ul className="list-disc pl-4">
+                                    <li>Implement features under the guidance of more senior developers, and in compliance with company & client practices.</li>
+                                    <li>Allots time to learn software development practices & technologies as prescribed by the company and as needed by the client.</li>
+                                    <li>Contributes to ideas & plans of the team.</li>
+                                    <li>Coordinates directly with client counterparts.</li>
+                                </ul>
+                            </TimelineCard>
+                            <TimelineCard drawProgress={maxDraw} drawPosition={0.30}
+                            className="mt-8" jobTitle="Java Plugin Developer" company="Freelance" date="February 2020 - Present" side="left">
+                                <ul className="list-disc pl-4">
+                                <li>Developed plugins (add-ons and modifications) for games such as Minecraft.</li>
+                                <li>Was able to work on and experience Java Programming and MySQL Database Management.</li>
+                                <li>Honed necessary skills for Object-Oriented Programming and Complex Database Logic and Queries.</li>
+                                <li>Presently and actively updating my developed plugins, allowing me to easily practice and sharpen my skills on a weekly basis.</li>
+                                </ul>
+                            </TimelineCard>
+                            <TimelineCard drawProgress={maxDraw} drawPosition={0.55}
+                            className="mt-8" jobTitle="Admin/Video Editor" company="Lava Automation" date="March 2023 - December 2024" side="left">
+                                <ul className="list-disc pl-4">
+                                <li>In charge of all things video editing related, from video construction to motion graphic animation.</li>
+                                <li>Helped create the company's current logo and have designed all of its animations, both 2D and 3D.</li>
+                                <li>Made infographics, PowerPoints, and similar graphic visualizations mainly for company advertisements.</li>
+                                </ul>
+                            </TimelineCard>
                         </div>
                         <div className="relative">
-                            <motion.div ref={targetRef} style={{ scaleY: draw, transformOrigin: "top" }} className="bg-highlight w-1 h-[200vh] rounded-full relative" />
+                            <motion.div ref={targetRef} style={{ scaleY: maxDraw, transformOrigin: "top" }} className="bg-foreground w-1 h-[calc(100%+2rem)] rounded-full relative" />
                             <motion.div initial="hidden" whileInView="revealed" viewport={{ amount: 1, once: true }} className="pb-[25vh] -left-1.5 absolute top-0">
                                 <motion.div variants={{ "hidden": { scale: 0 }, "revealed": { scale: 1 } }} className="aspect-square rounded-full w-4 h-4 border-[3px] border-highlight bg-background" />
                             </motion.div>
                         </div>
-                        <div className="flex flex-col items-start pl-4 flex-1 font-bold text-2xl">
-                            EDUCATION & CERTIFICATIONS
+                        <div className="flex flex-col items-start pl-4 flex-1">
+                            <div className="font-bold text-2xl">EDUCATION & CERTIFICATIONS</div>
+                            <TimelineCard drawProgress={maxDraw} drawPosition={0.15}
+                            className="mt-20" jobTitle="GIT Fundamentals" company="Orange & Bronze" date="December 2024">
+                                <ul className="list-disc pl-4">
+                                    <li>GIT Fundamentals: A certification that demonstrates proficiency in version control using Git, including key concepts like branching, merging, commit history, and collaborative workflows.</li>
+                                    <li>Validates skills in managing code repositories and version tracking for software development projects.</li>
+                                </ul>
+                            </TimelineCard>
+                            <TimelineCard drawProgress={maxDraw} drawPosition={0.61}
+                            className="mt-96" jobTitle="BS Information Technology Graduate" company="Ateneo de Davao University College" date="June 2020 - June 2024">
+                                <ul className="list-disc pl-4">
+                                    <li>Bachelor of Science in Information Technology</li>
+                                    <li>Consistent Honor Student</li>
+                                    <li>Scholar</li>
+                                    <li>President's Lister</li>
+                                </ul>
+                            </TimelineCard>
+                            <TimelineCard drawProgress={maxDraw} drawPosition={0.80}
+                            className="mt-8" jobTitle="TOPCIT Certification" company="Institute for Information & Communications Technology Promotion" date="April 2024">
+                                <ul className="list-disc pl-4">
+                                    <li>TOPCIT Certification (Level 3): Certified by the Institute for Information & Communications Technology Promotion (IITP), evaluating practical ICT competencies in technical, business, and integrated fields, including software, data, system architecture, information security, and IT business ethics.</li>
+                                    <li>Achieved a score of 456/1000 (45.6%), significantly surpassing the country average of 189.6 (18.96%) and the top 30% benchmark of 319.9 (31.99%)</li>
+                                </ul>
+                            </TimelineCard>
                         </div>
                     </div>
                 </div>
             </div>
             <div className="flex gap-8 items-start mt-6 max-md:flex-col">
             <div className="w-full">
-                <h2 className="text-2xl text-highlight font-bold mb-2">Contact</h2>
-                <div className="border-b mb-4"></div>
-                <div className="flex items-center gap-2">
-                <FaMobileAlt className="text-highlight" />
-                <span className="flex-1">+63 927 973 4717</span>
-                </div>
-                <div className="h-2"></div>
-                <div className="flex items-center gap-2">
-                <IoMdMail className="text-highlight" />
-                <span className="flex-1">waynegabule@gmail.com</span>
-                </div>
-                <div className="h-2"></div>
-                <div className="flex items-center gap-2">
-                <FaLinkedin className="text-highlight" />
-                <span className="flex-1">linkedin.com/in/sean-waynegabule-083a481a6/</span>
-                </div>
-                <div className="my-6"></div>
-                <h2 className="text-2xl text-highlight font-bold mb-2">Education</h2>
-                <div className="border-b mb-4"></div>
-                <div className="h-2"></div>
-                <div>
-                    <span className="text-sm align-bottom text-gray-400">2020 - 2024</span>
-                    <h3 className="text-xl font-bold">
-                    Ateneo de Davao University
-                    </h3>
-                    <span className="">College</span>
-                    <ul className="mt-2 list-disc pl-5">
-                        <li className="">Bachelor of Science in Information Technology</li>
-                        <li className="">Consistent Honor Student</li>
-                        <li className="">Scholar</li>
-                        <li className="">President's Lister</li>
-                    </ul>
-                </div>
-                <div className="h-2"></div>
-                <div>
-                    <span className="text-sm align-bottom text-gray-400">2018 - 2020</span>
-                    <h3 className="text-xl font-bold">
-                    Ateneo de Davao University
-                    </h3>
-                    <span className="">Senior High School</span>
-                    <ul className="mt-2 list-disc pl-5">
-                        <li className="">STEM Pre-Computer Studies</li>
-                        <li className="">Consistent Honor Student</li>
-                        <li className="">Scholar</li>
-                    </ul>
-                </div>
-                <div className="h-2"></div>
-                <div>
-                    <span className="text-sm align-bottom text-gray-400">2013 - 2018</span>
-                    <h3 className="text-xl font-bold">
-                    Ateneo de Davao University
-                    </h3>
-                    <span className="">Junior High School</span>
-                    <ul className="mt-2 list-disc pl-5">
-                        <li className="">STEM Pre-Computer Studies</li>
-                    </ul>
-                </div>
                 <div className="my-6"></div>
                 <h2 className="text-2xl text-highlight font-bold mb-2">Skills</h2>
                 <div className="border-b mb-4"></div>
@@ -237,89 +235,8 @@ export default function Resume() {
                 </ul>
             </div>
             <div className="grow">
-                <h2 className="text-2xl text-highlight font-bold mb-2">Profile</h2>
-                <div className="border-b mb-4"></div>
-                <p>
-                I am a BS in Information
-                Technology fresh graduate from the Ateneo de Davao University and have
-                been freelancing in both Java Programming and Video
-                Editing commissions in my spare times. Throughout my
-                subsidiaries, I have been exposed to various working
-                environments, ranging from online team planning and
-                communication to on-site event production and management,
-                and throughout these exposures, I am able to develop
-                various general and platform-specific skills that would
-                definitely help me with my careers.
-                </p>
                 <div className="my-8">
-                    <h2 className="mb-2 text-highlight font-bold text-2xl">Work Experience</h2>
-                    <div className="border-b mb-4"></div>
-                    <div className="flex gap-4">
-                        <div className="flex flex-col items-end">
-                        <div className="bg-highlight w-px h-full rounded-full -translate-x-0.5"></div>
-                        </div>
-                        <div className="flex-grow">
-                        <div className="h-2"></div>
-                        {[
-                            {
-                            company: "Orange & Bronze",
-                            year: "2024 - Present",
-                            title: "Associate Engineer 1",
-                            tasks: [
-                                "Implement features under the guidance of more senior developers, and in compliance with company & client practices.",
-                                "Allots time to learn software development practices & technologies as prescribed by the company and as needed by the client.",
-                                "Contributes to ideas & plans of the team.",
-                                "Coordinates directly with client counterparts.",
-                            ],
-                            },
-                            {
-                            company: "Freelance",
-                            year: "2020 - Present",
-                            title: "Java Plugin Developer",
-                            tasks: [
-                                "Developed plugins (add-ons and modifications) for games such as Minecraft.",
-                                "Was able to work on and experience Java Programming and MySQL Database Management.",
-                                "Honed necessary skills for Object-Oriented Programming and Complex Database Logic and Queries.",
-                                "Presently and actively updating my developed plugins, allowing me to easily practice and sharpen my skills on a weekly basis.",
-                            ],
-                            },
-                            {
-                            company: "LAVA Automation",
-                            year: "2023 - 2024",
-                            title: "Videographer",
-                            tasks: [
-                                "In charge of all things video editing related, from video construction to motion graphic animation.",
-                                "Helped create the company's current logo and have designed all of its animations, both 2D and 3D.",
-                                "Made infographics, PowerPoints, and similar graphic visualizations mainly for company advertisements."
-                            ],
-                            },
-                            {
-                            company: "The Createneo",
-                            year: "2020 - 2021",
-                            title: "Motion Graphics Head",
-                            tasks: [
-                                "In charge of all things animated tasked to the team.",
-                                "Achieved excellent, punctual work.",
-                                "Allowed me to learn leadership, crew management, and more in-depth Motion Graphics skills.",
-                            ],
-                            },
-                        ].map((experience, index) => (
-                            <div key={index} className="mb-6">
-                            <div className="flex items-center relative">
-                                <div className="border-highlight bg-background border-2 -translate-x-6 w-3 h-3 rounded-full absolute"></div>
-                                <h2 className="text-xl font-bold grow">{experience.company}</h2>
-                                <span className="text-gray-400">{experience.year}</span>
-                            </div>
-                            <span className="">{experience.title}</span>
-                            <ul className="mt-2 list-disc pl-5">
-                                {experience.tasks.map((task, taskIndex) => (
-                                <li key={taskIndex}>{task}</li>
-                                ))}
-                            </ul>
-                            </div>
-                        ))}
-                        </div>
-                    </div>
+                    
                     </div>
                     <div className="my-8">
                     <h2 className="mb-2 text-highlight font-bold text-2xl">Portfolios</h2>
