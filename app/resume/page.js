@@ -4,8 +4,9 @@ import Card from "../components/card";
 import { FaDiscord, FaFacebookF, FaGithub, FaGithubAlt, FaLinkedinIn, FaMobileAlt } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { FaLinkedin } from "react-icons/fa";
-import { motion } from "motion/react";
+import { motion, useScroll, useTransform } from "motion/react";
 import ContactButton from "../components/contact-button";
+import { useEffect, useRef } from "react";
 
 export default function Resume() {
 
@@ -30,6 +31,13 @@ export default function Resume() {
             width: "100%"
         }
     }
+
+    const targetRef = useRef(null);
+    const {scrollYProgress} = useScroll({
+        target: targetRef,
+        offset: ["start center", "end 75%"]
+    });
+    const draw = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
     return (
         <div className="p-6 w-fit">
@@ -75,7 +83,7 @@ export default function Resume() {
                     <motion.div whileHover="hover" initial="rest" className="p-4 flex flex-col gap-1">
                         <motion.div
                             variants={gradientHover}
-                            transition={{ duration: .3 }}
+                            transition={{ duration: .7 }}
                             className="font-extrabold text-3xl justify-center inline-block text-transparent bg-gradient bg-clip-text select-none">
                                 CONTACT ME
                         </motion.div>
@@ -133,13 +141,18 @@ export default function Resume() {
                             I am a recent <span className="text-foreground font-semibold">BS in Information Technology</span> graduate from Ateneo de Davao University with freelance experience in <span className="text-foreground font-semibold">Java programming</span> and <span className="text-foreground font-semibold">video editing</span>. My work has exposed me to diverse environments, including online team collaboration, on-site event production, and management, where I developed both general and platform-specific skills to advance my career.
                         </motion.p>
                     </motion.div>
-                    <div className="mt-24 flex w-full dbg">
-                        <div className="flex flex-col items-center flex-grow">
-                            Test
+                    <div className="mt-60 flex w-full justify-start">
+                        <div className="flex flex-col items-end pr-4 flex-1 font-bold text-2xl">
+                            WORK EXPERIENCE
                         </div>
-                        <div></div>
-                        <div className="flex flex-col items-center flex-grow">
-                            Test
+                        <div className="relative">
+                            <motion.div ref={targetRef} style={{ scaleY: draw, transformOrigin: "top" }} className="bg-highlight w-1 h-[200vh] rounded-full relative" />
+                            <motion.div initial="hidden" whileInView="revealed" viewport={{ amount: 1, once: true }} className="pb-[25vh] -left-1.5 absolute top-0">
+                                <motion.div variants={{ "hidden": { scale: 0 }, "revealed": { scale: 1 } }} className="aspect-square rounded-full w-4 h-4 border-[3px] border-highlight bg-background" />
+                            </motion.div>
+                        </div>
+                        <div className="flex flex-col items-start pl-4 flex-1 font-bold text-2xl">
+                            EDUCATION & CERTIFICATIONS
                         </div>
                     </div>
                 </div>
