@@ -85,7 +85,7 @@ export default function Resume() {
                 </div>
             </div>
             <div className="flex gap-8 mt-32">
-                <Card card1Style={{ padding: 0 }} className="flex-initial w-1/3 z-10 sticky top-1/4 max-h-screen">
+                <Card card1Style={{ padding: 0 }} className="flex-initial z-10 sticky top-1/4 max-h-screen">
                     <motion.div whileHover="hover" initial="rest" className="p-4 flex flex-col gap-1">
                         <motion.div
                             variants={gradientHover}
@@ -101,21 +101,21 @@ export default function Resume() {
                             <motion.span variants={beforeMail} className="absolute bg-gradient-to-r from-highlighter to-background rounded-md h-full -z-10" />
                             <a href="tel:+639279734717" className="text-sm text-foreground-2nd w-fit mx-2 hover:text-foreground hover:font-semibold transition-all">(+63) 927 973 4717</a>
                         </motion.div>
-                        <div className="mt-6 flex gap-2 justify-center">
+                        <div className="mt-3 flex gap-2">
                             <a href="https://discord.com/users/254225248889602048" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#7289da] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#7289da_0px_0px_5px_4px]">
-                                <FaDiscord className="size-6" />
+                                <FaDiscord className="size-4" />
                             </a>
                             <a href="https://github.com/Coralise" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#6e5494] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#6e5494_0px_0px_5px_4px]">
-                                <FaGithubAlt className="size-6" />
+                                <FaGithubAlt className="size-4" />
                             </a>
                             <a href="https://www.linkedin.com/in/sean-wayne-gabule-083a481a6/" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#0077B5] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#0077B5_0px_0px_5px_4px]">
-                                <FaLinkedinIn className="size-6" />
+                                <FaLinkedinIn className="size-4" />
                             </a>
                             <a href="https://www.facebook.com/Waynezki" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#1877F2] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#1877F2_0px_0px_5px_4px]">
-                                <FaFacebookF className="size-6" />
+                                <FaFacebookF className="size-4" />
                             </a>
                         </div>
-                        <ContactButton className="mt-8" />
+                        <ContactButton className="mt-3" />
                     </motion.div>
                 </Card>
                 <div className="grow w-full relative flex flex-col items-center">
@@ -202,10 +202,9 @@ export default function Resume() {
                                 </ul>
                             </TimelineCard>
                             <TimelineCard drawProgress={maxDraw} drawPosition={0.80}
-                            className="mt-8" jobTitle="TOPCIT Certification" company="Institute for Information & Communications Technology Promotion" date="April 2024">
+                            className="mt-8" jobTitle="TOPCIT Certification (Level 3)" company="Institute for Information & Communications Technology Promotion" date="April 2024">
                                 <ul className="list-disc pl-4">
-                                    <li>TOPCIT Certification (Level 3): Certified by the Institute for Information & Communications Technology Promotion (IITP), evaluating practical ICT competencies in technical, business, and integrated fields, including software, data, system architecture, information security, and IT business ethics.</li>
-                                    <li>Achieved a score of 456/1000 (45.6%), significantly surpassing the country average of 189.6 (18.96%) and the top 30% benchmark of 319.9 (31.99%)</li>
+                                    <li>Achieved a score of 456/1000 (45.6%), <span className="font-medium text-foreground">significantly surpassing the country average</span> of 189.6 (18.96%) and the <span className="font-medium text-foreground">top 30% benchmark</span> of 319.9 (31.99%)</li>
                                 </ul>
                             </TimelineCard>
                         </div>
