@@ -1,7 +1,7 @@
 "use client";
 
 import Card from "../components/card";
-import { FaDiscord, FaGithub, FaGithubAlt, FaLinkedinIn, FaMobileAlt } from "react-icons/fa";
+import { FaDiscord, FaFacebookF, FaGithub, FaGithubAlt, FaLinkedinIn, FaMobileAlt } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { FaLinkedin } from "react-icons/fa";
 import { motion } from "motion/react";
@@ -32,7 +32,7 @@ export default function Resume() {
     }
 
     return (
-        <div className="p-6 flex flex-col gap-5 w-fit">
+        <div className="p-6 w-fit">
             <div className="mt-20"></div>
             <div className="text-center flex max-md:flex-col max-md:gap-5 justify-center w-full">
                 <div id="prof-pic-wrapper" className="relative max-md:self-center">
@@ -70,7 +70,7 @@ export default function Resume() {
                     </motion.div>
                 </div>
             </div>
-            <div className="flex gap-8">
+            <div className="flex gap-8 mt-32">
                 <Card card1Style={{ padding: 0 }} className="flex-initial w-1/3 z-10 sticky top-1/4 max-h-screen">
                     <motion.div whileHover="hover" initial="rest" className="p-4 flex flex-col gap-1">
                         <motion.div
@@ -79,7 +79,7 @@ export default function Resume() {
                             className="font-extrabold text-3xl justify-center inline-block text-transparent bg-gradient bg-clip-text select-none">
                                 CONTACT ME
                         </motion.div>
-                        <motion.div initial="rest" whileHover="hover" className="relative w-fit flex items-center h-6 mt-4">
+                        <motion.div initial="rest" whileHover="hover" className="relative w-fit flex items-center h-6">
                             <motion.span variants={beforeMail} className="absolute bg-gradient-to-r from-highlighter to-background rounded-md h-full -z-10" />
                             <a href="mailto:wayne@gabule.com" className="text-sm text-foreground-2nd w-fit mx-2 hover:text-foreground hover:font-semibold transition-all">wayne@gabule.com</a>
                         </motion.div>
@@ -87,7 +87,7 @@ export default function Resume() {
                             <motion.span variants={beforeMail} className="absolute bg-gradient-to-r from-highlighter to-background rounded-md h-full -z-10" />
                             <a href="tel:+639279734717" className="text-sm text-foreground-2nd w-fit mx-2 hover:text-foreground hover:font-semibold transition-all">(+63) 927 973 4717</a>
                         </motion.div>
-                        <div className="mt-6 flex gap-2">
+                        <div className="mt-6 flex gap-2 justify-center">
                             <a href="https://discord.com/users/254225248889602048" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#7289da] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#7289da_0px_0px_5px_4px]">
                                 <FaDiscord className="size-6" />
                             </a>
@@ -97,16 +97,55 @@ export default function Resume() {
                             <a href="https://www.linkedin.com/in/sean-wayne-gabule-083a481a6/" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#0077B5] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#0077B5_0px_0px_5px_4px]">
                                 <FaLinkedinIn className="size-6" />
                             </a>
+                            <a href="https://www.facebook.com/Waynezki" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#1877F2] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#1877F2_0px_0px_5px_4px]">
+                                <FaFacebookF className="size-6" />
+                            </a>
                         </div>
                         <ContactButton className="mt-8" />
                     </motion.div>
                 </Card>
-                <div className="grow w-full dbg" style={{ height: "300vh" }}>
-                    Hi
+                <div className="grow w-full relative flex flex-col items-center">
+                    <motion.div initial="hidden" whileInView="revealed" viewport={{ once: true, amount: .75 }} transition={{ staggerChildren: .2 }} className="flex flex-col items-center">
+                        <motion.div transition={defaultTransition}
+                        variants={{
+                            "hidden": {
+                                x: 20,
+                                opacity: 0
+                            },
+                            "revealed": {
+                                x: 0,
+                                opacity: 1
+                            }
+                        }}
+                        className="text-5xl font-extrabold text-highlight font-sour-gummy w-fit text-center">PROFILE</motion.div>
+                        <motion.p transition={defaultTransition}
+                        variants={{
+                            "hidden": {
+                                x: 20,
+                                opacity: 0
+                            },
+                            "revealed": {
+                                x: 0,
+                                opacity: 1
+                            }
+                        }}
+                        className="indent-12 text-foreground-2nd mt-4 w-1/2 text-justify leading-loose">
+                            I am a recent <span className="text-foreground font-semibold">BS in Information Technology</span> graduate from Ateneo de Davao University with freelance experience in <span className="text-foreground font-semibold">Java programming</span> and <span className="text-foreground font-semibold">video editing</span>. My work has exposed me to diverse environments, including online team collaboration, on-site event production, and management, where I developed both general and platform-specific skills to advance my career.
+                        </motion.p>
+                    </motion.div>
+                    <div className="mt-24 flex w-full dbg">
+                        <div className="flex flex-col items-center flex-grow">
+                            Test
+                        </div>
+                        <div></div>
+                        <div className="flex flex-col items-center flex-grow">
+                            Test
+                        </div>
+                    </div>
                 </div>
             </div>
             <div className="flex gap-8 items-start mt-6 max-md:flex-col">
-            <div className="w-full dbg">
+            <div className="w-full">
                 <h2 className="text-2xl text-highlight font-bold mb-2">Contact</h2>
                 <div className="border-b mb-4"></div>
                 <div className="flex items-center gap-2">
