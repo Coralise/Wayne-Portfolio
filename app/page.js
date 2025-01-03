@@ -201,9 +201,9 @@ export default function Home() {
             viewport={{
               once: true
             }}
-            className="relative text-3xl z-10 motion-preset-blur-right">I'm <span className="text-highlight font-extrabold">Sean <span>{ "Wayne Gabule".split("").map((c, i) => (
+            className="relative text-3xl z-10">I'm <span className="text-highlight font-extrabold">Sean <span className="max-md:hidden">{ "Wayne Gabule".split("").map((c, i) => (
               <motion.span key={i} variants={revealLeft} transition={{duration: .5, type: "spring"}} className={`inline-block ${c !== " " ? "" : "pl-2"}`}>{c}</motion.span>
-            )) }</span></span>
+            )) }</span><span className="md:hidden">Wayne Gabule</span></span>
           </motion.div>
         </motion.div>
       </div>
