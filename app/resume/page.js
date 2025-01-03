@@ -113,7 +113,7 @@ export default function Resume() {
                     <BiTimeline maxDraw={maxDraw} targetRef={targetRef} className="hidden max-sm:hidden max-md:flex lg:flex" />
                     <MonoTimeline className="lg:hidden max-md:hidden max-sm:flex" />
 
-                    <div className="flex flex-col items-center mt-60">
+                    <div className="flex flex-col items-center mt-40">
                         <motion.div initial="hidden" whileInView="revealed" viewport={{ once: true, amount: .75 }} transition={{ staggerChildren: .2 }} className="flex flex-col items-center max-md:mt-32">
                             <motion.div transition={defaultTransition}
                             variants={revealXOpacity}
