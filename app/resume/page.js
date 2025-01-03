@@ -1,15 +1,15 @@
 "use client";
 
 import Card from "../components/card";
-import { FaCss3, FaDiscord, FaFacebookF, FaFigma, FaGitAlt, FaGithub, FaGithubAlt, FaHtml5, FaJava, FaLinkedinIn, FaMobileAlt, FaReact } from "react-icons/fa";
+import { FaBootstrap, FaCss3, FaDiscord, FaFacebookF, FaFigma, FaGitAlt, FaGithub, FaGithubAlt, FaHtml5, FaJava, FaLinkedinIn, FaMobileAlt, FaNodeJs, FaReact } from "react-icons/fa";
 import { TbBrandAdobeAfterEffect, TbBrandAdobeIllustrator, TbBrandAdobePhotoshop, TbBrandCSharp, TbBrandMysql } from "react-icons/tb";
 import { BiLogoSpringBoot } from "react-icons/bi";
 import { motion, useMotionValueEvent, useScroll, useTransform } from "motion/react";
 import ContactButton from "../components/contact-button";
 import { useEffect, useRef, useState } from "react";
 import { ProgressTimelineCard, TimelineCard } from "../components/timeline-card";
-import { RiFlutterFill, RiJavaFill, RiJavaLine } from "react-icons/ri";
-import { SiAdobe, SiAdobeaftereffects, SiAdobeillustrator, SiAdobephotoshop, SiAdobepremierepro, SiCanva, SiNextdotjs, SiSpigotmc, SiSpringboot } from "react-icons/si";
+import { RiFlutterFill, RiJavaFill, RiJavaLine, RiTailwindCssFill } from "react-icons/ri";
+import { SiAdobe, SiAdobeaftereffects, SiAdobeillustrator, SiAdobephotoshop, SiAdobepremierepro, SiCanva, SiExpress, SiNextdotjs, SiSpigotmc, SiSpringboot } from "react-icons/si";
 import { FaDartLang } from "react-icons/fa6";
 
 export default function Resume() {
@@ -106,7 +106,7 @@ export default function Resume() {
                         <motion.p transition={defaultTransition}
                         variants={revealXOpacity}
                         className="indent-12 text-foreground-2nd mt-4 lg:w-1/2 text-justify leading-loose">
-                            I am a recent <span className="text-foreground font-semibold">BS in Information Technology</span> graduate from Ateneo de Davao University with freelance experience in <span className="text-foreground font-semibold">Java programming</span> and <span className="text-foreground font-semibold">video editing</span>. My work has exposed me to diverse environments, including online team collaboration, on-site event production, and management, where I developed both general and platform-specific skills to advance my career.
+                            I am a recent <span className="text-foreground font-semibold">BS in Information Technology</span> graduate from Ateneo de Davao University with freelance experience in <span className="text-foreground font-semibold">Java programming</span> and <span className="text-foreground font-semibold">video editing</span>. I strive to excel in these fields, including <span className="text-foreground font-semibold">motion graphics design, front-end development</span>, and many more.
                         </motion.p>
                     </motion.div>
 
@@ -114,13 +114,13 @@ export default function Resume() {
                     <MonoTimeline className="lg:hidden max-md:hidden max-sm:flex" />
 
                     <div className="flex flex-col items-center mt-40">
-                        <motion.div initial="hidden" whileInView="revealed" viewport={{ once: true, amount: .75 }} transition={{ staggerChildren: .2 }} className="flex flex-col items-center max-md:mt-32">
+                        <motion.div initial="hidden" whileInView="revealed" viewport={{ once: true, amount: .50 }} transition={{ staggerChildren: .2 }} className="flex flex-col items-center max-md:mt-32">
                             <motion.div transition={defaultTransition}
                             variants={revealXOpacity}
                             className="text-5xl font-extrabold text-highlight font-sour-gummy w-fit text-center">SKILLS</motion.div>
-                            <div className="flex gap-4 mt-4 flex-col max-sm:flex-col max-md:flex-row lg:flex-row">
+                            <motion.div transition={defaultTransition} variants={revealXOpacity} className="flex gap-4 mt-4 flex-col max-sm:flex-col max-md:flex-row lg:flex-row">
                                 <div className="flex-1">
-                                <div className="font-bold w-full text-center">Programming</div>
+                                <div className="font-bold w-full text-center">Tech Stack</div>
                                     <div className="flex flex-wrap gap-4 mt-2 justify-center">
                                         <SkillIcon text="Flutter" icon={<RiFlutterFill />} />
                                         <SkillIcon text="Dart" icon={<FaDartLang />} />
@@ -130,8 +130,12 @@ export default function Resume() {
                                         <SkillIcon text="Git" icon={<FaGitAlt />} />
                                         <SkillIcon text="NextJS" icon={<SiNextdotjs />} />
                                         <SkillIcon text="ReactJS" icon={<FaReact />} />
+                                        <SkillIcon text="NodeJS" icon={<FaNodeJs />} />
+                                        <SkillIcon text="ExpressJS" icon={<SiExpress />} />
                                         <SkillIcon text="HTML" icon={<FaHtml5 />} />
                                         <SkillIcon text="CSS" icon={<FaCss3 />} />
+                                        <SkillIcon text="Tailwind" icon={<RiTailwindCssFill />} />
+                                        <SkillIcon text="Bootstrap" icon={<FaBootstrap />} />
                                         <SkillIcon text="Spring Boot" icon={<SiSpringboot />} />
                                         <SkillIcon text="Figma" icon={<FaFigma />} />
                                     </div>
@@ -146,10 +150,6 @@ export default function Resume() {
                                         <SkillIcon text="Canva" icon={<SiCanva />} />
                                     </div>
                                 </div>
-                            </div>
-                            <motion.div transition={defaultTransition}
-                            variants={revealXOpacity}
-                            className="mt-4 flex gap-2 flex-wrap">
                             </motion.div>
                         </motion.div>
                     </div>
