@@ -7,7 +7,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { motion, useMotionValueEvent, useScroll, useTransform } from "motion/react";
 import ContactButton from "../components/contact-button";
 import { useEffect, useRef, useState } from "react";
-import TimelineCard from "../components/timeline-card";
+import { ProgressTimelineCard, TimelineCard } from "../components/timeline-card";
 
 export default function Resume() {
 
@@ -44,6 +44,8 @@ export default function Resume() {
     useMotionValueEvent(draw, "change", (val) => {
         if (val > maxDraw) setMaxDraw(val);
     });
+
+    let screenWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 
     return (
         <div className="p-6 w-fit">
@@ -115,8 +117,8 @@ export default function Resume() {
                             I am a recent <span className="text-foreground font-semibold">BS in Information Technology</span> graduate from Ateneo de Davao University with freelance experience in <span className="text-foreground font-semibold">Java programming</span> and <span className="text-foreground font-semibold">video editing</span>. My work has exposed me to diverse environments, including online team collaboration, on-site event production, and management, where I developed both general and platform-specific skills to advance my career.
                         </motion.p>
                     </motion.div>
-                    <BiTimeline maxDraw={maxDraw} targetRef={targetRef} className="max-sm:hidden md:hidden" />
-                    <BiTimeline maxDraw={maxDraw} targetRef={targetRef} className="max-lg:hidden" />
+                    <BiTimeline maxDraw={maxDraw} targetRef={targetRef} className="hidden max-sm:hidden max-md:flex lg:flex" />
+                    <MonoTimeline className="lg:hidden max-md:hidden max-sm:flex" />
                 </div>
                 <div className="flex justify-center mt-32 md:hidden">
                     <ContactMeCard beforeMail={beforeMail} gradientHover={gradientHover} className="w-fit" />
@@ -203,11 +205,78 @@ export default function Resume() {
     );
 }
 
+function MonoTimeline({ className }) {
+    return <div className={`${className} mt-60 flex w-full justify-start pb-8`}>
+        <div className="relative">
+            <motion.div style={{ transformOrigin: "top" }} className="bg-foreground w-1 h-[calc(100%+2rem)] rounded-full relative" />
+            <motion.div initial="hidden" whileInView="revealed" viewport={{ amount: 1, once: true }} className="pb-[25vh] -left-1.5 absolute top-0">
+                <motion.div variants={{ "hidden": { scale: 0 }, "revealed": { scale: 1 } }} className="aspect-square rounded-full w-4 h-4 border-[3px] border-highlight bg-background" />
+            </motion.div>
+        </div>
+        <div>
+            <div className="flex flex-col items-start pl-4 flex-1">
+                <div className="font-bold text-2xl">WORK EXPERIENCE</div>
+                <TimelineCard
+                    className="mt-8" jobTitle="Associate Engineer 1" company="Orange & Bronze" date="July 2024 - Present">
+                    <ul className="list-disc pl-4">
+                        <li>Implement features under the guidance of more senior developers, and in compliance with company & client practices.</li>
+                        <li>Allots time to learn software development practices & technologies as prescribed by the company and as needed by the client.</li>
+                        <li>Contributes to ideas & plans of the team.</li>
+                        <li>Coordinates directly with client counterparts.</li>
+                    </ul>
+                </TimelineCard>
+                <TimelineCard
+                    className="mt-8" jobTitle="Java Plugin Developer" company="Freelance" date="February 2020 - Present">
+                    <ul className="list-disc pl-4">
+                        <li>Developed plugins (add-ons and modifications) for games such as Minecraft.</li>
+                        <li>Was able to work on and experience Java Programming and MySQL Database Management.</li>
+                        <li>Honed necessary skills for Object-Oriented Programming and Complex Database Logic and Queries.</li>
+                        <li>Presently and actively updating my developed plugins, allowing me to easily practice and sharpen my skills on a weekly basis.</li>
+                    </ul>
+                </TimelineCard>
+                <TimelineCard
+                    className="mt-8" jobTitle="Admin/Video Editor" company="Lava Automation" date="March 2023 - December 2024">
+                    <ul className="list-disc pl-4">
+                        <li>In charge of all things video editing related, from video construction to motion graphic animation.</li>
+                        <li>Helped create the company's current logo and have designed all of its animations, both 2D and 3D.</li>
+                        <li>Made infographics, PowerPoints, and similar graphic visualizations mainly for company advertisements.</li>
+                    </ul>
+                </TimelineCard>
+            </div>
+            <div className="flex flex-col items-start pl-4 flex-1 mt-32">
+                <div className="font-bold text-2xl">EDUCATION & CERTIFICATIONS</div>
+                <TimelineCard
+                    className="mt-8" jobTitle="GIT Fundamentals" company="Orange & Bronze" date="December 2024">
+                    <ul className="list-disc pl-4">
+                        <li>GIT Fundamentals: A certification that demonstrates proficiency in version control using Git, including key concepts like branching, merging, commit history, and collaborative workflows.</li>
+                        <li>Validates skills in managing code repositories and version tracking for software development projects.</li>
+                    </ul>
+                </TimelineCard>
+                <TimelineCard
+                    className="mt-8" jobTitle="BS Information Technology Graduate" company="Ateneo de Davao University College" date="June 2020 - June 2024">
+                    <ul className="list-disc pl-4">
+                        <li>Bachelor of Science in Information Technology</li>
+                        <li>Consistent Honor Student</li>
+                        <li>Scholar</li>
+                        <li>President's Lister</li>
+                    </ul>
+                </TimelineCard>
+                <TimelineCard
+                    className="mt-8" jobTitle="TOPCIT Certification (Level 3)" company="Institute for Information & Communications Technology Promotion" date="April 2024">
+                    <ul className="list-disc pl-4">
+                        <li>Achieved a score of 456/1000 (45.6%), <span className="font-medium text-foreground">significantly surpassing the country average</span> of 189.6 (18.96%) and the <span className="font-medium text-foreground">top 30% benchmark</span> of 319.9 (31.99%)</li>
+                    </ul>
+                </TimelineCard>
+            </div>
+        </div>
+    </div>;
+}
+
 function BiTimeline({ maxDraw, targetRef, className }) {
     return <div className={`${className} mt-60 flex w-full justify-start pb-8`}>
         <div className="flex flex-col items-end pr-4 flex-1">
             <div className="font-bold text-2xl">WORK EXPERIENCE</div>
-            <TimelineCard drawProgress={maxDraw} drawPosition={0.15}
+            <ProgressTimelineCard drawProgress={maxDraw} drawPosition={0.15}
                 className="mt-12" jobTitle="Associate Engineer 1" company="Orange & Bronze" date="July 2024 - Present" side="left">
                 <ul className="list-disc pl-4">
                     <li>Implement features under the guidance of more senior developers, and in compliance with company & client practices.</li>
@@ -215,8 +284,8 @@ function BiTimeline({ maxDraw, targetRef, className }) {
                     <li>Contributes to ideas & plans of the team.</li>
                     <li>Coordinates directly with client counterparts.</li>
                 </ul>
-            </TimelineCard>
-            <TimelineCard drawProgress={maxDraw} drawPosition={0.30}
+            </ProgressTimelineCard>
+            <ProgressTimelineCard drawProgress={maxDraw} drawPosition={0.30}
                 className="mt-8" jobTitle="Java Plugin Developer" company="Freelance" date="February 2020 - Present" side="left">
                 <ul className="list-disc pl-4">
                     <li>Developed plugins (add-ons and modifications) for games such as Minecraft.</li>
@@ -224,15 +293,15 @@ function BiTimeline({ maxDraw, targetRef, className }) {
                     <li>Honed necessary skills for Object-Oriented Programming and Complex Database Logic and Queries.</li>
                     <li>Presently and actively updating my developed plugins, allowing me to easily practice and sharpen my skills on a weekly basis.</li>
                 </ul>
-            </TimelineCard>
-            <TimelineCard drawProgress={maxDraw} drawPosition={0.55}
+            </ProgressTimelineCard>
+            <ProgressTimelineCard drawProgress={maxDraw} drawPosition={0.55}
                 className="mt-8" jobTitle="Admin/Video Editor" company="Lava Automation" date="March 2023 - December 2024" side="left">
                 <ul className="list-disc pl-4">
                     <li>In charge of all things video editing related, from video construction to motion graphic animation.</li>
                     <li>Helped create the company's current logo and have designed all of its animations, both 2D and 3D.</li>
                     <li>Made infographics, PowerPoints, and similar graphic visualizations mainly for company advertisements.</li>
                 </ul>
-            </TimelineCard>
+            </ProgressTimelineCard>
         </div>
         <div className="relative">
             <motion.div ref={targetRef} style={{ scaleY: maxDraw, transformOrigin: "top" }} className="bg-foreground w-1 h-[calc(100%+2rem)] rounded-full relative" />
@@ -242,14 +311,14 @@ function BiTimeline({ maxDraw, targetRef, className }) {
         </div>
         <div className="flex flex-col items-start pl-4 flex-1">
             <div className="font-bold text-2xl">EDUCATION & CERTIFICATIONS</div>
-            <TimelineCard drawProgress={maxDraw} drawPosition={0.15}
+            <ProgressTimelineCard drawProgress={maxDraw} drawPosition={0.15}
                 className="mt-20" jobTitle="GIT Fundamentals" company="Orange & Bronze" date="December 2024">
                 <ul className="list-disc pl-4">
                     <li>GIT Fundamentals: A certification that demonstrates proficiency in version control using Git, including key concepts like branching, merging, commit history, and collaborative workflows.</li>
                     <li>Validates skills in managing code repositories and version tracking for software development projects.</li>
                 </ul>
-            </TimelineCard>
-            <TimelineCard drawProgress={maxDraw} drawPosition={0.61}
+            </ProgressTimelineCard>
+            <ProgressTimelineCard drawProgress={maxDraw} drawPosition={0.61}
                 className="mt-96" jobTitle="BS Information Technology Graduate" company="Ateneo de Davao University College" date="June 2020 - June 2024">
                 <ul className="list-disc pl-4">
                     <li>Bachelor of Science in Information Technology</li>
@@ -257,13 +326,13 @@ function BiTimeline({ maxDraw, targetRef, className }) {
                     <li>Scholar</li>
                     <li>President's Lister</li>
                 </ul>
-            </TimelineCard>
-            <TimelineCard drawProgress={maxDraw} drawPosition={0.80}
+            </ProgressTimelineCard>
+            <ProgressTimelineCard drawProgress={maxDraw} drawPosition={0.80}
                 className="mt-8" jobTitle="TOPCIT Certification (Level 3)" company="Institute for Information & Communications Technology Promotion" date="April 2024">
                 <ul className="list-disc pl-4">
                     <li>Achieved a score of 456/1000 (45.6%), <span className="font-medium text-foreground">significantly surpassing the country average</span> of 189.6 (18.96%) and the <span className="font-medium text-foreground">top 30% benchmark</span> of 319.9 (31.99%)</li>
                 </ul>
-            </TimelineCard>
+            </ProgressTimelineCard>
         </div>
     </div>;
 }

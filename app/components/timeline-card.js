@@ -3,23 +3,42 @@
 import { motion, useMotionValueEvent } from "motion/react";
 import { useEffect } from "react";
 
-export default function TimelineCard({ className, drawPosition, drawProgress, jobTitle, company, date, children, side="right" }) {
+export function ProgressTimelineCard({ className, drawPosition, drawProgress, jobTitle, company, date, children, side="right" }) {
 
     const defaultTransition = { duration: .5 };
 
     const revealOpacity = { "rest": { opacity: 0 }, "revealed": { opacity: 1 } };
 
     return (
-        <motion.div initial="rest" animate={drawPosition >= drawProgress ? "rest" : "revealed"} viewport={{ once: true, amount: 1 }} transition={defaultTransition} className={`${className} items-${side === "right" ? "start" : "end"} flex flex-col w-full group relative`}>
-            <motion.div transition={defaultTransition} variants={{ "rest": { scale: 0 }, "revealed": { scale: 1 } }} className={`absolute w-4 h-4 rounded-full bg-background border-[3px] border-highlight ${side === "right" ? "-left-[1.62rem]" : "-right-[1.62rem]"} top-3 z-10`} />
-            <motion.div transition={defaultTransition} variants={revealOpacity} className="text-sm font-normal text-foreground-2nd group-hover:text-foreground transition-all duration-500">{date}</motion.div>
-            <motion.div transition={defaultTransition} variants={revealOpacity} className={`flex flex-col w-full p-3 rounded-${side === "right" ? "r" : "l"}-2xl rounded-b-2xl border-solid border-${side === "right" ? "l" : "r"}-2 border-t-2 hover:border-highlight backdrop-blur-md border-foreground-2nd transition-all duration-500 hover:scale-[101%] hover:shadow-[0px_5px_8px_1px_rgba(0,0,0,0.1)] shadow-[0px_0px_0px_0px_rgba(0,0,0,0.1)]`}>
-                <span className="text-lg font-bold">{jobTitle}</span>
-                <span className="text-xs text-foreground-2nd font-normal">{company}</span>
-                <div className="mt-4 text-sm text-foreground-2nd">
-                    {children}
-                </div>
-            </motion.div>
+        <motion.div initial="rest" animate={drawPosition >= drawProgress ? "rest" : "revealed"} viewport={{ once: true, amount: 1 }} transition={defaultTransition} className={`${className} items-${side == "right" ? "start" : "end"} flex flex-col w-full group relative`}>
+            {Card(defaultTransition, side, revealOpacity, date, jobTitle, company, children)}
         </motion.div>
     );
+}
+
+export function TimelineCard({ className, jobTitle, company, date, children, side="right" }) {
+
+    const defaultTransition = { duration: .5 };
+
+    const revealOpacity = { "rest": { opacity: 0 }, "revealed": { opacity: 1 } };
+
+    return (
+        <motion.div initial="rest" whileInView="revealed" viewport={{ once: true, amount: 1 }} transition={defaultTransition} className={`${className} items-${side == "right" ? "start" : "end"} flex flex-col w-full group relative`}>
+            {Card(defaultTransition, side, revealOpacity, date, jobTitle, company, children)}
+        </motion.div>
+    );
+}
+
+function Card(defaultTransition, side, revealOpacity, date, jobTitle, company, children) {
+    return <>
+        <motion.div transition={defaultTransition} variants={{ "rest": { scale: 0 }, "revealed": { scale: 1 } }} className={`absolute w-4 h-4 rounded-full bg-background border-[3px] border-highlight ${side == "right" ? "-left-[1.62rem]" : "-right-[1.62rem]"} top-3 z-10`} />
+        <motion.div transition={defaultTransition} variants={revealOpacity} className="text-sm font-normal text-foreground-2nd group-hover:text-foreground transition-all duration-500">{date}</motion.div>
+        <motion.div transition={defaultTransition} variants={revealOpacity} className={`flex flex-col w-full p-3 rounded-${side == "right" ? "r" : "l"}-2xl rounded-b-2xl border-solid border-${side == "right" ? "l" : "r"}-2 border-t-2 hover:border-highlight backdrop-blur-md border-foreground-2nd transition-all duration-500 hover:scale-[101%] hover:shadow-[0px_5px_8px_1px_rgba(0,0,0,0.1)] shadow-[0px_0px_0px_0px_rgba(0,0,0,0.1)]`}>
+            <span className="text-lg font-bold">{jobTitle}</span>
+            <span className="text-xs text-foreground-2nd font-normal">{company}</span>
+            <div className="mt-4 text-sm text-foreground-2nd">
+                {children}
+            </div>
+        </motion.div>
+    </>;
 }
