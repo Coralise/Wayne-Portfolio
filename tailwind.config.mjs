@@ -56,6 +56,16 @@ export default {
         },
         ".font-sour-gummy": {
           fontFamily: "var(--font-sour-gummy)"
+        },
+        ".neumorphic-bevel": {
+          borderRadius: "1rem",
+          backgroundImage: "linear-gradient(145deg, #cacaca, #f0f0f0)",
+          boxShadow:  "5px 5px 10px #bebebe, -5px -5px 10px #ffffff"
+        },
+        ".neumorphic-emboss": {
+          borderRadius: "1rem",
+          backgroundImage: "linear-gradient(145deg, #f0f0f0, #cacaca)",
+          boxShadow:  "5px 5px 10px #bebebe, -5px -5px 10px #ffffff"
         }
       };
 

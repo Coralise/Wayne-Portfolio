@@ -2,8 +2,9 @@
 
 import { motion, useMotionValueEvent } from "motion/react";
 import { useEffect } from "react";
+import Tag from "./tag";
 
-export function ProgressTimelineCard({ className, drawPosition, drawProgress, jobTitle, company, date, children, side="right" }) {
+export function ProgressTimelineCard({ className, drawPosition, drawProgress, jobTitle, company, date, children, tags, side="right" }) {
 
     const defaultTransition = { duration: .5 };
 
@@ -11,12 +12,12 @@ export function ProgressTimelineCard({ className, drawPosition, drawProgress, jo
 
     return (
         <motion.div initial="rest" animate={drawPosition >= drawProgress ? "rest" : "revealed"} viewport={{ once: true, amount: 1 }} transition={defaultTransition} className={`${className} items-${side == "right" ? "start" : "end"} flex flex-col w-full group relative`}>
-            {Card(defaultTransition, side, revealOpacity, date, jobTitle, company, children)}
+            {Card(defaultTransition, side, revealOpacity, date, jobTitle, company, children, tags)}
         </motion.div>
     );
 }
 
-export function TimelineCard({ className, jobTitle, company, date, children, side="right" }) {
+export function TimelineCard({ className, jobTitle, company, date, children, tags, side="right" }) {
 
     const defaultTransition = { duration: .5 };
 
@@ -24,12 +25,12 @@ export function TimelineCard({ className, jobTitle, company, date, children, sid
 
     return (
         <motion.div initial="rest" whileInView="revealed" viewport={{ once: true, amount: 1 }} transition={defaultTransition} className={`${className} items-${side == "right" ? "start" : "end"} flex flex-col w-full group relative`}>
-            {Card(defaultTransition, side, revealOpacity, date, jobTitle, company, children)}
+            {Card(defaultTransition, side, revealOpacity, date, jobTitle, company, children, tags)}
         </motion.div>
     );
 }
 
-function Card(defaultTransition, side, revealOpacity, date, jobTitle, company, children) {
+function Card(defaultTransition, side, revealOpacity, date, jobTitle, company, children, tags) {
     return <>
         <motion.div transition={defaultTransition} variants={{ "rest": { scale: 0 }, "revealed": { scale: 1 } }} className={`absolute w-4 h-4 rounded-full bg-background border-[3px] border-highlight ${side == "right" ? "-left-[1.62rem]" : "-right-[1.62rem]"} top-3 z-10`} />
         <motion.div transition={defaultTransition} variants={revealOpacity} className="text-sm font-normal text-foreground-2nd group-hover:text-foreground transition-all duration-500">{date}</motion.div>
@@ -38,6 +39,11 @@ function Card(defaultTransition, side, revealOpacity, date, jobTitle, company, c
             <span className="text-xs text-foreground-2nd font-normal">{company}</span>
             <div className="mt-4 text-sm text-foreground-2nd">
                 {children}
+            </div>
+            <div className="flex gap-1 flex-wrap mt-4">
+                {[...tags].map((tag, index) => (
+                    <Tag key={index} text={tag[1]} icon={tag[0]} />
+                ))}
             </div>
         </motion.div>
     </>;
