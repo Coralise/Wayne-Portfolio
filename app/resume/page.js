@@ -45,8 +45,6 @@ export default function Resume() {
         if (val > maxDraw) setMaxDraw(val);
     });
 
-    let screenWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-
     return (
         <div className="p-6 w-fit">
             <div className="mt-20"></div>
