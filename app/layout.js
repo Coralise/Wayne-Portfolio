@@ -42,6 +42,7 @@ export default function RootLayout({ children }) {
           <img src="images/Wave_Line_2.svg" className="w-full"/>
           <img src="images/Wave_Line_3.svg" className="w-full"/>
         </div>
+        <img src="/images/grain.avif" className="w-screen h-screen fixed -z-50 object-cover mix-blend-normal opacity-15" />
         <div className="container mx-auto relative">
         < Header />
           {children}
