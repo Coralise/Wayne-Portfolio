@@ -9,7 +9,7 @@ import ContactButton from "../components/contact-button";
 import { useEffect, useRef, useState } from "react";
 import { ProgressTimelineCard, TimelineCard } from "../components/timeline-card";
 import { RiFlutterFill, RiJavaFill, RiJavaLine, RiTailwindCssFill } from "react-icons/ri";
-import { SiAdobe, SiAdobeaftereffects, SiAdobeillustrator, SiAdobephotoshop, SiAdobepremierepro, SiCanva, SiExpress, SiNextdotjs, SiSpigotmc, SiSpringboot } from "react-icons/si";
+import { SiAdobe, SiAdobeaftereffects, SiAdobeillustrator, SiAdobephotoshop, SiAdobepremierepro, SiCanva, SiExpress, SiLua, SiNextdotjs, SiSpigotmc, SiSpringboot } from "react-icons/si";
 import { FaDartLang } from "react-icons/fa6";
 
 export default function Resume() {
@@ -113,7 +113,7 @@ export default function Resume() {
                     <BiTimeline maxDraw={maxDraw} targetRef={targetRef} className="hidden max-sm:hidden max-md:flex lg:flex" />
                     <MonoTimeline className="lg:hidden max-md:hidden max-sm:flex" />
 
-                    <div className="flex flex-col items-center mt-40">
+                    <div className="flex flex-col items-center mt-40 md:mb-40">
                         <motion.div initial="hidden" whileInView="revealed" viewport={{ once: true, amount: .50 }} transition={{ staggerChildren: .2 }} className="flex flex-col items-center max-md:mt-32">
                             <motion.div transition={defaultTransition}
                             variants={revealXOpacity}
@@ -126,6 +126,7 @@ export default function Resume() {
                                         <SkillIcon text="Dart" icon={<FaDartLang />} />
                                         <SkillIcon text="Java" icon={<RiJavaLine />} />
                                         <SkillIcon text="C#" icon={<TbBrandCSharp />} />
+                                        <SkillIcon text="Lua" icon={<SiLua />} />
                                         <SkillIcon text="MySQL" icon={<TbBrandMysql />} />
                                         <SkillIcon text="Git" icon={<FaGitAlt />} />
                                         <SkillIcon text="NextJS" icon={<SiNextdotjs />} />

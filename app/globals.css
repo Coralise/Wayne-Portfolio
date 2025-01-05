@@ -13,6 +13,16 @@
   --font-sour-gummy: 'Sour Gummy', sans-serif;
 }
 
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000000;
+    --foreground: #efefef;
+    --foreground-2nd: #9b9b9b;
+    --highlighter: #701a1c;
+    --highlight: #ff3b3f;
+  }
+} */
+
 body {
   color: var(--foreground);
   background: var(--background);
