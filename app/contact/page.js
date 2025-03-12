@@ -16,7 +16,7 @@ export default function Contact() {
             <div className="w-1/3 flex flex-col">
                 <span className="text-5xl font-bold">Let's Chat<span className="text-highlight font-black">.</span></span>
                 
-                <span className="mt-8 flex gap-1 items-center text-foreground-2nd"><span className="text-foreground"><IoMdMail /></span> wayne@gabule.com</span>
+                <span className="mt-8 flex gap-1 items-center text-foreground-2nd"><span className="text-foreground"><IoMdMail /></span> shaseajojo@gmail.com</span>
                 <span className="flex gap-1 items-center text-foreground-2nd"><span className="text-foreground"><FaPhoneAlt /></span> (+63) 927 973 4717</span>
                 <span className="flex gap-1 items-center text-foreground-2nd"><span className="text-foreground"><FaLocationDot /></span> Matina, Davao City, Davao del Sur, Philippines</span>
 
@@ -27,17 +27,17 @@ export default function Contact() {
                     <a href="https://github.com/Coralise" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#6e5494] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#6e5494_0px_0px_5px_4px]">
                         <FaGithubAlt className="size-4" />
                     </a>
-                    <a href="https://www.linkedin.com/in/sean-wayne-gabule-083a481a6/" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#0077B5] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#0077B5_0px_0px_5px_4px]">
+                    {/* <a href="https://www.linkedin.com/in/sean-wayne-gabule-083a481a6/" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#0077B5] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#0077B5_0px_0px_5px_4px]">
                         <FaLinkedinIn className="size-4" />
                     </a>
                     <a href="https://www.facebook.com/Waynezki" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#1877F2] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#1877F2_0px_0px_5px_4px]">
                         <FaFacebookF className="size-4" />
-                    </a>
+                    </a> */}
                 </div>
             </div>
             <div className="w-1/3">
                 <div className="w-full p-8 rounded-lg bg-background shadow-[3px_3px_0px_0px_var(--highlighter)] border-2 border-highlighter">
-
+                        To Do: Email Form
                 </div>
             </div>
         </div>

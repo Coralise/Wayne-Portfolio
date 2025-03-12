@@ -1,7 +1,6 @@
 import { Barlow, Barlow_Condensed, Sour_Gummy } from "next/font/google";
 import "./globals.css";
 import Header from "./components/header";
-import localFont from "next/font/local";
 
 const barlow = Barlow({
   variable: "--font-barlow",
@@ -22,8 +21,8 @@ const sourGummy = Sour_Gummy({
 });
 
 export const metadata = {
-  title: "Wayne Gabule",
-  description: "Wayne Gabule's Portfolio",
+  title: "Wen Portfolio",
+  description: "Wen's Portfolio",
 };
 
 export default function RootLayout({ children }) {
