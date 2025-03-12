@@ -228,12 +228,21 @@ export default function Home() {
               once: true
             }}
         className="flex gap-20 perspective max-md:hidden relative">
-          <Card3D href="/portfolio" text="Programming">
+          <Card3D href="/portfolio" text="Programming Portfolio">
             <img src="images/programming.jpg" className="w-full h-full object-cover rounded-2xl" />
           </Card3D>
-          <Card3D href="/portfolio" text="Motion Graphics">
-            <img src="images/Logo.gif" className="w-full h-full object-cover rounded-2xl" />
+          <Card3D href="/resume" text="Resume">
+            <img src="images/winnie.png" className="w-full h-full object-cover rounded-2xl" />
           </Card3D>
+          {/* <Card3D href="/portfolio" text="Motion Graphics Portfolio">
+            <video 
+              src="endgame.webm" 
+              autoPlay 
+              loop 
+              muted 
+              className="pointer-events-none w-full h-full object-cover rounded-2xl"
+            ></video>
+          </Card3D> */}
           <div className="absolute bg-highlighter blur-3xl w-full h-12 rounded-full opacity-75" style={{
             top: "calc(100% - 2rem)"
           }} />
@@ -241,12 +250,16 @@ export default function Home() {
         <div className="md:hidden flex flex-col gap-7 w-full items-center">
           <Link className="w-full" href={"/portfolio"}>
             <img src="images/programming.jpg" className="w-full h-40 object-cover rounded-2xl" />
-            <p className="text-center">Programming</p>
+            <p className="text-center">Programming Portfolio</p>
           </Link>
-          <Link className="w-full" href={"/portfolio"}>
+          <Link className="w-full" href={"/resume"}>
+            <img src="images/winnie.png" className="w-full h-40 object-cover rounded-2xl" />
+            <p className="text-center">Resume</p>
+          </Link>
+          {/* <Link className="w-full" href={"/portfolio"}>
             <img src="images/Logo.gif" className="w-full h-40 object-cover rounded-2xl" />
-            <p className="text-center">Motion Graphics</p>
-          </Link>
+            <p className="text-center">Motion Graphics Portfolio</p>
+          </Link> */}
         </div>
       </div>
     </div>

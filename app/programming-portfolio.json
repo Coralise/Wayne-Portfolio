@@ -1,6 +1,22 @@
 {
   "projects": [
     {
+      "title": "Jedis",
+      "subtitle": "Redis-like Datastore made in Java",
+      "start-date": "February 2022",
+      "end-date": "March 2022",
+      "tags": [
+        {
+          "icon": "java",
+          "name": "Java"
+        }
+      ],
+      "description": "**Jedis** (Java Redis) is my attempt at replicating all features of [Redis](https://redis.io/) in Java.\n\n[Source Code](https://github.com/Coralise/Java-Redis)",
+      "image": "images/jedis.jpg",
+      "gallery": [
+      ]
+    },
+    {
       "title": "Custom Bans Plus",
       "subtitle": "Advanced Ban Management for Minecraft Servers",
       "start-date": "February 2020",
@@ -125,22 +141,6 @@
         "image:images/uij/uij4.gif",
         "image:images/uij/uij5.gif",
         "image:images/uij/uij6.gif"
-      ]
-    },
-    {
-      "title": "Jedis",
-      "subtitle": "Redis-like Datastore made in Java",
-      "start-date": "February 2022",
-      "end-date": "March 2022",
-      "tags": [
-        {
-          "icon": "java",
-          "name": "Java"
-        }
-      ],
-      "description": "**Jedis** (Java Redis) is my attempt at replicating all features of [Redis](https://redis.io/) in Java.\n\n[Source Code](https://github.com/Coralise/Java-Redis)",
-      "image": "images/jedis.jpg",
-      "gallery": [
       ]
     }
   ]

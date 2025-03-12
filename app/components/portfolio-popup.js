@@ -8,7 +8,7 @@ import MarkdownRenderer from "./markdown-renderer";
 
 export default function PortfolioCard({ content }) {
     return (
-        <div>
+        <div className="rounded-2xl p-2 backdrop-blur-sm">
             <div className="w-full flex items-center gap-4">
                 <div className="flex-2 flex flex-col">
                     <h1 className="text-6xl font-black uppercase">{content.title}</h1>
@@ -26,11 +26,11 @@ export default function PortfolioCard({ content }) {
                     <motion.div className="relative rounded-3xl">
                         <motion.div className="absolute w-full h-full opacity-30 rounded-3xl"/>
                         <div className="w-full h-full absolute bg-neutral-900 -z-10 rounded-3xl" />
-                        <img src={content.image} className="bg-transparent h-80 aspect-video rounded-3xl object-contain" />
+                        <img src={content.image} className="bg-transparent h-80 aspect-video rounded-xl object-contain" />
                     </motion.div>
                 </div>
             </div>
-            <div className="h-60 w-full flex gap-5 mt-5 overflow-y-scroll">
+            <div className={`${content.gallery.length > 0 ? "h-60" : ""} w-full flex gap-5 mt-5 overflow-y-scroll`}>
                 {[...content.gallery].map((media, index) => {
                     const data = media.split(/:(.+)/);
                     const type = data[0];

@@ -7,8 +7,10 @@ import styled from 'styled-components';
 
 export default function Contact() {
 
-    const contact = (formData) => {
-
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        alert(`Email sent!`);
+        e.target.reset();
     }
 
     return (
@@ -36,8 +38,12 @@ export default function Contact() {
                 </div>
             </div>
             <div className="w-1/3">
-                <div className="w-full p-8 rounded-lg bg-background shadow-[3px_3px_0px_0px_var(--highlighter)] border-2 border-highlighter">
-                        To Do: Email Form
+                <div className="w-full p-4 rounded-lg bg-background shadow-[3px_3px_0px_0px_var(--highlight)] border-2 border-highlight">
+                        <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
+                            <input className="w-full py-2 px-4 input" placeholder="Subject" />
+                            <textarea className="input" rows={7} placeholder="Body" />
+                            <button className="self-end py-2 px-4 bg-highlighter rounded-md font-bold border-4 border-transparent hover:border-highlighter hover:bg-transparent transition-all duration-300" type="submit">Send Email</button>
+                        </form>
                 </div>
             </div>
         </div>
