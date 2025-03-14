@@ -154,7 +154,7 @@ export default function Home() {
   }
 
   return (
-    <div className="snap-y snap-mandatory h-screen overflow-y-scroll hidden-scrollbar">
+    <div className="snap-y snap-mandatory h-screen overflow-y-scroll ml-[5px] hidden-scrollbar">
       <Particles
         id="tsparticles"
         particlesLoaded={particlesLoaded}
@@ -205,7 +205,7 @@ export default function Home() {
           </motion.div>
         </motion.div>
       </div>
-      <div className="h-screen snap-start flex gap-3 flex-col items-center overflow-y-scroll pt-32">
+      <div className="h-screen snap-start flex gap-3 flex-col items-center overflow-y-hidden pt-32" id="portfolio-section">
         <motion.div
           initial={{ opacity: 0, filter: "blur(5px)", y: -100 }}
           whileInView={{ opacity: 1, filter: "blur(0px)", y: 0,
@@ -221,20 +221,21 @@ export default function Home() {
           className="text-foreground-2nd text-sm"
         >Which would you like to know about me?</motion.div>
         <motion.div
-            initial={{ opacity: 0, transform: "translate3d(0, -100px, 0) rotateX(60deg)" }}
-            whileInView={{ opacity: 1, transform: "translate3d(0, 0px, 0) rotateX(0deg)" }}
-            transition={{ duration: 1, delay: .75, ease: "easeOut" }}
-            viewport={{
-              once: true
-            }}
-        className="flex gap-20 perspective max-md:hidden relative">
-          <Card3D href="/portfolio" text="Programming Portfolio">
+          initial={{ opacity: 0, transform: "translate3d(0, -100px, 0) rotateX(60deg)" }}
+          whileInView={{ opacity: 1, transform: "translate3d(0, 0px, 0) rotateX(0deg)" }}
+          transition={{ duration: 1, delay: .75, ease: "easeOut" }}
+          viewport={{
+            once: true
+          }}
+          className="flex gap-20 perspective max-md:hidden relative"
+        >
+          <Card3D href="/programming-portfolio" text="Programming Portfolio">
             <img src="images/programming.jpg" className="w-full h-full object-cover rounded-2xl" />
           </Card3D>
           <Card3D href="/resume" text="Resume">
             <img src="images/winnie.png" className="w-full h-full object-cover rounded-2xl" />
           </Card3D>
-          {/* <Card3D href="/portfolio" text="Motion Graphics Portfolio">
+          <Card3D href="/motion-graphics-portfolio" text="Motion Graphics Portfolio">
             <video 
               src="endgame.webm" 
               autoPlay 
@@ -242,13 +243,13 @@ export default function Home() {
               muted 
               className="pointer-events-none w-full h-full object-cover rounded-2xl"
             ></video>
-          </Card3D> */}
+          </Card3D>
           <div className="absolute bg-highlighter blur-3xl w-full h-12 rounded-full opacity-75" style={{
             top: "calc(100% - 2rem)"
           }} />
         </motion.div>
         <div className="md:hidden flex flex-col gap-7 w-full items-center">
-          <Link className="w-full" href={"/portfolio"}>
+          <Link className="w-full" href={"/programming-portfolio"}>
             <img src="images/programming.jpg" className="w-full h-40 object-cover rounded-2xl" />
             <p className="text-center">Programming Portfolio</p>
           </Link>
@@ -256,10 +257,16 @@ export default function Home() {
             <img src="images/winnie.png" className="w-full h-40 object-cover rounded-2xl" />
             <p className="text-center">Resume</p>
           </Link>
-          {/* <Link className="w-full" href={"/portfolio"}>
-            <img src="images/Logo.gif" className="w-full h-40 object-cover rounded-2xl" />
+          <Link className="w-full h-40" href={"/motion-graphics-portfolio"}>
+            <video 
+              src="endgame.webm" 
+              autoPlay 
+              loop 
+              muted 
+              className="pointer-events-none w-full h-full object-cover rounded-2xl"
+            ></video>
             <p className="text-center">Motion Graphics Portfolio</p>
-          </Link> */}
+          </Link>
         </div>
       </div>
     </div>
