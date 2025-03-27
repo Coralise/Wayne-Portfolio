@@ -1,5 +1,5 @@
 import { promises as fs } from 'fs';
-import { FaBehance, FaGithubAlt } from 'react-icons/fa';
+import { FaBehance } from 'react-icons/fa';
 
 export default async function Portfolio() {
 
@@ -36,7 +36,7 @@ export default async function Portfolio() {
                     return (
                         <div key={index + ""} className="self-center w-full">
                             <iframe
-                                className='w-full aspect-video'
+                                className='w-full aspect-video border-0'
                                 src={autoplayUrl}
                                 title={`Video ${index + 1}`}
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

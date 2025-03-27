@@ -154,6 +154,21 @@ export default function Resume() {
                             </motion.div>
                         </motion.div>
                     </div>
+
+                    <div className="flex flex-col items-center mt-40 md:mb-40">
+                        <motion.div initial="hidden" whileInView="revealed" viewport={{ once: true, amount: .50 }} transition={{ staggerChildren: .2 }} className="flex flex-col items-center max-md:mt-32">
+                            <motion.div transition={defaultTransition}
+                            variants={revealXOpacity}
+                            className="text-5xl font-extrabold text-highlight font-sour-gummy w-fit text-center">ACHIEVEMENTS</motion.div>
+                            <motion.div transition={defaultTransition} variants={revealXOpacity} className="flex flex-col gap-4 mt-4">
+                                <div className="flex flex-wrap gap-4 mt-2 justify-center">
+                                    <span>AI Hackathon Champion (2025)</span>
+                                </div>
+                            </motion.div>
+                        </motion.div>
+                    </div>
+
+                    <div className="mt-40"></div>
                 </div>
                 <div className="flex justify-center mt-32 md:hidden">
                     <ContactMeCard beforeMail={beforeMail} gradientHover={gradientHover} className="w-fit" />
