@@ -1,14 +1,14 @@
 "use client";
 
 import Card from "../components/card";
-import { FaBootstrap, FaCss3, FaDiscord, FaFacebookF, FaFigma, FaGitAlt, FaGithub, FaGithubAlt, FaHtml5, FaJava, FaLinkedinIn, FaMobileAlt, FaNodeJs, FaReact } from "react-icons/fa";
-import { TbBrandAdobeAfterEffect, TbBrandAdobeIllustrator, TbBrandAdobePhotoshop, TbBrandCSharp, TbBrandMysql } from "react-icons/tb";
+import { FaBootstrap, FaCss3, FaDiscord, FaFigma, FaGitAlt, FaGithubAlt, FaHtml5, FaNodeJs, FaReact } from "react-icons/fa";
+import { TbBrandCSharp, TbBrandMysql } from "react-icons/tb";
 import { BiLogoSpringBoot } from "react-icons/bi";
 import { motion, useMotionValueEvent, useScroll, useTransform } from "motion/react";
 import ContactButton from "../components/contact-button";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { ProgressTimelineCard, TimelineCard } from "../components/timeline-card";
-import { RiFlutterFill, RiJavaFill, RiJavaLine, RiTailwindCssFill } from "react-icons/ri";
+import { RiFlutterFill, RiJavaLine, RiTailwindCssFill } from "react-icons/ri";
 import { SiAdobe, SiAdobeaftereffects, SiAdobeillustrator, SiAdobephotoshop, SiAdobepremierepro, SiCanva, SiExpress, SiLua, SiNextdotjs, SiSpigotmc, SiSpringboot } from "react-icons/si";
 import { FaDartLang } from "react-icons/fa6";
 
@@ -323,37 +323,42 @@ function BiTimeline({ maxDraw, targetRef, className }) {
 }
 
 function ContactMeCard({gradientHover, beforeMail, className, center=false}) {
-    return <Card card1Style={{ padding: 0 }} className={`flex-initial z-10 sticky top-1/4 max-h-screen ${className}`}>
-        <motion.div whileHover="hover" initial="rest" className={`p-4 flex flex-col gap-1 ${center ? "items-center" : ""}`}>
-            <motion.div
-                variants={gradientHover}
-                transition={{ duration: .7 }}
-                className="font-extrabold text-3xl justify-center inline-block text-transparent bg-gradient bg-clip-text select-none">
-                CONTACT ME
-            </motion.div>
-            <motion.div initial="rest" whileHover="hover" className="relative w-fit flex items-center h-6">
-                <motion.span variants={beforeMail} className="absolute bg-gradient-to-r from-highlighter to-background rounded-md h-full -z-10" />
-                <a href="mailto:shaseajojo@gmail.com" className="text-sm text-foreground-2nd w-fit mx-2 hover:text-foreground hover:font-semibold transition-all">shaseajojo@gmail.com</a>
-            </motion.div>
-            <motion.div initial="rest" whileHover="hover" className="relative w-fit flex items-center h-6">
-                <motion.span variants={beforeMail} className="absolute bg-gradient-to-r from-highlighter to-background rounded-md h-full -z-10" />
-                <a href="tel:+639279734717" className="text-sm text-foreground-2nd w-fit mx-2 hover:text-foreground hover:font-semibold transition-all">(+63) 927 973 4717</a>
-            </motion.div>
-            <div className="mt-3 flex gap-2">
-                <a href="https://discord.com/users/254225248889602048" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#7289da] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#7289da_0px_0px_5px_4px]">
-                    <FaDiscord className="size-4" />
-                </a>
-                <a href="https://github.com/Coralise" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#6e5494] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#6e5494_0px_0px_5px_4px]">
-                    <FaGithubAlt className="size-4" />
-                </a>
-                {/* <a href="https://www.linkedin.com/in/sean-wayne-gabule-083a481a6/" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#0077B5] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#0077B5_0px_0px_5px_4px]">
-                    <FaLinkedinIn className="size-4" />
-                </a>
-                <a href="https://www.facebook.com/Waynezki" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#1877F2] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#1877F2_0px_0px_5px_4px]">
-                    <FaFacebookF className="size-4" />
-                </a> */}
-            </div>
-            <ContactButton className="mt-3" />
-        </motion.div>
-    </Card>;
+    return (
+        <div className={`flex-initial z-10 sticky top-1/4 max-h-screen h-fit ${className}`}>
+            <Card card1Style={{ padding: 0 }} className={`flex-initial z-10 sticky top-1/4 max-h-screen ${className}`}>
+                <motion.div whileHover="hover" initial="rest" className={`p-4 flex flex-col gap-1 ${center ? "items-center" : ""}`}>
+                    <motion.div
+                        variants={gradientHover}
+                        transition={{ duration: .7 }}
+                        className="font-extrabold text-3xl justify-center inline-block text-transparent bg-gradient bg-clip-text select-none">
+                        CONTACT ME
+                    </motion.div>
+                    <motion.div initial="rest" whileHover="hover" className="relative w-fit flex items-center h-6">
+                        <motion.span variants={beforeMail} className="absolute bg-gradient-to-r from-highlighter to-background rounded-md h-full -z-10" />
+                        <a href="mailto:shaseajojo@gmail.com" className="text-sm text-foreground-2nd w-fit mx-2 hover:text-foreground hover:font-semibold transition-all">shaseajojo@gmail.com</a>
+                    </motion.div>
+                    <motion.div initial="rest" whileHover="hover" className="relative w-fit flex items-center h-6">
+                        <motion.span variants={beforeMail} className="absolute bg-gradient-to-r from-highlighter to-background rounded-md h-full -z-10" />
+                        <a href="tel:+639279734717" className="text-sm text-foreground-2nd w-fit mx-2 hover:text-foreground hover:font-semibold transition-all">(+63) 927 973 4717</a>
+                    </motion.div>
+                    <div className="mt-3 flex gap-2">
+                        <a href="https://discord.com/users/254225248889602048" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#7289da] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#7289da_0px_0px_5px_4px]">
+                            <FaDiscord className="size-4" />
+                        </a>
+                        <a href="https://github.com/Coralise" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#6e5494] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#6e5494_0px_0px_5px_4px]">
+                            <FaGithubAlt className="size-4" />
+                        </a>
+                        {/* <a href="https://www.linkedin.com/in/sean-wayne-gabule-083a481a6/" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#0077B5] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#0077B5_0px_0px_5px_4px]">
+                            <FaLinkedinIn className="size-4" />
+                        </a>
+                        <a href="https://www.facebook.com/Waynezki" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#1877F2] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#1877F2_0px_0px_5px_4px]">
+                            <FaFacebookF className="size-4" />
+                        </a> */}
+                    </div>
+                    <ContactButton className="mt-3" />
+                </motion.div>
+            </Card>
+            <div className="dbg"></div>
+        </div>
+    );
 }
