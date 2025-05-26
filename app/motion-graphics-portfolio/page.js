@@ -51,6 +51,7 @@ export default async function Portfolio() {
                         </div>
                     );
                 })}
+                <div className='mb-20' />
             </div>
             <div className="items-center flex-col relative hidden max-md:flex">
                 <div className="p-4 w-fit rounded-xl backdrop-blur-sm">
