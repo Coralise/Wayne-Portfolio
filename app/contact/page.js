@@ -7,12 +7,6 @@ import styled from 'styled-components';
 
 export default function Contact() {
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        alert(`Email sent!`);
-        e.target.reset();
-    }
-
     return (
         <div className="h-screen w-screen items-center justify-center flex gap-8">
             <div className="w-1/3 flex flex-col">
@@ -39,9 +33,12 @@ export default function Contact() {
             </div>
             <div className="w-1/3">
                 <div className="w-full p-4 rounded-lg bg-background shadow-[3px_3px_0px_0px_var(--highlight)] border-2 border-highlight">
-                        <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
-                            <input className="w-full py-2 px-4 input" placeholder="Subject" />
-                            <textarea className="input" rows={7} placeholder="Body" />
+                        <form className="flex flex-col gap-4"
+                            action="https://formspree.io/f/xyzjkvbe"
+                            method="POST"
+                        >
+                            <input className="w-full py-2 px-4 input" placeholder="Email" name="email" />
+                            <textarea className="input" rows={7} placeholder="Body" name="body" />
                             <button className="self-end py-2 px-4 bg-highlighter rounded-md font-bold border-4 border-transparent hover:border-highlighter hover:bg-transparent transition-all duration-300" type="submit">Send Email</button>
                         </form>
                 </div>
