@@ -23,6 +23,29 @@ export default function Home() {
     });
   }, []);
 
+  // Handle hash navigation
+  useEffect(() => {
+    const handleHashNavigation = () => {
+      const hash = window.location.hash;
+      if (hash === '#portfolio-section') {
+        const element = document.getElementById('portfolio-section');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    };
+
+    // Check on mount
+    handleHashNavigation();
+
+    // Listen for hash changes
+    window.addEventListener('hashchange', handleHashNavigation);
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashNavigation);
+    };
+  }, []);
+
   const particlesLoaded = (container) => {
     console.log(container);
   };
