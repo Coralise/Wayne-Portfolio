@@ -358,19 +358,6 @@ function ContactMeCard({gradientHover, beforeMail, className, center=false}) {
                     <ContactButton className="mt-3" />
                 </motion.div>
             </Card>
-            {/* <button className="download-cv-button mt-8 w-full" onClick={() => {
-                const link = document.createElement('a');
-                link.href = '/Gabule-Resume.pdf';
-                link.download = 'Gabule-Resume.pdf';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-            }}>
-                <span className="download-cv-button_lg">
-                    <span className="download-cv-button_sl"></span>
-                    <span className="download-cv-button_text">Download Resume</span>
-                </span>
-            </button> */}
         </div>
     );
 }
