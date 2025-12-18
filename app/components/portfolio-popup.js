@@ -39,8 +39,8 @@ export default function PortfolioCard({ content }) {
         <div className="rounded-2xl min-h-96 p-2 backdrop-blur-sm max-xl:flex-col flex gap-16">
             <div className="flex-[6] flex flex-col content-center">
                 <h1 className="text-6xl font-black uppercase">{content.title}</h1>
-                <span>{content.subtitle}</span>
-                <span className="text-sm">{content["start-date"] === content["end-date"] ? content["start-date"] : (content["start-date"] + " - " + content["end-date"])}</span>
+                <span className="text-foreground-2nd">{content.subtitle}</span>
+                <span className="text-sm text-foreground-2nd">{content["start-date"] === content["end-date"] ? content["start-date"] : (content["start-date"] + " - " + content["end-date"])}</span>
                 <div className="flex gap-2 mt-2">
                     {[...content.tags].map((tag) => (
                         <Tag key={tag.name} text={tag.name} icon={tag.icon} />
