@@ -8,7 +8,7 @@ import MarkdownRenderer from "./markdown-renderer";
 
 export default function PortfolioCard({ content }) {
     const [activeIndex, setActiveIndex] = useState(0);
-    const gallery = (content.gallery && content.gallery.length) ? [...content.gallery] : ["image:" + content.image];
+    const gallery = (content.gallery?.length) ? [...content.gallery] : ["image:" + content.image];
 
     const prev = () => setActiveIndex((i) => (i - 1 + gallery.length) % gallery.length);
     const next = () => setActiveIndex((i) => (i + 1) % gallery.length);
