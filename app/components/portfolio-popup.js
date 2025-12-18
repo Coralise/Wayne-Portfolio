@@ -50,7 +50,7 @@ export default function PortfolioCard({ content }) {
                 <MarkdownRenderer>{content.description}</MarkdownRenderer>
             </div>
             <div className="flex-[5] relative flex justify-end group xl:hover:scale-125 transition-transform duration-500 cursor-pointer">
-                <div className="w-full h-96 relative">
+                <div className="w-full max-xl:h-96 relative">
                     {renderMedia(gallery[activeIndex])}
 
                     {showArrows && (
