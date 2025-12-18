@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 :root {
-  --background: #efefef;
-  --foreground: #000000;
-  --foreground-2nd: #727272;
-  --highlighter: #caebf2;
+  --background: #020000;
+  --foreground: #dbdbdb;
+  --foreground-2nd: #a7a7a7;
+  --highlighter: #001b3a;
   --highlight: #ff3b3f;
   --font-barlow: 'Barlow', sans-serif;
   --font-barlow-condensed: 'Barlow Condensed', sans-serif;
