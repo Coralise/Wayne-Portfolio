@@ -8,7 +8,7 @@ export default async function Portfolio() {
 
     return (
         <div className="p-6 w-full snap-y">
-            <div className="mt-20 flex flex-col gap-40 snap-start">
+            <div className="mt-20 flex flex-col gap-40 snap-start mb-[20rem]">
                 {[...programmingPortfolio.projects].map((project, index) => (
                     <PortfolioCard content={project} key={index} />
                 ))}
