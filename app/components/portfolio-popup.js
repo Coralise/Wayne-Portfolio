@@ -36,8 +36,8 @@ export default function PortfolioCard({ content }) {
     const showArrows = gallery.length > 1; // Check if there are multiple images in the gallery
 
     return (
-        <div className="rounded-2xl h-96 p-2 backdrop-blur-sm flex gap-16">
-            <div className="flex-[6] content-center">
+        <div className="rounded-2xl min-h-96 p-2 backdrop-blur-sm max-xl:flex-col flex gap-16">
+            <div className="flex-[6] flex flex-col content-center">
                 <h1 className="text-6xl font-black uppercase">{content.title}</h1>
                 <span>{content.subtitle}</span>
                 <span className="text-sm">{content["start-date"] === content["end-date"] ? content["start-date"] : (content["start-date"] + " - " + content["end-date"])}</span>
@@ -49,8 +49,8 @@ export default function PortfolioCard({ content }) {
                 <div className="pt-1" />
                 <MarkdownRenderer>{content.description}</MarkdownRenderer>
             </div>
-            <div className="flex-[5] relative flex justify-end group hover:scale-125 transition-transform duration-500 cursor-pointer">
-                <div className="w-full h-full relative">
+            <div className="flex-[5] relative flex justify-end group xl:hover:scale-125 transition-transform duration-500 cursor-pointer">
+                <div className="w-full h-96 relative">
                     {renderMedia(gallery[activeIndex])}
 
                     {showArrows && (
@@ -69,7 +69,7 @@ export default function PortfolioCard({ content }) {
                         </>
                     )}
                 </div>
-                <div className="absolute z-[3] inset-0 pointer-events-none rounded-xl h-full w-full shadow-[inset_0_0_60px_rgba(0,0,0,1)] hover:shadow-[inset_0_0_0px_rgba(0,0,0,0)] transition-all duration-500" />
+                <div className="absolute z-[3] inset-0 pointer-events-none rounded-xl h-full w-full shadow-[inset_0_0_60px_rgba(0,0,0,1)] group-hover:shadow-[inset_0_0_0px_rgba(0,0,0,0)] transition-all duration-500" />
             </div>
         </div>
     );
