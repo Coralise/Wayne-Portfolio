@@ -14,7 +14,9 @@
       "gallery": [
         "image:images/pmc/pmc1.png",
         "image:images/pmc/pmc2.png",
-        "image:images/pmc/pmc3.png"
+        "image:images/pmc/pmc3.png",
+        "image:images/pmc/pmc4.png",
+        "image:images/pmc/pmc5.png"
       ]
     },
     {
@@ -88,8 +90,8 @@
     {
       "title": "TikTok Wordle",
       "subtitle": "Interactive Wordle Game with TikTok Integration",
-      "start-date": "December 2025",
-      "end-date": "Present",
+      "start-date": "May 2025",
+      "end-date": "May 2025",
       "tags": [
         {
           "icon": "typescript",
@@ -108,7 +110,7 @@
           "name": "Next.js"
         }
       ],
-      "description": "**TikTok Wordle** is an innovative and interactive Wordle game that seamlessly integrates with TikTok Live. Viewers can guess words in real-time through the TikTok live chat, creating a dynamic and social gaming experience.\n\nWhat I Learned:\n\n- Implementing real-time multiplayer functionality with **Socket.IO**\n- Designing responsive and user-friendly interfaces with **React**\n- Integrating third-party APIs for live streaming platforms\n- Building scalable and performant applications with **Next.js**\n- Enhancing user interaction design for social gaming experiences",
+      "description": "**TikTok Wordle** is an innovative and interactive Wordle game that seamlessly integrates with TikTok Live. Viewers can guess words in real-time through the TikTok live chat, creating a dynamic and social gaming experience.\n\nWhat I Learned:\n\n- Implementing real-time multiplayer functionality with **Socket.IO**\n- Designing responsive and user-friendly interfaces with **React**\n- Integrating third-party APIs for live streaming platforms\n- Building scalable and performant applications with **Next.js**\n- Enhancing user interaction design for social gaming experiences\n\n[Source Code](https://github.com/Coralise/TikTok-Wordle)",
       "image": "images/ttw/ttw.png",
       "gallery": [
         "image:images/ttw/ttw.png",
