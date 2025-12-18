@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
-import tailwindcssMotion from 'tailwindcss-motion';
+const tailwindcssMotion = require('tailwindcss-motion');
 
-export default {
+module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
