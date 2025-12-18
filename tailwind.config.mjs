@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+import tailwindcssMotion from 'tailwindcss-motion';
+
 export default {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -71,6 +73,6 @@ export default {
 
       addUtilities(newUtilities, ["responsive", "hover"]);
     },
-    require('tailwindcss-motion')
+    tailwindcssMotion
   ],
 };
