@@ -88,7 +88,7 @@ export default function Resume() {
                     transition={{...defaultTransition, duration: .75}}
                     >
                         <h1 className="text-4xl font-bold text-highlight mb-2 font-sour-gummy">
-                            Wen
+                            Wayne Gabule
                         </h1>
                         <h3 className="text-lg">
                             Programmer & Motion Graphics Designer

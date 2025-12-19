@@ -36,7 +36,7 @@ export default function PortfolioCard({ content }) {
     const showArrows = gallery.length > 1; // Check if there are multiple images in the gallery
 
     return (
-        <div className="rounded-2xl min-h-96 p-2 backdrop-blur-sm max-xl:flex-col flex gap-16">
+        <div className="rounded-2xl min-h-96 p-4 backdrop-blur-sm max-xl:flex-col flex gap-16 bg-white bg-opacity-5">
             <div className="flex-[6] flex flex-col content-center">
                 <h1 className="text-6xl font-black uppercase">{content.title}</h1>
                 <span className="text-foreground-2nd">{content.subtitle}</span>

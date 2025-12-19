@@ -8,6 +8,7 @@
   --foreground-2nd: #a7a7a7;
   --highlighter: #001b3a;
   --highlight: #ff3b3f;
+  --highlight-2nd: #00080e;
   --font-barlow: 'Barlow', sans-serif;
   --font-barlow-condensed: 'Barlow Condensed', sans-serif;
   --font-sour-gummy: 'Sour Gummy', sans-serif;
@@ -26,7 +27,7 @@
 body {
   scroll-behavior: smooth !important;
   color: var(--foreground);
-  background: var(--background);
+  background: linear-gradient(100deg, var(--background), var(--highlight-2nd)) no-repeat fixed;
   font-family: var(--font-barlow);
 }
 
