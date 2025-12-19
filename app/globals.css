@@ -29,6 +29,7 @@ body {
   color: var(--foreground);
   background: linear-gradient(100deg, var(--background), var(--highlight-2nd)) no-repeat fixed;
   font-family: var(--font-barlow);
+  overflow: overlay;
 }
 
 .dbg {
@@ -42,7 +43,7 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: transparent;
+    background: rgba(255, 255, 255, 0);
 }
 
 /* Handle */
@@ -144,7 +145,7 @@ body {
   display: block;
   padding: 10px 20px;
   color: #fff;
-  background-color: var(--foreground);
+  background-color: var(--highlight-2nd);
   overflow: hidden;
   box-shadow: inset 0px 0px 0px 1px transparent;
 }
@@ -179,7 +180,7 @@ body {
   bottom: -1px;
   left: -8px;
   width: 0;
-  background-image: linear-gradient(to bottom right, var(--highlight), var(--highlight));
+  background-image: linear-gradient(to bottom right, var(--highlighter), var(--highlighter));
   transform: skew(-15deg);
   transition: all .2s ease;
 }

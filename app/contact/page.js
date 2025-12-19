@@ -3,13 +3,12 @@
 import { FaDiscord, FaFacebookF, FaGithubAlt, FaLinkedinIn, FaPhoneAlt } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
-import styled from 'styled-components';
 
 export default function Contact() {
 
     return (
-        <div className="h-screen w-screen items-center justify-center flex gap-8">
-            <div className="w-1/3 flex flex-col">
+        <div className="h-screen w-full items-center justify-center flex gap-8 max-md:flex-col">
+            <div className="md:w-1/3 max-md:px-4 flex flex-col">
                 <span className="text-5xl font-bold">Let's Chat<span className="text-highlight font-black">.</span></span>
                 
                 <span className="mt-8 flex gap-1 items-center text-foreground-2nd"><span className="text-foreground"><IoMdMail /></span> shaseajojo@gmail.com</span>
@@ -31,7 +30,7 @@ export default function Contact() {
                     </a> */}
                 </div>
             </div>
-            <div className="w-1/3">
+            <div className="md:w-1/3 max-md:w-full max-md:px-4">
                 <div className="w-full p-4 rounded-lg bg-background shadow-[3px_3px_0px_0px_var(--highlight)] border-2 border-highlight">
                         <form className="flex flex-col gap-4"
                             action="https://formspree.io/f/xyzjkvbe"

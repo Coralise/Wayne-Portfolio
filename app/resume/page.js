@@ -1,7 +1,7 @@
 "use client";
 
 import Card from "../components/card";
-import { FaBootstrap, FaCss3, FaDiscord, FaFigma, FaGitAlt, FaGithubAlt, FaHtml5, FaNodeJs, FaReact } from "react-icons/fa";
+import { FaBootstrap, FaCss3, FaDiscord, FaFacebookF, FaFigma, FaGitAlt, FaGithubAlt, FaHtml5, FaLinkedinIn, FaNodeJs, FaReact } from "react-icons/fa";
 import { TbBrandCSharp, TbBrandMysql } from "react-icons/tb";
 import { BiLogoSpringBoot } from "react-icons/bi";
 import { motion, useMotionValueEvent, useScroll, useTransform } from "motion/react";
@@ -59,7 +59,7 @@ export default function Resume() {
         }
     };
     return (
-        <div className="p-6 w-fit">
+        <div className="p-12 w-fit">
             <div className="text-center flex max-md:flex-col max-md:gap-5 justify-center w-full mt-20">
                 <div id="prof-pic-wrapper" className="relative max-md:self-center">
                     <div className="absolute bg-highlighter bg-opacity-20 blur-3xl rounded-full w-72 h-72 -left-24 top-1/2 transform -translate-y-1/2 z-0" />
@@ -96,7 +96,7 @@ export default function Resume() {
                     </motion.div>
                 </div>
             </div>
-            <div className="md:flex gap-8 md:mt-32">
+            <div className="md:flex gap-12 md:mt-32">
                 <ContactMeCard gradientHover={gradientHover} beforeMail={beforeMail} className="max-md:hidden" />
                 <div className="grow w-full relative flex flex-col items-center">
                     <motion.div initial="hidden" whileInView="revealed" viewport={{ once: true, amount: .75 }} transition={{ staggerChildren: .2 }} className="flex flex-col items-center max-md:mt-32">
@@ -181,7 +181,7 @@ export default function Resume() {
 function SkillIcon({ text, icon }) {
     return <div className="flex flex-col items-center gap-1 group relative">
         <div
-        className={`bg-background transition-all duration-300 p-3 text-4xl text-foreground-2nd rounded-2xl group-hover:bg-highlighter group-hover:border-foreground border-2 border-solid border-foreground-2nd group-hover:rounded-[2rem] group-hover:shadow-[var(--highlighter)_0px_0px_7px_1px]`}>
+        className={`bg-background transition-all duration-300 p-3 text-4xl text-foreground-2nd rounded-2xl group-hover:bg-highlighter group-hover:border-foreground border-2 border-foreground-2nd group-hover:rounded-[2rem] group-hover:shadow-[var(--highlighter)_0px_0px_7px_1px]`}>
             <div className="opacity-1 scale-100 group-hover:opacity-0 group-hover:scale-50 transition-all duration-300">
                 {icon}
             </div>
@@ -324,8 +324,8 @@ function BiTimeline({ maxDraw, targetRef, className }) {
 
 function ContactMeCard({gradientHover, beforeMail, className, center=false}) {
     return (
-        <div className={`flex-initial z-10 sticky top-1/4 max-h-screen h-fit ${className}`}>
-            <Card card1Style={{ padding: 0 }} className={`flex-initial z-10 sticky top-1/4 max-h-screen ${className}`}>
+        <div className={`flex-initial z-10 sticky top-1/4 max-h-screen h-fit ${className} max-md:mb-[12rem]`}>
+            <Card card1Style={{ padding: 0 }} className={`flex-initial z-10 max-h-screen ${className}`}>
                 <motion.div whileHover="hover" initial="rest" className={`p-4 flex flex-col gap-1 ${center ? "items-center" : ""}`}>
                     <motion.div
                         variants={gradientHover}
@@ -358,6 +358,19 @@ function ContactMeCard({gradientHover, beforeMail, className, center=false}) {
                     <ContactButton className="mt-3" />
                 </motion.div>
             </Card>
+            <button className="download-cv-button mt-8 w-full" onClick={() => {
+                const link = document.createElement('a');
+                link.href = '/Gabule-Resume.pdf';
+                link.download = 'Gabule-Resume.pdf';
+                document.body.appendChild(link);
+                link.click();
+                link.remove();
+            }}>
+                <span className="download-cv-button_lg">
+                    <span className="download-cv-button_sl"></span>
+                    <span className="download-cv-button_text">Download My Resume</span>
+                </span>
+            </button>
         </div>
     );
 }

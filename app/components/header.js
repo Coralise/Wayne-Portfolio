@@ -21,8 +21,8 @@ export default function Header() {
                 <Link href={'/contact'} className="hover:text-highlight transition-all ease-out duration-300 my-auto hover:-rotate-6 active:rotate-6 hover:font-semibold">Contact</Link>
             </div>
             <div className={`flex w-screen z-40 justify-end absolute`}>
-                <button onClick={toggleNavBar} className={`${!navBarOpened ? "opacity-0 pointer-events-none" : "max-sm:opacity-30 sm:opacity-0 sm:pointer-events-none"} transition-opacity duration-500 fixed w-screen h-screen bg-black -z-50`} />
-                <div className={`${!navBarOpened ? "w-0 overflow-hidden" : "max-sm:w-3/4 sm:w-0 sm:overflow-hidden"} transition-all duration-500 fixed max-w-screen h-screen bg-background pt-14 rounded-l-3xl`}>
+                <button onClick={toggleNavBar} className={`${navBarOpened ? "max-sm:opacity-30 sm:opacity-0 sm:pointer-events-none" : "opacity-0 pointer-events-none"} transition-opacity duration-500 fixed w-screen h-screen bg-black -z-50`} />
+                <div className={`${navBarOpened ? "max-sm:w-3/4 sm:w-0 sm:overflow-hidden" : "w-0 overflow-hidden"} transition-all duration-500 fixed max-w-screen h-screen bg-background pt-14 rounded-l-3xl`}>
                     <div className="mx-4 flex flex-col gap-2 font-bold ">
                         <Link href={'/'} onClick={toggleNavBar}>Home</Link>
                         <Link href={'/resume'} onClick={toggleNavBar}>Resume</Link>
@@ -31,9 +31,9 @@ export default function Header() {
                     </div>
                 </div>
             </div>
-            <div className="hidden max-sm:flex fixed z-50 w-full justify-end p-2">
+            <div className="hidden max-sm:flex fixed z-50 w-full justify-end bottom-0 p-4">
                 <button onClick={toggleNavBar} className={`bg-highlighter shadow-md rounded-full transition-all duration-300 p-1`}>
-                    <img src="images/logo.png" className={`transition-all duration-300 ease-out size-5 m-1 ${navBarOpened ? "rotate-45" : ""}`} />
+                    <img src="images/logo.png" className={`transition-all duration-300 ease-out size-8 m-1 ${navBarOpened ? "rotate-[0deg]" : "rotate-[-45deg]"}`} />
                 </button>
             </div>
         </header>

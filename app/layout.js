@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`antialiased relative overflow-hidden overflow-x-hidden`}
+        className={`antialiased relative`}
       >
         <div className="absolute w-full flex flex-col min-h-screen" style={{
           maxHeight: "100%",
@@ -42,7 +42,7 @@ export default function RootLayout({ children }) {
           <img src="images/Wave_Line_3.svg" className="w-full"/>
         </div>
         <img src="/images/grain.avif" className="w-screen h-screen fixed -z-50 object-cover mix-blend-normal opacity-15 dark:opacity-5 select-none" />
-        <div className="container mx-auto relative">
+        <div className="mx-auto relative">
           <Header />
           {children}
         </div>
