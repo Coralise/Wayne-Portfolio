@@ -7,22 +7,13 @@
   --foreground: #dbdbdb;
   --foreground-2nd: #a7a7a7;
   --highlighter: #001b3a;
+  --highlighter-2nd: #229bff;
   --highlight: #ff3b3f;
   --highlight-2nd: #00080e;
   --font-barlow: 'Barlow', sans-serif;
   --font-barlow-condensed: 'Barlow Condensed', sans-serif;
   --font-sour-gummy: 'Sour Gummy', sans-serif;
 }
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #000000;
-    --foreground: #efefef;
-    --foreground-2nd: #9b9b9b;
-    --highlighter: #701a1c;
-    --highlight: #ff3b3f;
-  }
-} */
 
 body {
   scroll-behavior: smooth !important;
@@ -43,7 +34,7 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0);
+    background: var(--highlight-2nd);
 }
 
 /* Handle */
@@ -199,4 +190,21 @@ body {
 
 .download-cv-button:hover .download-cv-button_lg::after {
   background-color: var(--background);
+}
+
+.link {
+  color: var(--foreground-2nd);
+  position: relative;
+  transition: width 0.3s ease;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--highlighter-2nd);
+  transition: width 0.3s ease;
 }

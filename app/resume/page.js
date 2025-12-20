@@ -122,23 +122,23 @@ export default function Resume() {
                                 <div className="flex-1">
                                 <div className="font-bold w-full text-center">Tech Stack</div>
                                     <div className="flex flex-wrap gap-4 mt-2 justify-center">
+                                        <SkillIcon text="Java" icon={<RiJavaLine />} />
+                                        <SkillIcon text="Spring Boot" icon={<SiSpringboot />} />
+                                        <SkillIcon text="MySQL" icon={<TbBrandMysql />} />
+                                        <SkillIcon text="ReactJS" icon={<FaReact />} />
+                                        <SkillIcon text="Lua" icon={<SiLua />} />
+                                        <SkillIcon text="Figma" icon={<FaFigma />} />
                                         <SkillIcon text="Flutter" icon={<RiFlutterFill />} />
                                         <SkillIcon text="Dart" icon={<FaDartLang />} />
-                                        <SkillIcon text="Java" icon={<RiJavaLine />} />
                                         <SkillIcon text="C#" icon={<TbBrandCSharp />} />
-                                        <SkillIcon text="Lua" icon={<SiLua />} />
-                                        <SkillIcon text="MySQL" icon={<TbBrandMysql />} />
                                         <SkillIcon text="Git" icon={<FaGitAlt />} />
                                         <SkillIcon text="NextJS" icon={<SiNextdotjs />} />
-                                        <SkillIcon text="ReactJS" icon={<FaReact />} />
                                         <SkillIcon text="NodeJS" icon={<FaNodeJs />} />
                                         <SkillIcon text="ExpressJS" icon={<SiExpress />} />
                                         <SkillIcon text="HTML" icon={<FaHtml5 />} />
                                         <SkillIcon text="CSS" icon={<FaCss3 />} />
                                         <SkillIcon text="Tailwind" icon={<RiTailwindCssFill />} />
                                         <SkillIcon text="Bootstrap" icon={<FaBootstrap />} />
-                                        <SkillIcon text="Spring Boot" icon={<SiSpringboot />} />
-                                        <SkillIcon text="Figma" icon={<FaFigma />} />
                                     </div>
                                 </div>
                                 <div className="flex-1">

@@ -14,7 +14,8 @@ module.exports = {
         foreground: "var(--foreground)",
         "foreground-2nd": "var(--foreground-2nd)",
         highlight: "var(--highlight)",
-        highlighter: "var(--highlighter)"
+        highlighter: "var(--highlighter)",
+        "highlighter-2nd": "var(--highlighter-2nd)",
       },
       textShadow: {
         sm: '1px 1px 2px rgba(0, 0, 0, 0.5)',
