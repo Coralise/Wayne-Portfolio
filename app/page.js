@@ -225,16 +225,16 @@ export default function Home() {
                   }
                 }
               }}
-              className="gap-4 grid grid-cols-1 md:grid-cols-4 xl:w-2/3 max-xl:w-full px-4"
+              className="gap-4 grid grid-cols-1 lg:grid-cols-4 xl:w-2/3 max-xl:w-full px-4"
             >
-              <FrostedCard className="md:col-span-3 grid grid-cols-3 gap-2 group">
+              <FrostedCard className="lg:col-span-3 grid grid-cols-3 gap-2 group">
                 <header className="flex gap-4 items-center col-span-2">
                   <div className="h-2 w-10 rounded-lg bg-[#C082D2]" />
                   <span className="text-lg font-bold">Contact</span>
                 </header>
                 <a href="/resume" className="flex justify-end items-center">
-                  <span className="text-end flex items-center justify-end gap-1 text-foreground-2nd w-fit link hover:after:w-full max-md:text-highlighter-2nd group-hover:text-highlighter-2nd">
-                    <span className="max-md:opacity-100 opacity-0 group-hover:opacity-100 transition-opacity duration-500">View Resume</span>
+                  <span className="text-end flex items-center justify-end gap-1 text-foreground-2nd w-fit link hover:after:w-full max-lg:text-highlighter-2nd group-hover:text-highlighter-2nd">
+                    <span className="max-lg:opacity-100 opacity-0 group-hover:opacity-100 transition-opacity duration-500">View Resume</span>
                     <HiExternalLink className="text-lg transition-all duration-500" />
                   </span>
                 </a>
@@ -252,22 +252,22 @@ export default function Home() {
                     </a>
                   </div>
                 </div>
-                <div className="absolute w-[15px] h-[15px] bottom-4 right-4 bg-[#C082D2] max-md:opacity-100 opacity-30 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="absolute w-[10px] h-[10px] bottom-9 right-6 bg-[#C082D2] max-md:opacity-100 opacity-30 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="absolute w-[5px] h-[5px] bottom-6 right-9 bg-[#C082D2] max-md:opacity-100 opacity-30 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute w-[15px] h-[15px] bottom-4 right-4 bg-[#C082D2] max-lg:opacity-100 opacity-30 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute w-[10px] h-[10px] bottom-9 right-6 bg-[#C082D2] max-lg:opacity-100 opacity-30 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute w-[5px] h-[5px] bottom-6 right-9 bg-[#C082D2] max-lg:opacity-100 opacity-30 group-hover:opacity-100 transition-opacity duration-500" />
               </FrostedCard>
-              <FrostedCard className="md:row-span-2 grid grid-cols-2 gap-2 items-start content-start group">
+              <FrostedCard className="lg:row-span-2 grid grid-cols-2 gap-2 items-start content-start group">
                 <header className="flex gap-4 items-center">
                   <div className="h-2 w-10 rounded-lg bg-highlight" />
                   <span className="text-lg font-bold">Skills</span>
                 </header>
                 <a href="/resume" className="flex justify-end items-center">
-                  <span className="text-end flex items-center justify-end gap-1 text-foreground-2nd w-fit link hover:after:w-full max-md:text-highlighter-2nd group-hover:text-highlighter-2nd">
-                    <span className="max-md:opacity-100 opacity-0 group-hover:opacity-100 transition-all duration-500">View more</span>
+                  <span className="text-end flex items-center justify-end gap-1 text-foreground-2nd w-fit link hover:after:w-full max-lg:text-highlighter-2nd group-hover:text-highlighter-2nd">
+                    <span className="max-lg:opacity-100 opacity-0 group-hover:opacity-100 transition-all duration-500">View more</span>
                     <HiExternalLink className="text-lg transition-all duration-500" />
                   </span>
                 </a>
-                <span className="place-self-start col-span-2 mt-4 font-bold text-lg max-md:text-highlight group-hover:text-highlight transition-colors duration-500">Programming</span>
+                <span className="place-self-start col-span-2 mt-4 font-bold text-lg max-lg:text-highlight group-hover:text-highlight transition-colors duration-500">Programming</span>
                 <div className="col-span-2 grid grid-cols-2 gap-1">
                   <div className="flex items-center gap-1"><RiJavaLine /> Java</div>
                   <div className="flex items-center gap-1"><SiSpringboot /> Spring Boot</div>
@@ -276,7 +276,7 @@ export default function Home() {
                   <div className="flex items-center gap-1"><SiLua /> Lua</div>
                   <div className="flex items-center gap-1"><FaFigma /> Figma</div>
                 </div>
-                <span className="place-self-start col-span-2 mt-4 font-bold text-lg max-md:text-highlight group-hover:text-highlight transition-colors duration-500">Motion Graphics</span>
+                <span className="place-self-start col-span-2 mt-4 font-bold text-lg max-lg:text-highlight group-hover:text-highlight transition-colors duration-500">Motion Graphics</span>
                 <div className="col-span-2 grid grid-cols-2 gap-1">
                   <div className="flex items-center gap-1"><SiAdobeaftereffects /> After Effects</div>
                   <div className="flex items-center gap-1"><SiAdobephotoshop /> Photoshop</div>
@@ -291,13 +291,13 @@ export default function Home() {
                   <span className="text-lg font-bold">Communication</span>
                 </header>
                 <div className="flex gap-1 items-center">Filipino</div>
-                <div className="flex gap-1 items-center max-md:text-[#47cf5e] group-hover:text-[#47cf5e] transition-colors duration-500"><FaStar /><FaStar /><FaStar /><FaStar /><FaStar /></div>
+                <div className="flex gap-1 items-center max-lg:text-[#47cf5e] group-hover:text-[#47cf5e] transition-colors duration-500"><FaStar /><FaStar /><FaStar /><FaStar /><FaStar /></div>
                 <div className="flex gap-1 items-center">Written English</div>
-                <div className="flex gap-1 items-center max-md:text-[#47cf5e] group-hover:text-[#47cf5e] transition-colors duration-500"><FaStar /><FaStar /><FaStar /><FaStar /><FaStarHalfAlt /></div>
+                <div className="flex gap-1 items-center max-lg:text-[#47cf5e] group-hover:text-[#47cf5e] transition-colors duration-500"><FaStar /><FaStar /><FaStar /><FaStar /><FaStarHalfAlt /></div>
                 <div className="flex gap-1 items-center">Spoken English</div>
-                <div className="flex gap-1 items-center max-md:text-[#47cf5e] group-hover:text-[#47cf5e] transition-colors duration-500"><FaStar /><FaStar /><FaStar /><FaStar /><FaRegStar /></div>
+                <div className="flex gap-1 items-center max-lg:text-[#47cf5e] group-hover:text-[#47cf5e] transition-colors duration-500"><FaStar /><FaStar /><FaStar /><FaStar /><FaRegStar /></div>
               </FrostedCard>
-              <FrostedCard className="md:col-span-2 flex flex-col gap-2 group">
+              <FrostedCard className="lg:col-span-2 flex flex-col gap-2 group">
                 <header className="flex gap-4 items-center place-self-start">
                   <div className="h-2 w-10 rounded-lg bg-[#f8b248]" />
                   <span className="text-lg font-bold">About me</span>
@@ -306,15 +306,15 @@ export default function Home() {
                   I am a recent BS in Information Technology graduate from Ateneo de Davao University with freelance experience in Java programming and video editing. I strive to excel in these fields, including motion graphics design, front-end development, and many more.
                 </p>
               </FrostedCard>
-              <FrostedCard className="md:col-span-2 gap-2 group flex flex-col">
+              <FrostedCard className="lg:col-span-2 gap-2 group flex flex-col">
                 <header className="flex justify-between items-center w-full">
                   <div className="flex gap-4 items-center">
                     <div className="h-2 w-10 rounded-lg bg-[#3498db]" />
                     <span className="text-lg font-bold">Work Experience</span>
                   </div>
                   <a href="/resume" className="flex items-center">
-                    <span className="text-end flex items-center justify-end gap-1 text-foreground-2nd w-fit link hover:after:w-full max-md:text-highlighter-2nd group-hover:text-highlighter-2nd">
-                      <span className="max-md:opacity-100 opacity-0 group-hover:opacity-100 transition-opacity duration-500">View Resume</span>
+                    <span className="text-end flex items-center justify-end gap-1 text-foreground-2nd w-fit link hover:after:w-full max-lg:text-highlighter-2nd group-hover:text-highlighter-2nd">
+                      <span className="max-lg:opacity-100 opacity-0 group-hover:opacity-100 transition-opacity duration-500">View Resume</span>
                       <HiExternalLink className="text-lg transition-all duration-500" />
                     </span>
                   </a>
@@ -364,15 +364,15 @@ export default function Home() {
                   </div>
                 </div>
               </FrostedCard>
-              <FrostedCard className="md:col-span-2 gap-2 group flex flex-col">
+              <FrostedCard className="lg:col-span-2 gap-2 group flex flex-col">
                 <header className="flex justify-between items-center w-full">
                   <div className="flex gap-4 items-center">
                     <div className="h-2 w-10 rounded-lg bg-[#2ecc71]" />
                     <span className="text-lg font-bold">Education & Certifications</span>
                   </div>
                   <a href="/resume" className="flex items-center">
-                    <span className="text-end flex items-center justify-end gap-1 text-foreground-2nd w-fit link hover:after:w-full max-md:text-highlighter-2nd group-hover:text-highlighter-2nd">
-                      <span className="max-md:opacity-100 opacity-0 group-hover:opacity-100 transition-opacity duration-500">View Resume</span>
+                    <span className="text-end flex items-center justify-end gap-1 text-foreground-2nd w-fit link hover:after:w-full max-lg:text-highlighter-2nd group-hover:text-highlighter-2nd">
+                      <span className="max-lg:opacity-100 opacity-0 group-hover:opacity-100 transition-opacity duration-500">View Resume</span>
                       <HiExternalLink className="text-lg transition-all duration-500" />
                     </span>
                   </a>
@@ -425,15 +425,15 @@ export default function Home() {
                   <HiExternalLink className="text-sm" />
                 </a>
               </FrostedCard>
-              <FrostedCard id="portfolio-section" className="md:col-span-4 gap-2 group flex flex-col">
+              <FrostedCard id="portfolio-section" className="lg:col-span-4 gap-2 group flex flex-col">
                 <header className="flex justify-between items-center w-full">
                   <div className="flex gap-4 items-center">
                     <div className="h-2 w-10 rounded-lg bg-highlighter-2nd" />
                     <span className="text-lg font-bold">Programming Portfolio</span>
                   </div>
                   <a href="/programming-portfolio" className="flex items-center">
-                  <span className="text-end flex items-center justify-end gap-1 text-foreground-2nd w-fit link hover:after:w-full max-md:text-highlighter-2nd group-hover:text-highlighter-2nd">
-                      <span className="max-md:opacity-100 opacity-0 group-hover:opacity-100 transition-opacity duration-500">View all</span>
+                  <span className="text-end flex items-center justify-end gap-1 text-foreground-2nd w-fit link hover:after:w-full max-lg:text-highlighter-2nd group-hover:text-highlighter-2nd">
+                      <span className="max-lg:opacity-100 opacity-0 group-hover:opacity-100 transition-opacity duration-500">View all</span>
                       <HiExternalLink className="text-lg transition-all duration-500" />
                     </span>
                   </a>
@@ -477,15 +477,15 @@ export default function Home() {
                   <HiExternalLink className="text-sm" />
                 </a>
               </FrostedCard>
-              <FrostedCard className="md:col-span-4 gap-2 group flex flex-col">
+              <FrostedCard className="lg:col-span-4 gap-2 group flex flex-col">
                 <header className="flex justify-between items-center w-full">
                   <div className="flex gap-4 items-center">
                     <div className="h-2 w-10 rounded-lg bg-[#9b59b6]" />
                     <span className="text-lg font-bold">Motion Graphics Portfolio</span>
                   </div>
                   <a href="/motion-graphics-portfolio" className="flex items-center">
-                  <span className="text-end flex items-center justify-end gap-1 text-foreground-2nd w-fit link hover:after:w-full max-md:text-highlighter-2nd group-hover:text-highlighter-2nd">
-                      <span className="max-md:opacity-100 opacity-0 group-hover:opacity-100 transition-opacity duration-500">View all</span>
+                  <span className="text-end flex items-center justify-end gap-1 text-foreground-2nd w-fit link hover:after:w-full max-lg:text-highlighter-2nd group-hover:text-highlighter-2nd">
+                      <span className="max-lg:opacity-100 opacity-0 group-hover:opacity-100 transition-opacity duration-500">View all</span>
                       <HiExternalLink className="text-lg transition-all duration-500" />
                     </span>
                   </a>
