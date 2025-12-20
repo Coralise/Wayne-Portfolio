@@ -45,28 +45,32 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, []);
 
-  // Handle hash navigation
+  // Handle hash navigation - wait for element to exist in DOM
   useEffect(() => {
-    const handleHashNavigation = () => {
-      const hash = window.location.hash;
-      if (hash === '#portfolio-section') {
-        const element = document.getElementById('portfolio-section');
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
+    const hash = window.location.hash;
+    if (hash !== '#portfolio-section') return;
+
+    // Check if element already exists
+    const element = document.getElementById('portfolio-section');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      return;
+    }
+
+    // Watch for element to appear in DOM
+    const observer = new MutationObserver(() => {
+      const el = document.getElementById('portfolio-section');
+      if (el) {
+        observer.disconnect();
+        el.scrollIntoView({ behavior: 'smooth' });
       }
-    };
+    });
 
-    // Check on mount
-    handleHashNavigation();
+    observer.observe(document.body, { childList: true, subtree: true });
 
-    // Listen for hash changes
-    window.addEventListener('hashchange', handleHashNavigation);
-
-    return () => {
-      window.removeEventListener('hashchange', handleHashNavigation);
-    };
-  }, []);
+    // Cleanup
+    return () => observer.disconnect();
+  }, [showContent]);
 
   const particlesLoaded = useCallback((container) => {
     console.log(container);
@@ -301,7 +305,7 @@ export default function Home() {
                   I am a recent BS in Information Technology graduate from Ateneo de Davao University with freelance experience in Java programming and video editing. I strive to excel in these fields, including motion graphics design, front-end development, and many more.
                 </p>
               </FrostedCard>
-              <FrostedCard className="md:col-span-4 gap-2 group flex flex-col">
+              <FrostedCard id="portfolio-section" className="md:col-span-4 gap-2 group flex flex-col">
                 <header className="flex justify-between items-center w-full">
                   <div className="flex gap-4 items-center">
                     <div className="h-2 w-10 rounded-lg bg-highlighter-2nd" />
@@ -315,7 +319,7 @@ export default function Home() {
                   </a>
                 </header>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mt-2">
-                  <a href="/programming-portfolio" className="group/project relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-3 flex flex-col gap-2 hover:border-highlighter-2nd/50 transition-all duration-300">
+                  <a href="/programming-portfolio#jedis" className="group/project relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-3 flex flex-col gap-2 hover:border-highlighter-2nd/50 transition-all duration-300">
                     <img src="/images/jedis.jpg" alt="Jedis" className="w-full aspect-video object-cover rounded-lg transition-transform duration-500 group-hover/project:scale-105" />
                     <div className="flex flex-col gap-1">
                       <span className="text-sm font-bold text-foreground">Jedis</span>
@@ -325,7 +329,7 @@ export default function Home() {
                       </div>
                     </div>
                   </a>
-                  <a href="/programming-portfolio" className="group/project relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-3 flex flex-col gap-2 hover:border-highlighter-2nd/50 transition-all duration-300">
+                  <a href="/programming-portfolio#bean-s-spelling-bee-helper" className="group/project relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-3 flex flex-col gap-2 hover:border-highlighter-2nd/50 transition-all duration-300">
                     <img src="/images/rsb/rsb1.png" alt="Spelling Bee Helper" className="w-full aspect-video object-cover rounded-lg transition-transform duration-500 group-hover/project:scale-105" />
                     <div className="flex flex-col gap-1">
                       <span className="text-sm font-bold text-foreground">Spelling Bee Helper</span>
@@ -336,7 +340,7 @@ export default function Home() {
                       </div>
                     </div>
                   </a>
-                  <a href="/programming-portfolio" className="group/project relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-3 flex flex-col gap-2 hover:border-highlighter-2nd/50 transition-all duration-300">
+                  <a href="/programming-portfolio#mandog-driving" className="group/project relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-3 flex flex-col gap-2 hover:border-highlighter-2nd/50 transition-all duration-300">
                     <img src="/images/mandog-driving/g1.png" alt="Mandog Driving" className="w-full aspect-video object-cover rounded-lg transition-transform duration-500 group-hover/project:scale-105" />
                     <div className="flex flex-col gap-1">
                       <span className="text-sm font-bold text-foreground">Mandog Driving</span>
@@ -367,7 +371,7 @@ export default function Home() {
                   </a>
                 </header>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mt-2">
-                  <a href="/motion-graphics-portfolio" className="group/video relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-3 flex flex-col gap-2 hover:border-[#9b59b6]/50 transition-all duration-300">
+                  <a href="/motion-graphics-portfolio#motion-graphics" className="group/video relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-3 flex flex-col gap-2 hover:border-[#9b59b6]/50 transition-all duration-300">
                     <div className="relative w-full aspect-video rounded-lg overflow-hidden">
                       <img src="https://img.youtube.com/vi/ynktyH9hB1E/mqdefault.jpg" alt="Motion Graphics Showreel" className="w-full h-full object-cover transition-transform duration-500 group-hover/video:scale-105" />
                       <div className="absolute inset-0 flex items-center justify-center">
@@ -384,7 +388,7 @@ export default function Home() {
                       </div>
                     </div>
                   </a>
-                  <a href="/motion-graphics-portfolio" className="group/video relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-3 flex flex-col gap-2 hover:border-[#9b59b6]/50 transition-all duration-300">
+                  <a href="/motion-graphics-portfolio#logo-animations" className="group/video relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-3 flex flex-col gap-2 hover:border-[#9b59b6]/50 transition-all duration-300">
                     <div className="relative w-full aspect-video rounded-lg overflow-hidden">
                       <img src="https://img.youtube.com/vi/9PwLL1MZO8Q/mqdefault.jpg" alt="Logo Animation" className="w-full h-full object-cover transition-transform duration-500 group-hover/video:scale-105" />
                       <div className="absolute inset-0 flex items-center justify-center">
@@ -402,7 +406,7 @@ export default function Home() {
                       </div>
                     </div>
                   </a>
-                  <a href="/motion-graphics-portfolio" className="group/video relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-3 flex flex-col gap-2 hover:border-[#9b59b6]/50 transition-all duration-300">
+                  <a href="/motion-graphics-portfolio#typography" className="group/video relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-3 flex flex-col gap-2 hover:border-[#9b59b6]/50 transition-all duration-300">
                     <div className="relative w-full aspect-video rounded-lg overflow-hidden">
                       <img src="https://img.youtube.com/vi/XU4ZbQjpGdU/mqdefault.jpg" alt="Typography Animation" className="w-full h-full object-cover transition-transform duration-500 group-hover/video:scale-105" />
                       <div className="absolute inset-0 flex items-center justify-center">

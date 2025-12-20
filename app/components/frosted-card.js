@@ -17,9 +17,10 @@ export const cardVariants = {
     }
 };
 
-function FrostedCard({ children, className }) {
+function FrostedCard({ children, className, id }) {
     return (
         <motion.article
+            id={id}
             className={`
                 ${className}
                 p-4 rounded-2xl border-[1px] border-white border-opacity-5

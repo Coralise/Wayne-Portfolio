@@ -1,5 +1,11 @@
 import { promises as fs } from 'fs';
 import { FaBehance } from 'react-icons/fa';
+import HashNavigator from '../components/hash-navigator';
+
+// Helper to create URL-friendly IDs from category names
+function toId(title) {
+    return title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+}
 
 function MorePortfolios() {
     return (
@@ -32,6 +38,7 @@ export default async function Portfolio() {
                     <MorePortfolios />
                 </div>
             </div>
+            <HashNavigator />
             <div className="mt-20 flex flex-col gap-20 snap-start flex-1">
                 {Object.entries(motionGraphicsPortfolio).map(([category, videoIds], idx) => {
                     if (!Array.isArray(videoIds) || videoIds.length === 0) return null;
@@ -39,7 +46,7 @@ export default async function Portfolio() {
                     const firstVideo = videoIds[0];
                     const playlistUrl = `https://www.youtube.com/embed/${firstVideo}?playlist=${playlist}&autoplay=1&mute=1&loop=1`;
                     return (
-                        <div key={category} className="self-center w-full flex flex-col gap-4">
+                        <div key={category} id={toId(category)} className="self-center w-full flex flex-col gap-4 scroll-mt-24">
                             <h2 className="text-2xl font-bold mb-2">{category}</h2>
                             <iframe
                                 className='w-full aspect-video border-0'
