@@ -5,6 +5,7 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import { useEffect, useMemo, useState, useCallback } from "react";
 import FrostedCard from "./components/frosted-card";
+import Tag from "./components/tag";
 import { HiExternalLink } from "react-icons/hi";
 import { MdEmail } from "react-icons/md";
 import { FaPhone } from "react-icons/fa6";
@@ -325,7 +326,7 @@ export default function Home() {
                       <span className="text-sm font-bold text-foreground">Jedis</span>
                       <span className="text-xs text-foreground-2nd line-clamp-2">Redis-like in-memory datastore built from scratch in Java</span>
                       <div className="flex gap-1 mt-1 flex-wrap">
-                        <span className="text-[10px] px-2 py-0.5 rounded-full bg-highlighter-2nd/20 text-highlighter-2nd flex items-center gap-1"><RiJavaLine className="text-xs" /> Java</span>
+                        <Tag text="Java" icon="java" color="#00d4ff" />
                       </div>
                     </div>
                   </a>
@@ -335,8 +336,8 @@ export default function Home() {
                       <span className="text-sm font-bold text-foreground">Spelling Bee Helper</span>
                       <span className="text-xs text-foreground-2nd line-clamp-2">Practice tool & random-word API for Roblox Spelling Bee</span>
                       <div className="flex gap-1 mt-1 flex-wrap">
-                        <span className="text-[10px] px-2 py-0.5 rounded-full bg-highlighter-2nd/20 text-highlighter-2nd flex items-center gap-1"><SiNextdotjs className="text-xs" /> Next.js</span>
-                        <span className="text-[10px] px-2 py-0.5 rounded-full bg-highlighter-2nd/20 text-highlighter-2nd flex items-center gap-1"><FaReact className="text-xs" /> React</span>
+                        <Tag text="Next.js" icon="nextjs" color="#00d4ff" />
+                        <Tag text="React" icon="react" color="#00d4ff" />
                       </div>
                     </div>
                   </a>
@@ -346,8 +347,8 @@ export default function Home() {
                       <span className="text-sm font-bold text-foreground">Mandog Driving</span>
                       <span className="text-xs text-foreground-2nd line-clamp-2">Driver's License Exam Reviewer for Japan</span>
                       <div className="flex gap-1 mt-1 flex-wrap">
-                        <span className="text-[10px] px-2 py-0.5 rounded-full bg-highlighter-2nd/20 text-highlighter-2nd flex items-center gap-1"><RiFlutterFill className="text-xs" /> Flutter</span>
-                        <span className="text-[10px] px-2 py-0.5 rounded-full bg-highlighter-2nd/20 text-highlighter-2nd flex items-center gap-1"><SiFirebase className="text-xs" /> Firebase</span>
+                        <Tag text="Flutter" icon="flutter" color="#00d4ff" />
+                        <Tag text="Firebase" icon="firebase" color="#00d4ff" />
                       </div>
                     </div>
                   </a>
@@ -384,7 +385,7 @@ export default function Home() {
                       <span className="text-sm font-bold text-foreground">Motion Graphics Showreel</span>
                       <span className="text-xs text-foreground-2nd line-clamp-2">Compilation of animated visuals, kinetic typography & VFX work</span>
                       <div className="flex gap-1 mt-1 flex-wrap">
-                        <span className="text-[10px] px-2 py-0.5 rounded-full bg-[#9b59b6]/20 text-[#9b59b6] flex items-center gap-1"><SiAdobeaftereffects className="text-xs" /> After Effects</span>
+                        <Tag text="After Effects" icon="aftereffects" color="#9b59b6" />
                       </div>
                     </div>
                   </a>
@@ -401,8 +402,8 @@ export default function Home() {
                       <span className="text-sm font-bold text-foreground">Logo Animation</span>
                       <span className="text-xs text-foreground-2nd line-clamp-2">Sleek animated logo reveal with dynamic motion & lighting effects</span>
                       <div className="flex gap-1 mt-1 flex-wrap">
-                        <span className="text-[10px] px-2 py-0.5 rounded-full bg-[#9b59b6]/20 text-[#9b59b6] flex items-center gap-1"><SiAdobeaftereffects className="text-xs" /> After Effects</span>
-                        <span className="text-[10px] px-2 py-0.5 rounded-full bg-[#9b59b6]/20 text-[#9b59b6] flex items-center gap-1"><SiAdobeillustrator className="text-xs" /> Illustrator</span>
+                        <Tag text="After Effects" icon="aftereffects" color="#9b59b6" />
+                        <Tag text="Illustrator" icon="illustrator" color="#9b59b6" />
                       </div>
                     </div>
                   </a>
@@ -419,13 +420,132 @@ export default function Home() {
                       <span className="text-sm font-bold text-foreground">Kinetic Typography</span>
                       <span className="text-xs text-foreground-2nd line-clamp-2">Dynamic text animation synced to audio with expressive motion</span>
                       <div className="flex gap-1 mt-1 flex-wrap">
-                        <span className="text-[10px] px-2 py-0.5 rounded-full bg-[#9b59b6]/20 text-[#9b59b6] flex items-center gap-1"><SiAdobeaftereffects className="text-xs" /> After Effects</span>
+                        <Tag text="After Effects" icon="aftereffects" color="#9b59b6" />
                       </div>
                     </div>
                   </a>
                 </div>
                 <a href="/motion-graphics-portfolio" className="text-foreground-2nd text-sm mt-2 flex items-center gap-1 hover:text-highlighter-2nd transition-colors duration-300">
                   <span>+30 more videos</span>
+                  <HiExternalLink className="text-sm" />
+                </a>
+              </FrostedCard>
+              <FrostedCard className="md:col-span-2 gap-2 group flex flex-col">
+                <header className="flex justify-between items-center w-full">
+                  <div className="flex gap-4 items-center">
+                    <div className="h-2 w-10 rounded-lg bg-[#3498db]" />
+                    <span className="text-lg font-bold">Work Experience</span>
+                  </div>
+                  <a href="/resume" className="flex items-center">
+                    <span className="text-end flex items-center justify-end gap-1 text-foreground-2nd w-fit link hover:after:w-full max-md:text-highlighter-2nd group-hover:text-highlighter-2nd">
+                      <span className="max-md:opacity-100 opacity-0 group-hover:opacity-100 transition-opacity duration-500">View Resume</span>
+                      <HiExternalLink className="text-lg transition-all duration-500" />
+                    </span>
+                  </a>
+                </header>
+                <div className="flex flex-col gap-3 mt-2">
+                  <div className="relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-4 hover:border-[#3498db]/50 transition-all duration-300">
+                    <div className="flex justify-between items-start mb-2">
+                      <div>
+                        <span className="text-sm font-bold text-foreground">Associate Engineer 1</span>
+                        <span className="text-xs text-foreground-2nd block">Orange & Bronze</span>
+                      </div>
+                      <span className="text-xs text-[#3498db] font-medium">July 2024 - Present</span>
+                    </div>
+                    <p className="text-xs text-foreground-2nd">Implement features under guidance of senior developers, in compliance with company & client practices.</p>
+                    <div className="flex gap-1 mt-2 flex-wrap">
+                      <Tag text="Java" icon="java" color="#3498db" />
+                      <Tag text="Spring Boot" icon="springboot" color="#3498db" />
+                    </div>
+                  </div>
+                  <div className="relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-4 hover:border-[#3498db]/50 transition-all duration-300">
+                    <div className="flex justify-between items-start mb-2">
+                      <div>
+                        <span className="text-sm font-bold text-foreground">Java Plugin Developer</span>
+                        <span className="text-xs text-foreground-2nd block">Freelance</span>
+                      </div>
+                      <span className="text-xs text-[#3498db] font-medium">Feb 2020 - Present</span>
+                    </div>
+                    <p className="text-xs text-foreground-2nd">Developed plugins for games like Minecraft. Experienced Java Programming and MySQL Database Management.</p>
+                    <div className="flex gap-1 mt-2 flex-wrap">
+                      <Tag text="Java" icon="java" color="#3498db" />
+                      <Tag text="MySQL" icon="mysql" color="#3498db" />
+                    </div>
+                  </div>
+                  <div className="relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-4 hover:border-[#3498db]/50 transition-all duration-300">
+                    <div className="flex justify-between items-start mb-2">
+                      <div>
+                        <span className="text-sm font-bold text-foreground">Admin/Video Editor</span>
+                        <span className="text-xs text-foreground-2nd block">Lava Automation</span>
+                      </div>
+                      <span className="text-xs text-[#3498db] font-medium">Mar 2023 - Dec 2024</span>
+                    </div>
+                    <p className="text-xs text-foreground-2nd">In charge of video editing, motion graphics animation, and company logo design.</p>
+                    <div className="flex gap-1 mt-2 flex-wrap">
+                      <Tag text="After Effects" icon="aftereffects" color="#3498db" />
+                      <Tag text="Premiere Pro" icon="premierepro" color="#3498db" />
+                    </div>
+                  </div>
+                </div>
+              </FrostedCard>
+              <FrostedCard className="md:col-span-2 gap-2 group flex flex-col">
+                <header className="flex justify-between items-center w-full">
+                  <div className="flex gap-4 items-center">
+                    <div className="h-2 w-10 rounded-lg bg-[#2ecc71]" />
+                    <span className="text-lg font-bold">Education & Certifications</span>
+                  </div>
+                  <a href="/resume" className="flex items-center">
+                    <span className="text-end flex items-center justify-end gap-1 text-foreground-2nd w-fit link hover:after:w-full max-md:text-highlighter-2nd group-hover:text-highlighter-2nd">
+                      <span className="max-md:opacity-100 opacity-0 group-hover:opacity-100 transition-opacity duration-500">View Resume</span>
+                      <HiExternalLink className="text-lg transition-all duration-500" />
+                    </span>
+                  </a>
+                </header>
+                <div className="flex flex-col gap-3 mt-2">
+                  <div className="relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-4 hover:border-[#2ecc71]/50 transition-all duration-300">
+                    <div className="flex justify-between items-start mb-2">
+                      <div>
+                        <span className="text-sm font-bold text-foreground">BS Information Technology</span>
+                        <span className="text-xs text-foreground-2nd block">Ateneo de Davao University College</span>
+                      </div>
+                      <span className="text-xs text-[#2ecc71] font-medium">2020 - 2024</span>
+                    </div>
+                    <div className="flex gap-1 mt-2 flex-wrap">
+                      <Tag text="Honor Student" color="#2ecc71" />
+                      <Tag text="Scholar" color="#2ecc71" />
+                      <Tag text="President's Lister" color="#2ecc71" />
+                    </div>
+                  </div>
+                  <div className="relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-4 hover:border-[#2ecc71]/50 transition-all duration-300">
+                    <div className="flex justify-between items-start mb-2">
+                      <div>
+                        <span className="text-sm font-bold text-foreground">Java Fundamentals</span>
+                        <span className="text-xs text-foreground-2nd block">Orange & Bronze</span>
+                      </div>
+                      <span className="text-xs text-[#2ecc71] font-medium">June 2025</span>
+                    </div>
+                    <p className="text-xs text-foreground-2nd">Enterprise Java development, OOP design patterns, and coding standards.</p>
+                    <div className="flex gap-1 mt-2 flex-wrap">
+                      <Tag text="Java" icon="java" color="#2ecc71" />
+                    </div>
+                  </div>
+                  <div className="relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-4 hover:border-[#2ecc71]/50 transition-all duration-300">
+                    <div className="flex justify-between items-start mb-2">
+                      <div>
+                        <span className="text-sm font-bold text-foreground">TOPCIT Level 3</span>
+                        <span className="text-xs text-foreground-2nd block">IITP Korea</span>
+                      </div>
+                      <span className="text-xs text-[#2ecc71] font-medium">April 2024</span>
+                    </div>
+                    <p className="text-xs text-foreground-2nd">Scored in the top 30% nationally, exceeding the country average by 140%.</p>
+                    <div className="flex gap-1 mt-2 flex-wrap">
+                      <Tag text="IT Competency" color="#2ecc71" />
+                      <Tag text="Top 30%" color="#2ecc71" />
+                    </div>
+                  </div>
+                </div>
+                <a href="/resume" className="text-foreground-2nd text-sm mt-2 flex items-center gap-1 hover:text-[#2ecc71] transition-colors duration-300">
+                  <span>+4 more certifications</span>
                   <HiExternalLink className="text-sm" />
                 </a>
               </FrostedCard>
