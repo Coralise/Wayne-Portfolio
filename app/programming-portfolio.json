@@ -136,7 +136,7 @@
           "name": "Google Firebase"
         }
       ],
-      "description": "An **online platform** built with **Flutter** and **Google Firebase**, Mandog Driving is designed to help users prepare for Japan's driver's license exam. It features interactive tools, real-time feedback, and a user-friendly interface to ensure effective learning.\n\nWhat I Learned:\n\n- Building cross-platform applications with **Flutter**\n- Integrating **Google Firebase** for real-time data storage\n- Designing interactive practice tests with instant feedback\n- Optimizing mobile interfaces for educational tools\n- Managing cloud-based data for seamless user access\n\n[Visit Website](https://mandog-driving.com)",
+      "description": "An **online platform** built with **Flutter** and **Google Firebase**, Mandog Driving is designed to help users prepare for Japan's driver's license exam. It features interactive tools, real-time feedback, and a user-friendly interface to ensure effective learning.\n\nWhat I Learned:\n\n- Building cross-platform applications with **Flutter**\n- Integrating **Google Firebase** for real-time data storage\n- Designing interactive practice tests with instant feedback\n- Optimizing mobile interfaces for educational tools\n- Managing cloud-based data for seamless user access\n\n[Visit Website](https://mandog-driving.web.app/)",
       "image": "images/mandog-driving/g1.png",
       "gallery": [
         "image:images/mandog-driving/g1.png",
