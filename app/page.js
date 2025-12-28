@@ -303,7 +303,7 @@ export default function Home() {
                   <span className="text-lg font-bold">About me</span>
                 </header>
                 <p className="indent-4">
-                  I am a recent BS in Information Technology graduate from Ateneo de Davao University with freelance experience in Java programming and video editing. I strive to excel in these fields, including motion graphics design, front-end development, and many more.
+                  I am a BS in Information Technology graduate from Ateneo de Davao University with freelance experience in Java programming and video editing. I strive to excel in these fields, including motion graphics design, front-end development, and many more.
                 </p>
               </FrostedCard>
               <FrostedCard className="lg:col-span-2 gap-2 group flex flex-col">

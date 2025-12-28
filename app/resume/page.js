@@ -107,7 +107,7 @@ export default function Resume() {
                         <motion.p transition={defaultTransition}
                         variants={revealXOpacity}
                         className="indent-12 text-foreground-2nd mt-4 lg:w-1/2 text-justify leading-loose">
-                            I am a recent <span className="text-foreground font-semibold">BS in Information Technology</span> graduate from Ateneo de Davao University with freelance experience in <span className="text-foreground font-semibold">Java programming</span> and <span className="text-foreground font-semibold">video editing</span>. I strive to excel in these fields, including <span className="text-foreground font-semibold">motion graphics design, front-end development</span>, and many more.
+                            I am a <span className="text-foreground font-semibold">BS in Information Technology</span> graduate from Ateneo de Davao University with freelance experience in <span className="text-foreground font-semibold">Java programming</span> and <span className="text-foreground font-semibold">video editing</span>. I strive to excel in these fields, including <span className="text-foreground font-semibold">motion graphics design, front-end development</span>, and many more.
                         </motion.p>
                     </motion.div>
 
