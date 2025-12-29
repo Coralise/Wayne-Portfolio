@@ -203,21 +203,21 @@ function MonoTimeline({ className }) {
             <div className="flex flex-col items-start pl-4 flex-1">
                 <div className="font-bold text-2xl">WORK EXPERIENCE</div>
                 <TimelineCard
-                    className="mt-8" jobTitle="Associate Engineer 1" company="Orange & Bronze" date="July 2024 - Present" tags={[[<RiJavaLine />, "Java"], [<TbBrandMysql />, "MySQL"], [<BiLogoSpringBoot />, "Spring Boot"]]} tagColor="#3498db">
-                    <ul className="list-disc pl-4">
-                        <li>Implement features under the guidance of more senior developers, and in compliance with company & client practices.</li>
-                        <li>Allots time to learn software development practices & technologies as prescribed by the company and as needed by the client.</li>
-                        <li>Contributes to ideas & plans of the team.</li>
-                        <li>Coordinates directly with client counterparts.</li>
-                    </ul>
-                </TimelineCard>
-                <TimelineCard
                     className="mt-8" jobTitle="Java Plugin Developer" company="Freelance" date="February 2020 - Present" tags={[[<RiJavaLine />, "Java"], [<TbBrandMysql />, "MySQL"], [<SiSpigotmc />, "Spigot MC"]]} tagColor="#3498db">
                     <ul className="list-disc pl-4">
                         <li>Developed plugins (add-ons and modifications) for games such as Minecraft.</li>
                         <li>Was able to work on and experience Java Programming and MySQL Database Management.</li>
                         <li>Honed necessary skills for Object-Oriented Programming and Complex Database Logic and Queries.</li>
                         <li>Presently and actively updating my developed plugins, allowing me to easily practice and sharpen my skills on a weekly basis.</li>
+                    </ul>
+                </TimelineCard>
+                <TimelineCard
+                    className="mt-8" jobTitle="Associate Engineer 1" company="Orange & Bronze" date="July 2024 - December 2025" tags={[[<RiJavaLine />, "Java"], [<TbBrandMysql />, "MySQL"], [<BiLogoSpringBoot />, "Spring Boot"]]} tagColor="#3498db">
+                    <ul className="list-disc pl-4">
+                        <li>Implement features under the guidance of more senior developers, and in compliance with company & client practices.</li>
+                        <li>Allots time to learn software development practices & technologies as prescribed by the company and as needed by the client.</li>
+                        <li>Contributes to ideas & plans of the team.</li>
+                        <li>Coordinates directly with client counterparts.</li>
                     </ul>
                 </TimelineCard>
                 <TimelineCard

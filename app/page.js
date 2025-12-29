@@ -188,21 +188,6 @@ export default function Home() {
     "retina_detect": true
   }), []);
 
-  const defaultTransition = {
-      duration: .5
-  }
-
-  const revealLeft = {
-    "rest": {
-      opacity: 0,
-      x: 40
-    },
-    "revealed": {
-      opacity: 1,
-      x: 0
-    }
-  }
-
   return (
     <div className="h-fit min-h-screen">
       <Particles
@@ -323,20 +308,6 @@ export default function Home() {
                   <div className="relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-4 hover:border-[#3498db]/50 transition-all duration-300">
                     <div className="flex justify-between items-start mb-2">
                       <div>
-                        <span className="text-sm font-bold text-foreground">Associate Engineer 1</span>
-                        <span className="text-xs text-foreground-2nd block">Orange & Bronze</span>
-                      </div>
-                      <span className="text-xs text-[#3498db] font-medium">July 2024 - Present</span>
-                    </div>
-                    <p className="text-xs text-foreground-2nd">Implement features under guidance of senior developers, in compliance with company & client practices.</p>
-                    <div className="flex gap-1 mt-2 flex-wrap">
-                      <Tag text="Java" icon="java" color="#3498db" />
-                      <Tag text="Spring Boot" icon="springboot" color="#3498db" />
-                    </div>
-                  </div>
-                  <div className="relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-4 hover:border-[#3498db]/50 transition-all duration-300">
-                    <div className="flex justify-between items-start mb-2">
-                      <div>
                         <span className="text-sm font-bold text-foreground">Java Plugin Developer</span>
                         <span className="text-xs text-foreground-2nd block">Freelance</span>
                       </div>
@@ -346,6 +317,20 @@ export default function Home() {
                     <div className="flex gap-1 mt-2 flex-wrap">
                       <Tag text="Java" icon="java" color="#3498db" />
                       <Tag text="MySQL" icon="mysql" color="#3498db" />
+                    </div>
+                  </div>
+                  <div className="relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-4 hover:border-[#3498db]/50 transition-all duration-300">
+                    <div className="flex justify-between items-start mb-2">
+                      <div>
+                        <span className="text-sm font-bold text-foreground">Associate Engineer 1</span>
+                        <span className="text-xs text-foreground-2nd block">Orange & Bronze</span>
+                      </div>
+                      <span className="text-xs text-[#3498db] font-medium">July 2024 - December 2025</span>
+                    </div>
+                    <p className="text-xs text-foreground-2nd">Implement features under guidance of senior developers, in compliance with company & client practices.</p>
+                    <div className="flex gap-1 mt-2 flex-wrap">
+                      <Tag text="Java" icon="java" color="#3498db" />
+                      <Tag text="Spring Boot" icon="springboot" color="#3498db" />
                     </div>
                   </div>
                   <div className="relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-4 hover:border-[#3498db]/50 transition-all duration-300">
