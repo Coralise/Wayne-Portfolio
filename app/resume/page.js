@@ -269,15 +269,6 @@ function BiTimeline({ maxDraw, targetRef, className }) {
         <div className="flex flex-col items-end pr-4 flex-1">
             <div className="font-bold text-2xl">WORK EXPERIENCE</div>
             <ProgressTimelineCard drawProgress={maxDraw} drawPosition={0.15}
-                className="mt-12" jobTitle="Associate Engineer 1" company="Orange & Bronze" date="July 2024 - Present" side="left" tags={[[<RiJavaLine />, "Java"], [<TbBrandMysql />, "MySQL"], [<BiLogoSpringBoot />, "Spring Boot"]]} tagColor="#3498db">
-                <ul className="list-disc pl-4">
-                    <li>Implement features under the guidance of more senior developers, and in compliance with company & client practices.</li>
-                    <li>Allots time to learn software development practices & technologies as prescribed by the company and as needed by the client.</li>
-                    <li>Contributes to ideas & plans of the team.</li>
-                    <li>Coordinates directly with client counterparts.</li>
-                </ul>
-            </ProgressTimelineCard>
-            <ProgressTimelineCard drawProgress={maxDraw} drawPosition={0.30}
                 className="mt-8" jobTitle="Java Plugin Developer" company="Freelance" date="February 2020 - Present" side="left" tags={[[<RiJavaLine />, "Java"], [<TbBrandMysql />, "MySQL"], [<SiSpigotmc />, "Spigot MC"]]} tagColor="#3498db">
                 <ul className="list-disc pl-4">
                     <li>Developed plugins (add-ons and modifications) for games such as Minecraft.</li>
@@ -286,12 +277,22 @@ function BiTimeline({ maxDraw, targetRef, className }) {
                     <li>Presently and actively updating my developed plugins, allowing me to easily practice and sharpen my skills on a weekly basis.</li>
                 </ul>
             </ProgressTimelineCard>
+            <ProgressTimelineCard drawProgress={maxDraw} drawPosition={0.30}
+                className="mt-12" jobTitle="Associate Engineer 1" company="Orange & Bronze" date="July 2024 - December 2025" side="left" tags={[[<RiJavaLine />, "Java"], [<TbBrandMysql />, "MySQL"], [<BiLogoSpringBoot />, "Spring Boot"]]} tagColor="#3498db">
+                <ul className="list-disc pl-4">
+                    <li>Implement features under the guidance of more senior developers, and in compliance with company & client practices.</li>
+                    <li>Allots time to learn software development practices & technologies as prescribed by the company and as needed by the client.</li>
+                    <li>Contributes to ideas & plans of the team.</li>
+                    <li>Coordinates directly with client counterparts.</li>
+                </ul>
+            </ProgressTimelineCard>
             <ProgressTimelineCard drawProgress={maxDraw} drawPosition={0.55}
                 className="mt-8" jobTitle="Admin/Video Editor" company="Lava Automation" date="March 2023 - December 2024" side="left" tags={[[<SiAdobe />, "Adobe"], [<SiAdobeaftereffects />, "After Effects"], [<SiAdobepremierepro />, "Premiere Pro"], [<SiAdobeillustrator />, "Illustrator"], [<SiAdobephotoshop />, "Photoshop"]]} tagColor="#3498db">
                 <ul className="list-disc pl-4">
-                    <li>In charge of all things video editing related, from video construction to motion graphic animation.</li>
-                    <li>Helped create the company's current logo and have designed all of its animations, both 2D and 3D.</li>
-                    <li>Made infographics, PowerPoints, and similar graphic visualizations mainly for company advertisements.</li>
+                    <li>Led all video production efforts, including video editing, motion graphics, and animation for marketing and digital content.</li>
+                    <li>Designed and helped develop the company’s current logo, as well as all branded animations in both 2D and 3D formats.</li>
+                    <li>Created visual assets such as infographics, presentations, and graphic materials used for advertisements and company communications.</li>
+                    <li>Supported administrative and creative tasks to ensure consistent branding and timely delivery of content.</li>
                 </ul>
             </ProgressTimelineCard>
         </div>
