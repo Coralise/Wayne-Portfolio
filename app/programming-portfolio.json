@@ -1,10 +1,31 @@
 {
   "projects": [
     {
+      "title": "Game of the Generals Online",
+      "subtitle": "Real-time multiplayer Filipino strategy game with WebRTC",
+      "start-date": "January 2026",
+      "end-date": "January 2026",
+      "tags": [
+        { "icon": "nextjs", "name": "Next.js" },
+        { "icon": "typescript", "name": "TypeScript" },
+        { "icon": "react", "name": "React" },
+        { "icon": "tailwindcss", "name": "Tailwind CSS" },
+        { "icon": "webrtc", "name": "WebRTC" }
+      ],
+      "description": "**Game of the Generals Online** is a real-time multiplayer implementation of the classic Filipino strategy board game (Salpakan), featuring true peer-to-peer connectivity through WebRTC. Players can create or join games using simple 4-character room codes and experience instant piece movement with direct browser-to-browser communication.\n\nWhat I Learned:\n\n- Implementing **WebRTC** for direct peer-to-peer connections using RTCPeerConnection and RTCDataChannel\n- Building real-time multiplayer game logic with Next.js and TypeScript\n- Designing modern, responsive UI with **Tailwind CSS** and **Framer Motion** animations\n- Managing WebRTC signaling with **Supabase** for SDP exchange and ICE candidate relay\n- Creating room-based matchmaking systems with glassmorphic design\n- Implementing classic game mechanics with spy elements and combat resolution\n\n[Play Game](https://gotg-online.vercel.app/) | [Source Code](https://github.com/Wayne-Portfolio/game-of-the-generals-online)",
+      "image": "images/gotg/gotg1.png",
+      "gallery": [
+        "image:images/gotg/gotg1.png",
+        "image:images/gotg/gotg2.png",
+        "image:images/gotg/gotg3.png",
+        "image:images/gotg/gotg4.png"
+      ]
+    },
+    {
       "title": "Roblox Roleplay Game",
       "subtitle": "Philippine Marine Corps Roleplay Game on Roblox",
       "start-date": "August 2025",
-      "end-date": "Present",
+      "end-date": "December 2025",
       "tags": [
           { "icon": "lua", "name": "Lua" },
           { "icon": "gamedesign", "name": "Game Design" }
