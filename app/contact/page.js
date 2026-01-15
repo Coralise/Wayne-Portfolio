@@ -11,7 +11,7 @@ export default function Contact() {
             <div className="md:w-1/3 max-md:px-4 flex flex-col">
                 <span className="text-5xl font-bold">Let's Chat<span className="text-highlight font-black">.</span></span>
                 
-                <span className="mt-8 flex gap-1 items-center text-foreground-2nd"><span className="text-foreground"><IoMdMail /></span> shaseajojo@gmail.com</span>
+                <span className="mt-8 flex gap-1 items-center text-foreground-2nd"><span className="text-foreground"><IoMdMail /></span> waynegabule@gmail.com</span>
                 <span className="flex gap-1 items-center text-foreground-2nd"><span className="text-foreground"><FaPhoneAlt /></span> (+63) 927 973 4717</span>
                 <span className="flex gap-1 items-center text-foreground-2nd"><span className="text-foreground"><FaLocationDot /></span> Matina, Davao City, Davao del Sur, Philippines</span>
 

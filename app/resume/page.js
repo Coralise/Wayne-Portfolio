@@ -347,7 +347,7 @@ function ContactMeCard({gradientHover, beforeMail, className, center=false}) {
                     </motion.div>
                     <motion.div initial="rest" whileHover="hover" className="relative w-fit flex items-center h-6">
                         <motion.span variants={beforeMail} className="absolute bg-gradient-to-r from-highlighter to-background rounded-md h-full -z-10" />
-                        <a href="mailto:shaseajojo@gmail.com" className="text-sm text-foreground-2nd w-fit mx-2 hover:text-foreground hover:font-semibold transition-all">shaseajojo@gmail.com</a>
+                        <a href="mailto:waynegabule@gmail.com" className="text-sm text-foreground-2nd w-fit mx-2 hover:text-foreground hover:font-semibold transition-all">waynegabule@gmail.com</a>
                     </motion.div>
                     <motion.div initial="rest" whileHover="hover" className="relative w-fit flex items-center h-6">
                         <motion.span variants={beforeMail} className="absolute bg-gradient-to-r from-highlighter to-background rounded-md h-full -z-10" />
