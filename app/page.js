@@ -9,7 +9,7 @@ import Tag from "./components/tag";
 import { HiExternalLink } from "react-icons/hi";
 import { MdEmail } from "react-icons/md";
 import { FaPhone } from "react-icons/fa6";
-import { FaDiscord, FaGithubAlt, FaRegStar, FaStar, FaStarHalfAlt, FaReact, FaFigma } from "react-icons/fa";
+import { FaDiscord, FaGithubAlt, FaRegStar, FaStar, FaStarHalfAlt, FaReact, FaFigma, FaWhatsapp } from "react-icons/fa";
 import { RiJavaLine, RiFlutterFill } from "react-icons/ri";
 import { SiSpringboot, SiLua, SiAdobeaftereffects, SiAdobephotoshop, SiAdobeillustrator, SiAdobepremierepro, SiCanva, SiNextdotjs, SiFirebase } from "react-icons/si";
 import { TbBrandMysql } from "react-icons/tb";
@@ -227,7 +227,7 @@ export default function Home() {
                 <div className="md:col-span-2 max-md:col-span-3 flex flex-col gap-1 justify-center max-md:items-center max-md:text-center">
                   <span className="text-2xl font-bold font-sour-gummy text-transparent bg-clip-text bg-gradient-to-tl from-white to-[#C082D2]">Sean Wayne Gabule</span>
                   <span className="text-foreground-2nd flex gap-2 items-center"><MdEmail />waynegabule@gmail.com</span>
-                  <span className="text-foreground-2nd flex gap-2 items-center"><FaPhone />(+63) 927-973-4717</span>
+                  <span className="text-foreground-2nd flex gap-2 items-center"><FaWhatsapp />(+63) 927-973-4717</span>
                   <div className="mt-2 flex gap-2">
                     <a href="https://discord.com/users/254225248889602048" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#7289da] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#7289da_0px_0px_5px_4px]">
                         <FaDiscord className="size-4" />
@@ -308,15 +308,18 @@ export default function Home() {
                   <div className="relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-4 hover:border-[#3498db]/50 transition-all duration-300">
                     <div className="flex justify-between items-start mb-2">
                       <div>
-                        <span className="text-sm font-bold text-foreground">Java Plugin Developer</span>
-                        <span className="text-xs text-foreground-2nd block">Freelance</span>
+                        <span className="text-sm font-bold text-foreground">Video Editor</span>
+                        <span className="text-xs text-foreground-2nd block">Hyre</span>
                       </div>
-                      <span className="text-xs text-[#3498db] font-medium">Feb 2020 - Present</span>
+                      <span className="text-xs text-[#3498db] font-medium">January 2026 - Present</span>
                     </div>
-                    <p className="text-xs text-foreground-2nd">Developed plugins for games like Minecraft. Experienced Java Programming and MySQL Database Management.</p>
+                    <p className="text-xs text-foreground-2nd">
+                      Edited video content and created motion graphics to support brand identity and digital campaigns.
+                    </p>
                     <div className="flex gap-1 mt-2 flex-wrap">
-                      <Tag text="Java" icon="java" color="#3498db" />
-                      <Tag text="MySQL" icon="mysql" color="#3498db" />
+                      <Tag text="After Effects" icon="aftereffects" color="#3498db" />
+                      <Tag text="Premiere Pro" icon="premierepro" color="#3498db" />
+                      <Tag text="Motion Graphics" icon="sparkles" color="#3498db" />
                     </div>
                   </div>
                   <div className="relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-4 hover:border-[#3498db]/50 transition-all duration-300">

@@ -1,6 +1,6 @@
 "use client";
 
-import { FaDiscord, FaFacebookF, FaGithubAlt, FaLinkedinIn, FaPhoneAlt } from "react-icons/fa";
+import { FaDiscord, FaFacebookF, FaGithubAlt, FaLinkedinIn, FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 
@@ -12,7 +12,7 @@ export default function Contact() {
                 <span className="text-5xl font-bold">Let's Chat<span className="text-highlight font-black">.</span></span>
                 
                 <span className="mt-8 flex gap-1 items-center text-foreground-2nd"><span className="text-foreground"><IoMdMail /></span> waynegabule@gmail.com</span>
-                <span className="flex gap-1 items-center text-foreground-2nd"><span className="text-foreground"><FaPhoneAlt /></span> (+63) 927 973 4717</span>
+                <span className="flex gap-1 items-center text-foreground-2nd"><span className="text-foreground"><FaWhatsapp /></span> (+63) 927 973 4717</span>
                 <span className="flex gap-1 items-center text-foreground-2nd"><span className="text-foreground"><FaLocationDot /></span> Davao City, Davao del Sur, Philippines</span>
 
                 <div className="mt-8 flex gap-2">
@@ -36,8 +36,18 @@ export default function Contact() {
                         action="https://formspree.io/f/xyzjkvbe"
                         method="POST"
                     >
-                        <input className="w-full py-2 px-4 input bg-[#18181b] text-background border border-foreground-2nd rounded-md focus:outline-none focus:border-highlight placeholder:text-foreground-2nd transition-all duration-300" placeholder="Email" name="email" />
-                        <textarea className="input bg-[#18181b] text-background border border-foreground-2nd rounded-md focus:outline-none focus:border-highlight placeholder:text-foreground-2nd transition-all duration-300" rows={7} placeholder="Body" name="body" />
+                        <input
+                            className="w-full py-2 px-4 input text-background bg-background-dark border border-foreground-2nd rounded-md focus:outline-none focus:border-highlight placeholder:text-foreground-2nd transition-all duration-300"
+                            placeholder="Email"
+                            name="email"
+                        />
+
+                        <textarea
+                            className="input text-background bg-background-dark border border-foreground-2nd rounded-md focus:outline-none focus:border-highlight placeholder:text-foreground-2nd transition-all duration-300 p-2"
+                            rows={7}
+                            placeholder="Body"
+                            name="body"
+                        />
                         <button className="self-end py-2 px-4 bg-highlighter-2nd text-foreground rounded-md font-bold border-4 border-transparent hover:border-highlighter-2nd hover:bg-transparent hover:text-highlighter-2nd transition-all duration-300" type="submit">Send Email</button>
                     </form>
                 </div>
