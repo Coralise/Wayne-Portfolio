@@ -203,6 +203,28 @@ function MonoTimeline({ className }) {
             <div className="flex flex-col items-start pl-4 flex-1">
                 <div className="font-bold text-2xl">WORK EXPERIENCE</div>
                 <TimelineCard
+                    className="mt-8"
+                    jobTitle="Java Plugin Developer"
+                    company="Freelance"
+                    date="February 2020 - Present"
+                    tags={[
+                        [<RiJavaLine />, "Java Development"],
+                        [<TbBrandMysql />, "Database Systems"],
+                        [<SiSpigotmc />, "Game Plugins"],
+                        ["⚙️", "Backend Logic"],
+                        ["🧠", "System Design"]
+                    ]}
+                    tagColor="#3498db"
+                    >
+                    <ul className="list-disc pl-4">
+                        <li>Developed custom game plugins and features for Minecraft servers using Java.</li>
+                        <li>Built database-driven systems with MySQL to manage player data and server functionality.</li>
+                        <li>Created modular and scalable code structures using object-oriented programming principles.</li>
+                        <li>Improved plugin performance, stability, and usability through continuous updates.</li>
+                        <li>Translated gameplay ideas into functional systems and tools for real-world server use.</li>
+                    </ul>
+                </TimelineCard>
+                <TimelineCard
                     className="mt-8" jobTitle="Java Plugin Developer" company="Freelance" date="February 2020 - Present" tags={[[<RiJavaLine />, "Java"], [<TbBrandMysql />, "MySQL"], [<SiSpigotmc />, "Spigot MC"]]} tagColor="#3498db">
                     <ul className="list-disc pl-4">
                         <li>Developed plugins (add-ons and modifications) for games such as Minecraft.</li>
@@ -268,6 +290,23 @@ function BiTimeline({ maxDraw, targetRef, className }) {
     return <div className={`${className} mt-60 flex w-full justify-start pb-8`}>
         <div className="flex flex-col items-end pr-4 flex-1">
             <div className="font-bold text-2xl">WORK EXPERIENCE</div>
+            <ProgressTimelineCard drawProgress={maxDraw} drawPosition={0.15}
+                className="mt-8" jobTitle="Video Editor" company="Hyre" date="January 2026 - Present" side="left" tags={[
+  [<SiAdobeaftereffects />, "After Effects"],
+  [<SiAdobepremierepro />, "Video Editing"],
+  ["🎬", "Motion Graphics"],
+  ["✨", "Visual Effects"],
+  ["📱", "Social Media Content"]
+]} tagColor="#3498db">
+                <ul className="list-disc pl-4">
+                    <li>Edited high-quality video content for social media, marketing, and client deliverables.</li>
+                    <li>Created motion graphics, animations, and visual effects using Adobe After Effects and Premiere Pro.</li>
+                    <li>Designed engaging transitions, typography, and visual storytelling to enhance viewer retention.</li>
+                    <li>Collaborated with creative teams to align visuals with brand identity and project goals.</li>
+                    <li>Optimized videos for multiple platforms and formats (16:9, 9:16, 1:1).</li>
+                    <li>Continuously improved editing workflows and visual style to maintain consistent quality.</li>
+                </ul>
+            </ProgressTimelineCard>
             <ProgressTimelineCard drawProgress={maxDraw} drawPosition={0.15}
                 className="mt-8" jobTitle="Java Plugin Developer" company="Freelance" date="February 2020 - Present" side="left" tags={[[<RiJavaLine />, "Java"], [<TbBrandMysql />, "MySQL"], [<SiSpigotmc />, "Spigot MC"]]} tagColor="#3498db">
                 <ul className="list-disc pl-4">

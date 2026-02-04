@@ -13,7 +13,7 @@ export default function Contact() {
                 
                 <span className="mt-8 flex gap-1 items-center text-foreground-2nd"><span className="text-foreground"><IoMdMail /></span> waynegabule@gmail.com</span>
                 <span className="flex gap-1 items-center text-foreground-2nd"><span className="text-foreground"><FaPhoneAlt /></span> (+63) 927 973 4717</span>
-                <span className="flex gap-1 items-center text-foreground-2nd"><span className="text-foreground"><FaLocationDot /></span> Matina, Davao City, Davao del Sur, Philippines</span>
+                <span className="flex gap-1 items-center text-foreground-2nd"><span className="text-foreground"><FaLocationDot /></span> Davao City, Davao del Sur, Philippines</span>
 
                 <div className="mt-8 flex gap-2">
                     <a href="https://discord.com/users/254225248889602048" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#7289da] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#7289da_0px_0px_5px_4px]">
@@ -31,15 +31,15 @@ export default function Contact() {
                 </div>
             </div>
             <div className="md:w-1/3 max-md:w-full max-md:px-4">
-                <div className="w-full p-4 rounded-lg bg-background shadow-[3px_3px_0px_0px_var(--highlight)] border-2 border-highlight">
-                        <form className="flex flex-col gap-4"
-                            action="https://formspree.io/f/xyzjkvbe"
-                            method="POST"
-                        >
-                            <input className="w-full py-2 px-4 input" placeholder="Email" name="email" />
-                            <textarea className="input" rows={7} placeholder="Body" name="body" />
-                            <button className="self-end py-2 px-4 bg-highlighter rounded-md font-bold border-4 border-transparent hover:border-highlighter hover:bg-transparent transition-all duration-300" type="submit">Send Email</button>
-                        </form>
+                <div className="w-full p-4 rounded-lg bg-background shadow-[3px_3px_0px_0px_var(--highlighter)] border-2 border-highlighter">
+                    <form className="flex flex-col gap-4 bg-background-dark p-4 rounded-lg"
+                        action="https://formspree.io/f/xyzjkvbe"
+                        method="POST"
+                    >
+                        <input className="w-full py-2 px-4 input bg-[#18181b] text-background border border-foreground-2nd rounded-md focus:outline-none focus:border-highlight placeholder:text-foreground-2nd transition-all duration-300" placeholder="Email" name="email" />
+                        <textarea className="input bg-[#18181b] text-background border border-foreground-2nd rounded-md focus:outline-none focus:border-highlight placeholder:text-foreground-2nd transition-all duration-300" rows={7} placeholder="Body" name="body" />
+                        <button className="self-end py-2 px-4 bg-highlighter-2nd text-foreground rounded-md font-bold border-4 border-transparent hover:border-highlighter-2nd hover:bg-transparent hover:text-highlighter-2nd transition-all duration-300" type="submit">Send Email</button>
+                    </form>
                 </div>
             </div>
         </div>
