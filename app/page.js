@@ -224,9 +224,10 @@ export default function Home() {
                   </span>
                 </a>
                 <img src="/images/winnie.png" className="p-4 w-[25vh] aspect-square rounded-full object-cover md:col-span-1 max-md:col-span-3 place-self-center" />
-                <div className="md:col-span-2 max-md:col-span-3 flex flex-col gap-1 justify-center max-md:items-center max-md:text-center">
+                <div className="md:col-span-2 max-md:col-span-3 flex flex-col justify-center max-md:items-center max-md:text-center">
                   <span className="text-2xl font-bold font-sour-gummy text-transparent bg-clip-text bg-gradient-to-tl from-white to-[#C082D2]">Sean Wayne Gabule</span>
-                  <span className="text-foreground-2nd flex gap-2 items-center"><MdEmail />waynegabule@gmail.com</span>
+                  <span className="font-sour-gummy text-foreground flex gap-2 items-center">Full-Stack Developer | Motion Graphic Designer</span>
+                  <span className="text-foreground-2nd flex gap-2 items-center mt-2"><MdEmail />waynegabule@gmail.com</span>
                   <span className="text-foreground-2nd flex gap-2 items-center"><FaWhatsapp />(+63) 927-973-4717</span>
                   <div className="mt-2 flex gap-2">
                     <a href="https://discord.com/users/254225248889602048" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#7289da] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#7289da_0px_0px_5px_4px]">

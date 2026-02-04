@@ -92,7 +92,7 @@ export default function Resume() {
                             Wayne Gabule
                         </h1>
                         <h3 className="text-lg">
-                            Programmer & Motion Graphics Designer
+                            Full-Stack Developer | Motion Graphics Designer
                         </h3>
                     </motion.div>
                 </div>
