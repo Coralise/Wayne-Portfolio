@@ -29,11 +29,11 @@ export default async function Portfolio() {
     return (
         <div className="p-6 w-full snap-y flex gap-8 max-md:flex-col">
             <div className="w-1/4 flex items-center flex-col relative max-md:hidden">
-                <div className="p-4 w-fit sticky top-[50vh] -translate-y-1/2 rounded-xl backdrop-blur-sm">
+                <div className="p-4 w-fit sticky top-[50vh] -translate-y-1/2 rounded-xl backdrop-blur-sm bg-white/5 border-[1px] border-white/5">
                     <MorePortfolios />
                 </div>
             </div>
-            <div className="mt-16 items-center flex-col relative hidden max-md:flex">
+            <div className="mt-16 items-center flex-col relative hidden max-md:flex backdrop-blur-sm bg-white/5 border-[1px] border-white/5">
                 <div className="p-4 w-fit rounded-xl backdrop-blur-sm">
                     <MorePortfolios />
                 </div>
@@ -61,7 +61,7 @@ export default async function Portfolio() {
                 <div className='mb-20' />
             </div>
             <div className="items-center flex-col relative hidden max-md:flex">
-                <div className="p-4 w-fit rounded-xl backdrop-blur-sm">
+                <div className="p-4 w-fit rounded-xl backdrop-blur-sm bg-white/5 border-[1px] border-white/5">
                     <MorePortfolios />
                 </div>
             </div>

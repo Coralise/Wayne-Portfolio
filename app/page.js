@@ -9,7 +9,7 @@ import Tag from "./components/tag";
 import { HiExternalLink } from "react-icons/hi";
 import { MdEmail } from "react-icons/md";
 import { FaPhone } from "react-icons/fa6";
-import { FaDiscord, FaGithubAlt, FaRegStar, FaStar, FaStarHalfAlt, FaReact, FaFigma, FaWhatsapp } from "react-icons/fa";
+import { FaDiscord, FaGithubAlt, FaRegStar, FaStar, FaStarHalfAlt, FaReact, FaFigma, FaWhatsapp, FaLinkedin } from "react-icons/fa";
 import { RiJavaLine, RiFlutterFill } from "react-icons/ri";
 import { SiSpringboot, SiLua, SiAdobeaftereffects, SiAdobephotoshop, SiAdobeillustrator, SiAdobepremierepro, SiCanva, SiNextdotjs, SiFirebase } from "react-icons/si";
 import { TbBrandMysql } from "react-icons/tb";
@@ -236,6 +236,9 @@ export default function Home() {
                     <a href="https://github.com/Coralise" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#6e5494] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#6e5494_0px_0px_5px_4px]">
                         <FaGithubAlt className="size-4" />
                     </a>
+                    <a href="https://www.linkedin.com/in/sean-wayne-gabule-083a481a6/" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#3ea1e2] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#3ea1e2_0px_0px_5px_4px]">
+                        <FaLinkedin className="size-4" />
+                    </a>
                   </div>
                 </div>
                 <div className="absolute w-[15px] h-[15px] bottom-4 right-4 bg-[#C082D2] max-lg:opacity-100 opacity-30 group-hover:opacity-100 transition-opacity duration-500" />
@@ -289,7 +292,7 @@ export default function Home() {
                   <span className="text-lg font-bold">About me</span>
                 </header>
                 <p className="indent-4">
-                  I am a BS in Information Technology graduate from Ateneo de Davao University with freelance experience in Java programming and video editing. I strive to excel in these fields, including motion graphics design, front-end development, and many more.
+                  <span className="text-foreground font-semibold">BS in Information Technology</span> graduate from Ateneo de Davao University with professional experience in <span className="text-foreground font-semibold">full-stack development</span> and <span className="text-foreground font-semibold">motion graphics design</span>. Skilled in building scalable web solutions and creating engaging visual content, with a strong focus on <span className="text-foreground font-semibold">front-end development</span> and <span className="text-foreground font-semibold">multimedia/video production</span>.
                 </p>
               </FrostedCard>
               <FrostedCard className="lg:col-span-2 gap-2 group flex flex-col">

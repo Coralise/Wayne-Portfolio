@@ -182,7 +182,7 @@ export default function Resume() {
 function SkillIcon({ text, icon }) {
     return <div className="flex flex-col items-center gap-1 group relative">
         <div
-        className={`bg-background transition-all duration-300 p-3 text-4xl text-foreground-2nd rounded-2xl group-hover:bg-highlighter group-hover:border-foreground border-2 border-foreground-2nd group-hover:rounded-[2rem] group-hover:shadow-[var(--highlighter)_0px_0px_7px_1px]`}>
+        className={`bg-background transition-all duration-300 p-3 text-4xl text-foreground-2nd rounded-2xl group-hover:bg-highlighter group-hover:border-foreground border-[1px] border-white/50 group-hover:rounded-[2rem] group-hover:shadow-[var(--highlighter)_0px_0px_7px_1px]`}>
             <div className="opacity-1 scale-100 group-hover:opacity-0 group-hover:scale-50 transition-all duration-300">
                 {icon}
             </div>
