@@ -45,7 +45,7 @@ export default function Tag({ text, icon, color }) {
     
     // Default styling
     return (
-        <div className="py-0.5 px-2 rounded-lg bg-highlighter w-fit h-fit text-xs select-none flex items-center gap-1 font-barlow-condensed text-foreground">
+        <div className="py-0.5 px-2 rounded-lg bg-highlighter-2nd text-background font-semibold w-fit h-fit text-xs select-none flex items-center gap-1 font-barlow-condensed">
             {icon != undefined && icons[icon]}
             <div>{text}</div>
         </div>
