@@ -225,7 +225,7 @@ export default function Home() {
                 </a>
                 <img src="/images/winnie.png" className="p-4 w-[25vh] aspect-square rounded-full object-cover md:col-span-1 max-md:col-span-3 place-self-center" />
                 <div className="md:col-span-2 max-md:col-span-3 flex flex-col justify-center max-md:items-center max-md:text-center">
-                  <span className="text-2xl font-bold font-sour-gummy text-transparent bg-clip-text bg-gradient-to-tl from-white to-[#C082D2]">Sean Wayne Gabule</span>
+                  <span className="text-2xl font-bold font-sour-gummy text-transparent bg-clip-text bg-gradient-to-tl from-white to-[#C082D2]">Wen</span>
                   <span className="font-sour-gummy text-foreground flex gap-2 items-center">Full-Stack Developer | Motion Graphic Designer</span>
                   <span className="text-foreground-2nd flex gap-2 items-center mt-2"><MdEmail />waynegabule@gmail.com</span>
                   <span className="text-foreground-2nd flex gap-2 items-center"><FaWhatsapp />(+63) 927-973-4717</span>
@@ -236,9 +236,9 @@ export default function Home() {
                     <a href="https://github.com/Coralise" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#6e5494] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#6e5494_0px_0px_5px_4px]">
                         <FaGithubAlt className="size-4" />
                     </a>
-                    <a href="https://www.linkedin.com/in/sean-wayne-gabule-083a481a6/" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#3ea1e2] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#3ea1e2_0px_0px_5px_4px]">
+                    {/* <a href="https://www.linkedin.com/in/sean-wayne-gabule-083a481a6/" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#3ea1e2] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#3ea1e2_0px_0px_5px_4px]">
                         <FaLinkedin className="size-4" />
-                    </a>
+                    </a> */}
                   </div>
                 </div>
                 <div className="absolute w-[15px] h-[15px] bottom-4 right-4 bg-[#C082D2] max-lg:opacity-100 opacity-30 group-hover:opacity-100 transition-opacity duration-500" />
