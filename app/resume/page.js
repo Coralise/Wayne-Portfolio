@@ -411,8 +411,8 @@ function ContactMeCard({gradientHover, beforeMail, className, center=false}) {
             </Card>
             <button className="download-cv-button mt-8 w-full" onClick={() => {
                 const link = document.createElement('a');
-                link.href = '/Gabule-Resume.pdf';
-                link.download = 'Gabule-Resume.pdf';
+                link.href = '/Gabule-Resume July 2026.pdf';
+                link.download = 'Gabule-Resume July 2026.pdf';
                 document.body.appendChild(link);
                 link.click();
                 link.remove();
