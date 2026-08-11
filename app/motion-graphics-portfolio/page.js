@@ -40,14 +40,24 @@ export default async function Portfolio() {
             </div>
             <HashNavigator />
             <div className="mt-20 flex flex-col gap-20 flex-1">
-                {Object.entries(motionGraphicsPortfolio).map(([category, videoIds], idx) => {
-                    if (!Array.isArray(videoIds) || videoIds.length === 0) return null;
-                    const playlist = videoIds.join(",");
-                    const firstVideo = videoIds[0];
+                {Object.entries(motionGraphicsPortfolio).map(([category, categoryData]) => {
+                    const normalized = typeof categoryData === 'object' && categoryData !== null && !Array.isArray(categoryData)
+                        ? categoryData
+                        : { Description: '', Playlist: Array.isArray(categoryData) ? categoryData : [] };
+
+                    const playlistItems = Array.isArray(normalized.Playlist) ? normalized.Playlist : [];
+                    if (playlistItems.length === 0) return null;
+
+                    const playlist = playlistItems.join(",");
+                    const firstVideo = playlistItems[0];
                     const playlistUrl = `https://www.youtube.com/embed/${firstVideo}?playlist=${playlist}&autoplay=1&mute=1&loop=1`;
+
                     return (
                         <div key={category} id={toId(category)} className="w-full flex flex-col items-center gap-4 scroll-mt-24">
-                            <h2 className="text-2xl font-bold mb-2 bg-gradient-to-tl from-highlight to-purple-600 bg-clip-text text-transparent">{category}</h2>
+                            <h2 className="text-2xl font-bold bg-gradient-to-tl from-highlight to-purple-600 bg-clip-text text-transparent">{category}</h2>
+                            {normalized.Description ? (
+                                <p className="max-w-2xl text-center text-sm text-foreground-2nd">{normalized.Description}</p>
+                            ) : null}
                             <iframe
                                 className='lg:w-2/3 max-lg:w-full aspect-video border-0'
                                 src={playlistUrl}

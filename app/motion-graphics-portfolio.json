@@ -1,51 +1,67 @@
 {
-    "Motion Graphics": [
-        "8N9WE9SxUfU",
-        "X3OOeMxlEDw",
-        "ynktyH9hB1E",
-        "sDvYGHHAJEE",
-        "DzBUnDz5UH4",
-        "cyrsH8-NMrg",
-        "aWqJJERwu1U",
-        "kbbCIw8d8oU",
-        "IgQwSgag86Q",
-        "As6X9toDt6w",
-        "hR4_TzwpCcA",
-        "eqU7JKVeU5U",
-        "ui6JVVRI1So",
-        "QK7hS403h3I",
-        "sSkqzXzUq5U"
-    ],
-    "Short Form Videos": [
-        "WzQCc9uHwOI",
-        "pSvT0Jf3s8Q",
-        "HrWWPvRlEpY",
-        "p-3Ydou9PP0",
-        "I3JCRhSF4lI",
-        "MMrjXzy7xEU",
-        "FAwZTJd_pXw",
-        "R_d9dBCknB8",
-        "KOADae79feg",
-        "PgcDejAV15k"
-    ],
-    "Long Form Videos": [
-        "z30aSnz-bwE",
-        "HZscxnmbfmc"
-    ],
-    "Typography": [
-        "XU4ZbQjpGdU",
-        "79SyE7yd9mE",
-        "j6s48dbW5Dk"
-    ],
-    "Logo Animations": [
-        "9PwLL1MZO8Q",
-        "9xHGInEkYes",
-        "OKvLbq18TNI",
-        "IMpfr0vpAN0",
-        "oSDykWQFJUI",
-        "ZARWFrZa_4o",
-        "O_oO2Cj5Ye4",
-        "HYrbda-tzPI",
-        "dPAB-aj7OTw"
-    ]
+    "Motion Graphics": {
+        "Description": "Motion graphics, title sequences, and transitions.",
+        "Playlist": [
+            "8N9WE9SxUfU",
+            "X3OOeMxlEDw",
+            "ynktyH9hB1E",
+            "sDvYGHHAJEE",
+            "DzBUnDz5UH4",
+            "cyrsH8-NMrg",
+            "aWqJJERwu1U",
+            "kbbCIw8d8oU",
+            "IgQwSgag86Q",
+            "As6X9toDt6w",
+            "hR4_TzwpCcA",
+            "eqU7JKVeU5U",
+            "ui6JVVRI1So",
+            "QK7hS403h3I",
+            "sSkqzXzUq5U"
+        ]
+    },
+    "Short Form Videos": {
+        "Description": "Short-form edits, reels, and quick promos.",
+        "Playlist": [
+            "WzQCc9uHwOI",
+            "pSvT0Jf3s8Q",
+            "HrWWPvRlEpY",
+            "p-3Ydou9PP0",
+            "I3JCRhSF4lI",
+            "MMrjXzy7xEU",
+            "FAwZTJd_pXw",
+            "R_d9dBCknB8",
+            "KOADae79feg",
+            "PgcDejAV15k"
+        ]
+    },
+    "Long Form Videos": {
+        "Description": "Documentaries, narratives, and storytelling videos.",
+        "Playlist": [
+            "z30aSnz-bwE",
+            "HZscxnmbfmc",
+            "7QrRismrarE"
+        ]
+    },
+    "Typography": {
+        "Description": "Animated typography and kinetic lettering.",
+        "Playlist": [
+            "XU4ZbQjpGdU",
+            "79SyE7yd9mE",
+            "j6s48dbW5Dk"
+        ]
+    },
+    "Logo Animations": {
+        "Description": "Logo reveals and brand identity motion.",
+        "Playlist": [
+            "9PwLL1MZO8Q",
+            "9xHGInEkYes",
+            "OKvLbq18TNI",
+            "IMpfr0vpAN0",
+            "oSDykWQFJUI",
+            "ZARWFrZa_4o",
+            "O_oO2Cj5Ye4",
+            "HYrbda-tzPI",
+            "dPAB-aj7OTw"
+        ]
+    }
 }
