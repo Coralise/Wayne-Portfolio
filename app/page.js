@@ -11,7 +11,9 @@ import { MdEmail } from "react-icons/md";
 import { FaPhone } from "react-icons/fa6";
 import { FaDiscord, FaGithubAlt, FaRegStar, FaStar, FaStarHalfAlt, FaReact, FaFigma, FaWhatsapp, FaLinkedin } from "react-icons/fa";
 import { RiJavaLine, RiFlutterFill } from "react-icons/ri";
-import { SiSpringboot, SiLua, SiAdobeaftereffects, SiAdobephotoshop, SiAdobeillustrator, SiAdobepremierepro, SiCanva, SiNextdotjs, SiFirebase } from "react-icons/si";
+import { SiSpringboot, SiLua, SiNextdotjs, SiFirebase } from "react-icons/si";
+import { FaVideo, FaPaintBrush, FaImage } from "react-icons/fa";
+import Image from "next/image";
 import { TbBrandMysql } from "react-icons/tb";
 
 export default function Home() {
@@ -223,7 +225,7 @@ export default function Home() {
                     <HiExternalLink className="text-lg transition-all duration-500" />
                   </span>
                 </a>
-                <img src="/images/winnie.png" className="p-4 w-[25vh] aspect-square rounded-full object-cover md:col-span-1 max-md:col-span-3 place-self-center" />
+                    <Image src="/images/winnie.png" alt="Profile" width={200} height={200} className="p-4 w-[25vh] aspect-square rounded-full object-cover md:col-span-1 max-md:col-span-3 place-self-center" />
                 <div className="md:col-span-2 max-md:col-span-3 flex flex-col justify-center max-md:items-center max-md:text-center">
                   <span className="text-2xl font-bold font-sour-gummy text-transparent bg-clip-text bg-gradient-to-tl from-white to-[#C082D2]">Wen</span>
                   <span className="font-sour-gummy text-foreground flex gap-2 items-center">Full-Stack Developer | Motion Graphic Designer</span>
@@ -267,11 +269,11 @@ export default function Home() {
                 </div>
                 <span className="place-self-start col-span-2 mt-4 font-bold text-lg max-lg:text-highlight group-hover:text-highlight transition-colors duration-500">Motion Graphics</span>
                 <div className="col-span-2 grid grid-cols-2 gap-1">
-                  <div className="flex items-center gap-1"><SiAdobeaftereffects /> After Effects</div>
-                  <div className="flex items-center gap-1"><SiAdobephotoshop /> Photoshop</div>
-                  <div className="flex items-center gap-1"><SiAdobeillustrator /> Illustrator</div>
-                  <div className="flex items-center gap-1"><SiAdobepremierepro /> Premiere Pro</div>
-                  <div className="flex items-center gap-1"><SiCanva /> Canva</div>
+                  <div className="flex items-center gap-1"><FaVideo /> After Effects</div>
+                  <div className="flex items-center gap-1"><FaImage /> Photoshop</div>
+                  <div className="flex items-center gap-1"><FaPaintBrush /> Illustrator</div>
+                  <div className="flex items-center gap-1"><FaVideo /> Premiere Pro</div>
+                  <div className="flex items-center gap-1"><FaImage /> Canva</div>
                 </div>
               </FrostedCard>
               <FrostedCard className="grid grid-cols-2 gap-2 group">
@@ -432,7 +434,7 @@ export default function Home() {
                 </header>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mt-2">
                   <a href="/programming-portfolio#jedis" className="group/project relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-3 flex flex-col gap-2 hover:border-highlighter-2nd/50 transition-all duration-300">
-                    <img src="/images/jedis.jpg" alt="Jedis" className="w-full aspect-video object-cover rounded-lg transition-transform duration-500 group-hover/project:scale-105" />
+                    <Image src="/images/jedis.jpg" alt="Jedis" width={640} height={360} className="w-full aspect-video object-cover rounded-lg transition-transform duration-500 group-hover/project:scale-105" unoptimized />
                     <div className="flex flex-col gap-1">
                       <span className="text-sm font-bold text-foreground">Jedis</span>
                       <span className="text-xs text-foreground-2nd line-clamp-2">Redis-like in-memory datastore built from scratch in Java</span>
@@ -442,7 +444,7 @@ export default function Home() {
                     </div>
                   </a>
                   <a href="/programming-portfolio#bean-s-spelling-bee-helper" className="group/project relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-3 flex flex-col gap-2 hover:border-highlighter-2nd/50 transition-all duration-300">
-                    <img src="/images/rsb/rsb1.png" alt="Spelling Bee Helper" className="w-full aspect-video object-cover rounded-lg transition-transform duration-500 group-hover/project:scale-105" />
+                    <Image src="/images/rsb/rsb1.png" alt="Spelling Bee Helper" width={640} height={360} className="w-full aspect-video object-cover rounded-lg transition-transform duration-500 group-hover/project:scale-105" unoptimized />
                     <div className="flex flex-col gap-1">
                       <span className="text-sm font-bold text-foreground">Spelling Bee Helper</span>
                       <span className="text-xs text-foreground-2nd line-clamp-2">Practice tool & random-word API for Roblox Spelling Bee</span>
@@ -453,10 +455,10 @@ export default function Home() {
                     </div>
                   </a>
                   <a href="/programming-portfolio#mandog-driving" className="group/project relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-3 flex flex-col gap-2 hover:border-highlighter-2nd/50 transition-all duration-300">
-                    <img src="/images/mandog-driving/g1.png" alt="Mandog Driving" className="w-full aspect-video object-cover rounded-lg transition-transform duration-500 group-hover/project:scale-105" />
+                    <Image src="/images/mandog-driving/g1.png" alt="Mandog Driving" width={640} height={360} className="w-full aspect-video object-cover rounded-lg transition-transform duration-500 group-hover/project:scale-105" unoptimized />
                     <div className="flex flex-col gap-1">
                       <span className="text-sm font-bold text-foreground">Mandog Driving</span>
-                      <span className="text-xs text-foreground-2nd line-clamp-2">Driver's License Exam Reviewer for Japan</span>
+                      <span className="text-xs text-foreground-2nd line-clamp-2">Driver&apos;s License Exam Reviewer for Japan</span>
                       <div className="flex gap-1 mt-1 flex-wrap">
                         <Tag text="Flutter" icon="flutter" color="#00d4ff" />
                         <Tag text="Firebase" icon="firebase" color="#00d4ff" />
@@ -485,7 +487,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mt-2">
                   <a href="/motion-graphics-portfolio#motion-graphics" className="group/video relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-3 flex flex-col gap-2 hover:border-[#9b59b6]/50 transition-all duration-300">
                     <div className="relative w-full aspect-video rounded-lg overflow-hidden">
-                      <img src="https://img.youtube.com/vi/ynktyH9hB1E/mqdefault.jpg" alt="Motion Graphics Showreel" className="w-full h-full object-cover transition-transform duration-500 group-hover/video:scale-105" />
+                      <Image src="https://img.youtube.com/vi/ynktyH9hB1E/mqdefault.jpg" alt="Motion Graphics Showreel" fill className="w-full h-full object-cover transition-transform duration-500 group-hover/video:scale-105" unoptimized />
                       <div className="absolute inset-0 flex items-center justify-center">
                         <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover/video:bg-[#9b59b6]/80 transition-colors duration-300">
                           <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[12px] border-l-white border-b-[8px] border-b-transparent ml-1" />
@@ -502,7 +504,7 @@ export default function Home() {
                   </a>
                   <a href="/motion-graphics-portfolio#logo-animations" className="group/video relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-3 flex flex-col gap-2 hover:border-[#9b59b6]/50 transition-all duration-300">
                     <div className="relative w-full aspect-video rounded-lg overflow-hidden">
-                      <img src="https://img.youtube.com/vi/9PwLL1MZO8Q/mqdefault.jpg" alt="Logo Animation" className="w-full h-full object-cover transition-transform duration-500 group-hover/video:scale-105" />
+                      <Image src="https://img.youtube.com/vi/9PwLL1MZO8Q/mqdefault.jpg" alt="Logo Animation" fill className="w-full h-full object-cover transition-transform duration-500 group-hover/video:scale-105" unoptimized />
                       <div className="absolute inset-0 flex items-center justify-center">
                         <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover/video:bg-[#9b59b6]/80 transition-colors duration-300">
                           <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[12px] border-l-white border-b-[8px] border-b-transparent ml-1" />
@@ -520,7 +522,7 @@ export default function Home() {
                   </a>
                   <a href="/motion-graphics-portfolio#typography" className="group/video relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-3 flex flex-col gap-2 hover:border-[#9b59b6]/50 transition-all duration-300">
                     <div className="relative w-full aspect-video rounded-lg overflow-hidden">
-                      <img src="https://img.youtube.com/vi/XU4ZbQjpGdU/mqdefault.jpg" alt="Typography Animation" className="w-full h-full object-cover transition-transform duration-500 group-hover/video:scale-105" />
+                      <Image src="https://img.youtube.com/vi/XU4ZbQjpGdU/mqdefault.jpg" alt="Typography Animation" fill className="w-full h-full object-cover transition-transform duration-500 group-hover/video:scale-105" unoptimized />
                       <div className="absolute inset-0 flex items-center justify-center">
                         <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover/video:bg-[#9b59b6]/80 transition-colors duration-300">
                           <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[12px] border-l-white border-b-[8px] border-b-transparent ml-1" />
@@ -570,7 +572,7 @@ export default function Home() {
               className="text-6xl font-black z-10 mb-3 font-sour-gummy flex flex-col items-center"
             >
               <span className="text-transparent bg-clip-text bg-gradient-to-tl from-white to-[#797979]">Hello!</span>
-              <span className="text-base font-barlow font-normal">I'm Wayne.</span>
+              <span className="text-base font-barlow font-normal">I&apos;m Wayne.</span>
             </motion.div>
           )}
         </AnimatePresence>

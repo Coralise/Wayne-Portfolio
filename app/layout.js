@@ -1,4 +1,5 @@
 import { Barlow, Barlow_Condensed, Sour_Gummy } from "next/font/google";
+import Image from "next/image";
 import "./globals.css";
 import Header from "./components/header";
 
@@ -36,12 +37,12 @@ export default function RootLayout({ children }) {
           overflow: "hidden",
           gap: "40rem"
         }}>
-          <img src="images/Curve_Line.svg" className="w-full" />
-          <img src="images/Wave_Line.svg" className="w-full"/>
-          <img src="images/Wave_Line_2.svg" className="w-full"/>
-          <img src="images/Wave_Line_3.svg" className="w-full"/>
+          <Image src="/images/Curve_Line.svg" alt="" width={1200} height={200} className="w-full" unoptimized />
+          <Image src="/images/Wave_Line.svg" alt="" width={1200} height={200} className="w-full" unoptimized />
+          <Image src="/images/Wave_Line_2.svg" alt="" width={1200} height={200} className="w-full" unoptimized />
+          <Image src="/images/Wave_Line_3.svg" alt="" width={1200} height={200} className="w-full" unoptimized />
         </div>
-        <img src="/images/grain.avif" className="w-screen h-screen fixed -z-50 object-cover mix-blend-normal opacity-15 dark:opacity-5 select-none" />
+        <Image src="/images/grain.avif" alt="" fill className="w-screen h-screen fixed -z-50 object-cover mix-blend-normal opacity-15 dark:opacity-5 select-none" unoptimized />
         <div className="mx-auto relative">
           <Header />
           {children}

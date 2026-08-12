@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import Image from 'next/image'
 import type { PortfolioVideo } from '../types/portfolio'
 import { embedUrl, thumbnailCandidates } from '../utils/youtube'
 
@@ -186,9 +187,24 @@ export function VideoSlide({
    * placeholder with a 200, so the only reliable tell is the decoded size.
    */
   const handleThumbLoad = useCallback(
-    (event: React.SyntheticEvent<HTMLImageElement>) => {
-      const image = event.currentTarget
-      const isPlaceholder = image.naturalWidth <= 120 && image.naturalHeight <= 90
+    (arg: any) => {
+      // Support both the native image event (event.currentTarget)
+      // and Next.js Image's onLoadingComplete result ({ naturalWidth, naturalHeight }).
+      let naturalWidth = 0
+      let naturalHeight = 0
+
+      if (arg && typeof arg === 'object' && 'naturalWidth' in arg && 'naturalHeight' in arg) {
+        naturalWidth = Number(arg.naturalWidth) || 0
+        naturalHeight = Number(arg.naturalHeight) || 0
+      } else if (arg && arg.currentTarget) {
+        naturalWidth = arg.currentTarget.naturalWidth
+        naturalHeight = arg.currentTarget.naturalHeight
+      } else {
+        setThumbLoaded(true)
+        return
+      }
+
+      const isPlaceholder = naturalWidth <= 120 && naturalHeight <= 90
       if (isPlaceholder && candidate < candidates.length - 1) {
         nextCandidate()
         return
@@ -220,17 +236,18 @@ export function VideoSlide({
 
         {/* Poster frame — lazy loaded, and only until the player takes over */}
         {isLoaded ? (
-          <img
+          <Image
             src={candidates[candidate]}
             alt=""
             aria-hidden="true"
             loading="lazy"
-            decoding="async"
-            onLoad={handleThumbLoad}
+            onLoadingComplete={handleThumbLoad}
             onError={nextCandidate}
-            className={`pointer-events-none absolute inset-0 h-full w-full object-cover transition-opacity duration-500 ${
+            fill
+            className={`pointer-events-none absolute inset-0 object-cover transition-opacity duration-500 ${
               thumbLoaded && !frameLoaded ? 'opacity-100' : 'opacity-0'
             }`}
+            unoptimized
           />
         ) : null}
 

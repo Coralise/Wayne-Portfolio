@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion } from "motion/react";
 import PropTypes from "prop-types";
 import Tag from "./tag";
@@ -22,8 +23,9 @@ export default function PortfolioCard({ content }) {
             case "image":
                 return (
                     <>
-                        <img src={value} alt={content.title} className="absolute inset-0 z-[1] bg-transparent w-full h-full rounded-xl object-contain transition-all duration-500" />
-                        <img src={value} alt={content.title} className="absolute inset-0 z-[2] bg-transparent w-full h-full rounded-xl object-cover opacity-100 group-hover:opacity-0 transition-all duration-500" />
+                        <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+                            <Image src={value} alt={content.title} fill className="rounded-xl object-contain transition-all duration-500" unoptimized />
+                        </div>
                     </>
                 );
             case "video-link":

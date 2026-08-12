@@ -1,9 +1,9 @@
 import { FaFlutter, FaGitAlt } from "react-icons/fa6";
 import { IoMdDocument } from "react-icons/io";
 import { RiFirebaseFill, RiJavaLine } from "react-icons/ri";
-import { SiAdobeaftereffects, SiAdobeillustrator, SiAdobepremierepro, SiDart, SiDocker, SiKubernetes, SiMysql, SiNextdotjs, SiSpigotmc, SiSpringboot, SiSqlite } from "react-icons/si";
+import { SiDart, SiDocker, SiKubernetes, SiNextdotjs, SiSpigotmc, SiSpringboot, SiSqlite } from "react-icons/si";
 import { TbBrandMysql } from "react-icons/tb";
-import { FaReact } from "react-icons/fa";
+import { FaReact, FaVideo, FaPaintBrush, FaImage } from "react-icons/fa";
 
 const icons = {
     "java": <RiJavaLine />,
@@ -17,9 +17,9 @@ const icons = {
     "ocr": <IoMdDocument />,
     "nextjs": <SiNextdotjs />,
     "react": <FaReact />,
-    "aftereffects": <SiAdobeaftereffects />,
-    "illustrator": <SiAdobeillustrator />,
-    "premierepro": <SiAdobepremierepro />,
+    "aftereffects": <FaVideo />,
+    "illustrator": <FaPaintBrush />,
+    "premierepro": <FaVideo />,
     "springboot": <SiSpringboot />,
     "git": <FaGitAlt />,
     "docker": <SiDocker />,

@@ -10,8 +10,8 @@ import ContactButton from "../components/contact-button";
 import { useRef, useState } from "react";
 import { ProgressTimelineCard, TimelineCard } from "../components/timeline-card";
 import { RiFlutterFill, RiJavaLine, RiTailwindCssFill } from "react-icons/ri";
-import { SiAdobe, SiAdobeaftereffects, SiAdobeillustrator, SiAdobephotoshop, SiAdobepremierepro, SiCanva, SiExpress, SiLua, SiNextdotjs, SiSpigotmc, SiSpringboot } from "react-icons/si";
-import { FaDartLang } from "react-icons/fa6";
+import { SiExpress, SiLua, SiNextdotjs, SiSpigotmc, SiSpringboot } from "react-icons/si";
+import { FaCode, FaVideo, FaPaintBrush, FaImage } from "react-icons/fa";
 
 export default function Resume() {
 
@@ -130,7 +130,7 @@ export default function Resume() {
                                         <SkillIcon text="Lua" icon={<SiLua />} />
                                         <SkillIcon text="Figma" icon={<FaFigma />} />
                                         <SkillIcon text="Flutter" icon={<RiFlutterFill />} />
-                                        <SkillIcon text="Dart" icon={<FaDartLang />} />
+                                        <SkillIcon text="Dart" icon={<FaCode />} />
                                         <SkillIcon text="C#" icon={<TbBrandCSharp />} />
                                         <SkillIcon text="Git" icon={<FaGitAlt />} />
                                         <SkillIcon text="NextJS" icon={<SiNextdotjs />} />
@@ -145,11 +145,11 @@ export default function Resume() {
                                 <div className="flex-1">
                                     <div className="font-bold w-full text-center">Multimedia</div>
                                     <div className="flex flex-wrap gap-4 mt-2 justify-center">
-                                        <SkillIcon text="After Effects" icon={<SiAdobeaftereffects />} />
-                                        <SkillIcon text="Photoshop" icon={<SiAdobephotoshop />} />
-                                        <SkillIcon text="Illustrator" icon={<SiAdobeillustrator />} />
-                                        <SkillIcon text="Premiere Pro" icon={<SiAdobepremierepro />} />
-                                        <SkillIcon text="Canva" icon={<SiCanva />} />
+                                        <SkillIcon text="After Effects" icon={<FaVideo />} />
+                                        <SkillIcon text="Photoshop" icon={<FaImage />} />
+                                        <SkillIcon text="Illustrator" icon={<FaPaintBrush />} />
+                                        <SkillIcon text="Premiere Pro" icon={<FaVideo />} />
+                                        <SkillIcon text="Canva" icon={<FaImage />} />
                                     </div>
                                 </div>
                             </motion.div>
@@ -208,9 +208,9 @@ function MonoTimeline({ className }) {
                     company="Freelance"
                     date="February 2020 - Present"
                     tags={[
-                        [<RiJavaLine />, "Java Development"],
-                        [<TbBrandMysql />, "Database Systems"],
-                        [<SiSpigotmc />, "Game Plugins"],
+                        [<RiJavaLine key="ri-java-1" />, "Java Development"],
+                        [<TbBrandMysql key="tb-mysql-1" />, "Database Systems"],
+                        [<SiSpigotmc key="si-spigotmc-1" />, "Game Plugins"],
                         ["⚙️", "Backend Logic"],
                         ["🧠", "System Design"]
                     ]}
@@ -225,7 +225,7 @@ function MonoTimeline({ className }) {
                     </ul>
                 </TimelineCard>
                 <TimelineCard
-                    className="mt-8" jobTitle="Java Plugin Developer" company="Freelance" date="February 2020 - Present" tags={[[<RiJavaLine />, "Java"], [<TbBrandMysql />, "MySQL"], [<SiSpigotmc />, "Spigot MC"]]} tagColor="#3498db">
+                    className="mt-8" jobTitle="Java Plugin Developer" company="Freelance" date="February 2020 - Present" tags={[[<RiJavaLine key="ri-java-2" />, "Java"], [<TbBrandMysql key="tb-mysql-2" />, "MySQL"], [<SiSpigotmc key="si-spigotmc-2" />, "Spigot MC"]]} tagColor="#3498db">
                     <ul className="list-disc pl-4">
                         <li>Developed plugins (add-ons and modifications) for games such as Minecraft.</li>
                         <li>Was able to work on and experience Java Programming and MySQL Database Management.</li>
@@ -234,7 +234,7 @@ function MonoTimeline({ className }) {
                     </ul>
                 </TimelineCard>
                 <TimelineCard
-                    className="mt-8" jobTitle="Associate Engineer 1" company="Orange & Bronze" date="July 2024 - December 2025" tags={[[<RiJavaLine />, "Java"], [<TbBrandMysql />, "MySQL"], [<BiLogoSpringBoot />, "Spring Boot"]]} tagColor="#3498db">
+                    className="mt-8" jobTitle="Associate Engineer 1" company="Orange & Bronze" date="July 2024 - December 2025" tags={[[<RiJavaLine key="ri-java-3" />, "Java"], [<TbBrandMysql key="tb-mysql-3" />, "MySQL"], [<BiLogoSpringBoot key="bi-spring-3" />, "Spring Boot"]]} tagColor="#3498db">
                     <ul className="list-disc pl-4">
                         <li>Implement features under the guidance of more senior developers, and in compliance with company & client practices.</li>
                         <li>Allots time to learn software development practices & technologies as prescribed by the company and as needed by the client.</li>
@@ -243,10 +243,10 @@ function MonoTimeline({ className }) {
                     </ul>
                 </TimelineCard>
                 <TimelineCard
-                    className="mt-8" jobTitle="Admin/Video Editor" company="Lava Automation" date="March 2023 - December 2024" tags={[[<SiAdobe />, "Adobe"], [<SiAdobeaftereffects />, "After Effects"], [<SiAdobepremierepro />, "Premiere Pro"], [<SiAdobeillustrator />, "Illustrator"], [<SiAdobephotoshop />, "Photoshop"]]} tagColor="#3498db">
+                    className="mt-8" jobTitle="Admin/Video Editor" company="Lava Automation" date="March 2023 - December 2024" tags={[[<FaPaintBrush key="si-adobe-1" />, "Adobe"], [<FaVideo key="si-ae-1" />, "After Effects"], [<FaVideo key="si-pr-1" />, "Premiere Pro"], [<FaPaintBrush key="si-ai-1" />, "Illustrator"], [<FaImage key="si-ps-1" />, "Photoshop"]]} tagColor="#3498db">
                     <ul className="list-disc pl-4">
                         <li>In charge of all things video editing related, from video construction to motion graphic animation.</li>
-                        <li>Helped create the company's current logo and have designed all of its animations, both 2D and 3D.</li>
+                        <li>Helped create the company&apos;s current logo and have designed all of its animations, both 2D and 3D.</li>
                         <li>Made infographics, PowerPoints, and similar graphic visualizations mainly for company advertisements.</li>
                     </ul>
                 </TimelineCard>
@@ -258,11 +258,11 @@ function MonoTimeline({ className }) {
                     <p className="text-foreground-2nd">Graduated with consistent academic honors while developing strong foundations in software development, database management, and system design.</p>
                 </TimelineCard>
                 <TimelineCard
-                    className="mt-8" jobTitle="Java Fundamentals Certification" company="Orange & Bronze" date="June 2025" tags={[[<RiJavaLine />, "Java"]]} tagColor="#2ecc71">
+                    className="mt-8" jobTitle="Java Fundamentals Certification" company="Orange & Bronze" date="June 2025" tags={[[<RiJavaLine key="ri-java-4" />, "Java"]]} tagColor="#2ecc71">
                     <p className="text-foreground-2nd">Certified in enterprise Java development covering OOP design patterns, coding standards, and industry best practices for building scalable applications.</p>
                 </TimelineCard>
                 <TimelineCard
-                    className="mt-8" jobTitle="SQL Fundamentals Certification" company="Orange & Bronze" date="June 2025" tags={[[<TbBrandMysql />, "SQL"]]} tagColor="#2ecc71">
+                    className="mt-8" jobTitle="SQL Fundamentals Certification" company="Orange & Bronze" date="June 2025" tags={[[<TbBrandMysql key="tb-mysql-1" />, "SQL"]]} tagColor="#2ecc71">
                     <p className="text-foreground-2nd">Certified in relational database design, complex query optimization, data manipulation, and backend data management techniques.</p>
                 </TimelineCard>
                 <TimelineCard
@@ -270,7 +270,7 @@ function MonoTimeline({ className }) {
                     <p className="text-foreground-2nd">Certified in Linux server administration, shell scripting, and configuring deployment environments for production applications.</p>
                 </TimelineCard>
                 <TimelineCard
-                    className="mt-8" jobTitle="Git Version Control Certification" company="Orange & Bronze" date="December 2024" tags={[[<FaGitAlt />, "Git"]]} tagColor="#2ecc71">
+                    className="mt-8" jobTitle="Git Version Control Certification" company="Orange & Bronze" date="December 2024" tags={[[<FaGitAlt key="fa-git-1" />, "Git"]]} tagColor="#2ecc71">
                     <p className="text-foreground-2nd">Certified in Git branching strategies, collaborative workflows, code review processes, and enterprise repository management.</p>
                 </TimelineCard>
                 <TimelineCard
@@ -292,8 +292,8 @@ function BiTimeline({ maxDraw, targetRef, className }) {
             <div className="font-bold text-2xl">WORK EXPERIENCE</div>
             <ProgressTimelineCard drawProgress={maxDraw} drawPosition={0.15}
                 className="mt-8" jobTitle="Video Editor" company="Hyre" date="January 2026 - Present" side="left" tags={[
-  [<SiAdobeaftereffects />, "After Effects"],
-  [<SiAdobepremierepro />, "Video Editing"],
+    [<FaVideo key="si-ae-2" />, "After Effects"],
+    [<FaVideo key="si-pr-2" />, "Video Editing"],
   ["🎬", "Motion Graphics"],
   ["✨", "Visual Effects"],
   ["📱", "Social Media Content"]
@@ -308,7 +308,7 @@ function BiTimeline({ maxDraw, targetRef, className }) {
                 </ul>
             </ProgressTimelineCard>
             <ProgressTimelineCard drawProgress={maxDraw} drawPosition={0.15}
-                className="mt-8" jobTitle="Java Plugin Developer" company="Freelance" date="February 2020 - Present" side="left" tags={[[<RiJavaLine />, "Java"], [<TbBrandMysql />, "MySQL"], [<SiSpigotmc />, "Spigot MC"]]} tagColor="#3498db">
+                className="mt-8" jobTitle="Java Plugin Developer" company="Freelance" date="February 2020 - Present" side="left" tags={[[<RiJavaLine key="ri-java-5" />, "Java"], [<TbBrandMysql key="tb-mysql-5" />, "MySQL"], [<SiSpigotmc key="si-spigotmc-5" />, "Spigot MC"]]} tagColor="#3498db">
                 <ul className="list-disc pl-4">
                     <li>Developed plugins (add-ons and modifications) for games such as Minecraft.</li>
                     <li>Was able to work on and experience Java Programming and MySQL Database Management.</li>
@@ -317,7 +317,7 @@ function BiTimeline({ maxDraw, targetRef, className }) {
                 </ul>
             </ProgressTimelineCard>
             <ProgressTimelineCard drawProgress={maxDraw} drawPosition={0.30}
-                className="mt-12" jobTitle="Associate Engineer 1" company="Orange & Bronze" date="July 2024 - December 2025" side="left" tags={[[<RiJavaLine />, "Java"], [<TbBrandMysql />, "MySQL"], [<BiLogoSpringBoot />, "Spring Boot"]]} tagColor="#3498db">
+                className="mt-12" jobTitle="Associate Engineer 1" company="Orange & Bronze" date="July 2024 - December 2025" side="left" tags={[[<RiJavaLine key="ri-java-6" />, "Java"], [<TbBrandMysql key="tb-mysql-6" />, "MySQL"], [<BiLogoSpringBoot key="bi-spring-6" />, "Spring Boot"]]} tagColor="#3498db">
                 <ul className="list-disc pl-4">
                     <li>Implement features under the guidance of more senior developers, and in compliance with company & client practices.</li>
                     <li>Allots time to learn software development practices & technologies as prescribed by the company and as needed by the client.</li>
@@ -326,7 +326,7 @@ function BiTimeline({ maxDraw, targetRef, className }) {
                 </ul>
             </ProgressTimelineCard>
             <ProgressTimelineCard drawProgress={maxDraw} drawPosition={0.55}
-                className="mt-8" jobTitle="Admin/Video Editor" company="Lava Automation" date="March 2023 - December 2024" side="left" tags={[[<SiAdobe />, "Adobe"], [<SiAdobeaftereffects />, "After Effects"], [<SiAdobepremierepro />, "Premiere Pro"], [<SiAdobeillustrator />, "Illustrator"], [<SiAdobephotoshop />, "Photoshop"]]} tagColor="#3498db">
+                className="mt-8" jobTitle="Admin/Video Editor" company="Lava Automation" date="March 2023 - December 2024" side="left" tags={[[<FaPaintBrush key="si-adobe-2" />, "Adobe"], [<FaVideo key="si-ae-3" />, "After Effects"], [<FaVideo key="si-pr-3" />, "Premiere Pro"], [<FaPaintBrush key="si-ai-3" />, "Illustrator"], [<FaImage key="si-ps-3" />, "Photoshop"]]} tagColor="#3498db">
                 <ul className="list-disc pl-4">
                     <li>Led all video production efforts, including video editing, motion graphics, and animation for marketing and digital content.</li>
                     <li>Designed and helped develop the company’s current logo, as well as all branded animations in both 2D and 3D formats.</li>
@@ -347,11 +347,11 @@ function BiTimeline({ maxDraw, targetRef, className }) {
                 className="mt-12" jobTitle="BS Information Technology" company="Ateneo de Davao University College" date="2020 - 2024" tags={["Honor Student", "Scholar", "President's Lister"]} tagColor="#2ecc71">
             </ProgressTimelineCard>
             <ProgressTimelineCard drawProgress={maxDraw} drawPosition={0.20}
-                className="mt-8" jobTitle="Java Fundamentals" company="Orange & Bronze" date="June 2025" tags={[[<RiJavaLine />, "Java"]]} tagColor="#2ecc71">
+                className="mt-8" jobTitle="Java Fundamentals" company="Orange & Bronze" date="June 2025" tags={[[<RiJavaLine key="ri-java-7" />, "Java"]]} tagColor="#2ecc71">
                 <p>Enterprise Java, OOP design patterns, and coding standards.</p>
             </ProgressTimelineCard>
             <ProgressTimelineCard drawProgress={maxDraw} drawPosition={0.32}
-                className="mt-8" jobTitle="SQL Fundamentals" company="Orange & Bronze" date="June 2025" tags={[[<TbBrandMysql />, "SQL"]]} tagColor="#2ecc71">
+                className="mt-8" jobTitle="SQL Fundamentals" company="Orange & Bronze" date="June 2025" tags={[[<TbBrandMysql key="tb-mysql-2" />, "SQL"]]} tagColor="#2ecc71">
                 <p>Database design, complex queries, and data optimization.</p>
             </ProgressTimelineCard>
             <ProgressTimelineCard drawProgress={maxDraw} drawPosition={0.44}
@@ -359,7 +359,7 @@ function BiTimeline({ maxDraw, targetRef, className }) {
                 <p>Server administration, shell scripting, and deployment environments.</p>
             </ProgressTimelineCard>
             <ProgressTimelineCard drawProgress={maxDraw} drawPosition={0.56}
-                className="mt-8" jobTitle="Git Version Control" company="Orange & Bronze" date="December 2024" tags={[[<FaGitAlt />, "Git"]]} tagColor="#2ecc71">
+                className="mt-8" jobTitle="Git Version Control" company="Orange & Bronze" date="December 2024" tags={[[<FaGitAlt key="fa-git-2" />, "Git"]]} tagColor="#2ecc71">
                 <p>Branching strategies, collaborative workflows, and repository management.</p>
             </ProgressTimelineCard>
             <ProgressTimelineCard drawProgress={maxDraw} drawPosition={0.68}
