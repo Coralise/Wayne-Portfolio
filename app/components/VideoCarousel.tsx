@@ -188,7 +188,7 @@ export function VideoCarousel({ videos, label }: VideoCarouselProps) {
   return (
     <div className="relative w-3/4 max-lg:w-full" ref={rootRef}>
       <div
-        className="embla-viewport h-[400px]"
+        className="embla-viewport h-[400px] sm:h-[300px] lg:h-[400px]"
         ref={emblaRef}
         role="region"
         aria-roledescription="carousel"
