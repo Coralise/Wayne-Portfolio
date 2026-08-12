@@ -23,25 +23,53 @@ body {
   overflow: overlay;
 }
 
+.embla-viewport {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    #000 6%,
+    #000 94%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    #000 6%,
+    #000 94%,
+    transparent 100%
+  );
+}
+.embla-container {
+  display: flex;
+  height: 100%;
+  touch-action: pan-y pinch-zoom;
+  margin-left: -1rem;
+}
+.embla-slide {
+  flex: 0 0 auto;
+  min-width: 0;
+  height: 100%;
+  padding-left: 1rem;
+}
+.embla-slide-inner {
+  height: 100%;
+  will-change: opacity;
+}
+
 .dbg {
   border: 1px solid red;
 }
 
-/* width */
 ::-webkit-scrollbar {
-    width: 5px;
+  width: 5px;
 }
-
-/* Track */
 ::-webkit-scrollbar-track {
-    background: var(--highlight-2nd);
+  background: var(--highlight-2nd);
 }
-
-/* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #F13751;
-    width: 10px;
-    border-radius: 10px 0 0 10px;  
+  background: #f13751;
+  border-radius: 10px 0 0 10px;
 }
 
 /* Handle */
