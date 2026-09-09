@@ -51,6 +51,7 @@ export const motionGraphicsPortfolio: PortfolioCategory[] = [
     name: 'Long Form Videos',
     description: 'Documentaries, narratives, and storytelling videos.',
     videos: [
+      { id: 'g3jp9zdif6s', title: 'Testimonial', orientation: 'landscape' },
       { id: 'z30aSnz-bwE', title: 'Long Form 01', orientation: 'landscape' },
       { id: 'HZscxnmbfmc', title: 'Long Form 02', orientation: 'landscape' },
       { id: '7QrRismrarE', title: 'Long Form 03', orientation: 'landscape' },
