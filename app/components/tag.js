@@ -1,7 +1,7 @@
-import { FaFlutter, FaGitAlt } from "react-icons/fa6";
+import { FaFlutter, FaGamepad, FaGitAlt } from "react-icons/fa6";
 import { IoMdDocument } from "react-icons/io";
 import { RiFirebaseFill, RiJavaLine } from "react-icons/ri";
-import { SiDart, SiDocker, SiKubernetes, SiNextdotjs, SiSpigotmc, SiSpringboot, SiSqlite } from "react-icons/si";
+import { SiDart, SiDocker, SiFramer, SiKubernetes, SiLua, SiNextdotjs, SiSocketdotio, SiSpigotmc, SiSpringboot, SiSqlite, SiSupabase, SiTailwindcss, SiTypescript, SiWebrtc } from "react-icons/si";
 import { TbBrandMysql } from "react-icons/tb";
 import { FaReact, FaVideo, FaPaintBrush, FaImage } from "react-icons/fa";
 
@@ -24,6 +24,14 @@ const icons = {
     "git": <FaGitAlt />,
     "docker": <SiDocker />,
     "kubernetes": <SiKubernetes />,
+    "typescript": <SiTypescript />,
+    "tailwindcss": <SiTailwindcss />,
+    "framer-motion": <SiFramer />,
+    "supabase": <SiSupabase />,
+    "webrtc": <SiWebrtc />,
+    "lua": <SiLua />,
+    "socket.io": <SiSocketdotio />,
+    "gamedesign": <FaGamepad />,
 }
 
 export default function Tag({ text, icon, color }) {

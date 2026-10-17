@@ -75,6 +75,9 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
+        env:
+          # Discord webhook for the contact form (Settings → Secrets and variables → Actions)
+          NEXT_PUBLIC_DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

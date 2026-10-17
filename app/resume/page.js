@@ -203,6 +203,22 @@ function MonoTimeline({ className }) {
             <div className="flex flex-col items-start pl-4 flex-1">
                 <div className="font-bold text-2xl">WORK EXPERIENCE</div>
                 <TimelineCard
+                    className="mt-8" jobTitle="Social Media Manager" company="Hyre" date="September 2026 - Present" tags={[
+    ["💬", "Community Management"],
+    ["📍", "Local SEO"],
+    ["📅", "Content Scheduling"],
+    ["🎯", "Lead Routing"],
+    ["📊", "Reporting"]
+]} tagColor="#3498db">
+                    <ul className="list-disc pl-4">
+                        <li>Manage community engagement across TikTok, Instagram, Facebook, and Google Business Profiles for a portfolio of home service brands.</li>
+                        <li>Qualify inbound inquiries from social channels and Google Messages, routing high-intent leads to the sales team.</li>
+                        <li>Run the Buffer posting queue, publishing approved videos, captions, and hashtags at least 3 times a week per brand.</li>
+                        <li>Maintain Google Business Profiles and local SEO: customer Q&amp;As, NAP accuracy, local search insights, and weekly reputation sweeps.</li>
+                        <li>Escalate service disputes and 1–3 star reviews, and report engagement metrics and GBP rankings to leadership.</li>
+                    </ul>
+                </TimelineCard>
+                <TimelineCard
                     className="mt-8"
                     jobTitle="Java Plugin Developer"
                     company="Freelance"
@@ -290,8 +306,24 @@ function BiTimeline({ maxDraw, targetRef, className }) {
     return <div className={`${className} mt-60 flex w-full justify-start pb-8`}>
         <div className="flex flex-col items-end pr-4 flex-1">
             <div className="font-bold text-2xl">WORK EXPERIENCE</div>
+            <ProgressTimelineCard drawProgress={maxDraw} drawPosition={0.05}
+                className="mt-8" jobTitle="Social Media Manager" company="Hyre" date="September 2026 - Present" side="left" tags={[
+    ["💬", "Community Management"],
+    ["📍", "Local SEO"],
+    ["📅", "Content Scheduling"],
+    ["🎯", "Lead Routing"],
+    ["📊", "Reporting"]
+]} tagColor="#3498db">
+                <ul className="list-disc pl-4">
+                    <li>Manage community engagement across TikTok, Instagram, Facebook, and Google Business Profiles for a portfolio of home service brands.</li>
+                    <li>Qualify inbound inquiries from social channels and Google Messages, routing high-intent leads to the sales team.</li>
+                    <li>Run the Buffer posting queue, publishing approved videos, captions, and hashtags at least 3 times a week per brand.</li>
+                    <li>Maintain Google Business Profiles and local SEO: customer Q&amp;As, NAP accuracy, local search insights, and weekly reputation sweeps.</li>
+                    <li>Escalate service disputes and 1–3 star reviews, and report engagement metrics and GBP rankings to leadership.</li>
+                </ul>
+            </ProgressTimelineCard>
             <ProgressTimelineCard drawProgress={maxDraw} drawPosition={0.15}
-                className="mt-8" jobTitle="Video Editor" company="Hyre" date="January 2026 - Present" side="left" tags={[
+                className="mt-8" jobTitle="Video Editor" company="Hyre" date="January 2026 - August 2026" side="left" tags={[
     [<FaVideo key="si-ae-2" />, "After Effects"],
     [<FaVideo key="si-pr-2" />, "Video Editing"],
   ["🎬", "Motion Graphics"],

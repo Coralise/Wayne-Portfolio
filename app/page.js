@@ -314,10 +314,27 @@ export default function Home() {
                   <div className="relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-4 hover:border-[#3498db]/50 transition-all duration-300">
                     <div className="flex justify-between items-start mb-2">
                       <div>
+                        <span className="text-sm font-bold text-foreground">Social Media Manager</span>
+                        <span className="text-xs text-foreground-2nd block">Hyre</span>
+                      </div>
+                      <span className="text-xs text-[#3498db] font-medium">September 2026 - Present</span>
+                    </div>
+                    <p className="text-xs text-foreground-2nd">
+                      Manage community engagement, content scheduling, and local SEO across social and Google Business Profiles for a portfolio of home service brands.
+                    </p>
+                    <div className="flex gap-1 mt-2 flex-wrap">
+                      <Tag text="Community Management" color="#3498db" />
+                      <Tag text="Local SEO" color="#3498db" />
+                      <Tag text="Buffer" color="#3498db" />
+                    </div>
+                  </div>
+                  <div className="relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-4 hover:border-[#3498db]/50 transition-all duration-300">
+                    <div className="flex justify-between items-start mb-2">
+                      <div>
                         <span className="text-sm font-bold text-foreground">Video Editor</span>
                         <span className="text-xs text-foreground-2nd block">Hyre</span>
                       </div>
-                      <span className="text-xs text-[#3498db] font-medium">January 2026 - Present</span>
+                      <span className="text-xs text-[#3498db] font-medium">January 2026 - August 2026</span>
                     </div>
                     <p className="text-xs text-foreground-2nd">
                       Edited video content and created motion graphics to support brand identity and digital campaigns.
