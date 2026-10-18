@@ -130,7 +130,7 @@ export const programmingPortfolio: ProgrammingProject[] = [
     category: 'Systems',
     period: { start: 'January 2025', end: 'February 2025' },
     summary:
-      'Jedis (Java Redis) is my attempt at replicating Redis in Java — data persistence, in-memory caching and pub/sub messaging, built from scratch with a focus on performance and thread safety.',
+      'Jedis (Java Redis) is my attempt at replicating Redis in Java, covering data persistence, in-memory caching and pub/sub messaging. It was built from scratch with a focus on performance and thread safety.',
     features: [
       'Strings, hashes, lists and sets',
       'In-memory caching with persistence',
@@ -340,7 +340,7 @@ export const programmingPortfolio: ProgrammingProject[] = [
     category: 'Plugin',
     period: { start: 'February 2022', end: 'March 2022' },
     summary:
-      'A Minecraft plugin that reworks in-game economies with interactive jobs and anti-cheat measures — fair and engaging for players, simple to manage for server admins.',
+      'A Minecraft plugin that reworks in-game economies with interactive jobs and anti-cheat measures. It keeps gameplay fair and engaging for players while staying simple to manage for server admins.',
     features: [
       'Interactive job system with rewards',
       'Anti-cheat measures for fair play',
