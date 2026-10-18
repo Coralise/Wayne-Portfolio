@@ -122,7 +122,7 @@ export default function ProgrammingPortfolio() {
                             Programming<span className="font-black text-highlight">.</span>
                         </h1>
                         <p className="mt-2 max-w-2xl text-foreground-2nd">
-                            Web apps, games, plugins and systems I&apos;ve built — from Minecraft servers to real-time multiplayer on the web.
+                            Web apps, games, plugins and systems I&apos;ve built, from Minecraft servers to real-time multiplayer on the web.
                         </p>
                     </div>
                     <CategoryFilter categories={categories} active={category} onChange={setCategory} />
