@@ -53,7 +53,7 @@ function GithubLink() {
                     target="_blank"
                     rel="noreferrer"
                     aria-label="GitHub profile"
-                    className="flex w-fit rounded-lg bg-neutral-400 p-2 text-background shadow-[transparent_0px_0px_5px_4px] transition-all duration-500 hover:bg-transparent hover:text-[#6e5494] hover:shadow-[#6e5494_0px_0px_5px_4px]"
+                    className="flex w-fit rounded-lg bg-neutral-400 p-2 text-background shadow-[transparent_0px_0px_5px_4px] transition-all duration-500 hover:bg-transparent hover:text-[#ff3b3f] hover:shadow-[#ff3b3f_0px_0px_5px_4px]"
                 >
                     <FaGithubAlt className="size-4" />
                 </a>

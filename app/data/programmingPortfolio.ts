@@ -375,9 +375,9 @@ export const programmingPortfolio: ProgrammingProject[] = [
 
 /** Accent colour per category, used for pills, tags and hover glows. */
 export const categoryColors: Record<ProjectCategory, string> = {
-  'Web App': '#229bff',
-  Game: '#47cf5e',
-  Plugin: '#f8b248',
-  'Mobile App': '#C082D2',
+  'Web App': '#ff3b3f',
+  Game: '#ff3b3f',
+  Plugin: '#ff3b3f',
+  'Mobile App': '#ff3b3f',
   Systems: '#ff3b3f',
 }

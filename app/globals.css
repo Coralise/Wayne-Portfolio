@@ -6,10 +6,10 @@
   --background: #020000;
   --foreground: #dbdbdb;
   --foreground-2nd: #a7a7a7;
-  --highlighter: #001b3a;
-  --highlighter-2nd: #229bff;
+  --highlighter: #4a0a0c;
+  --highlighter-2nd: #ff3b3f;
   --highlight: #ff3b3f;
-  --highlight-2nd: #00080e;
+  --highlight-2nd: #0e0203;
   --font-barlow: 'Barlow', sans-serif;
   --font-barlow-condensed: 'Barlow Condensed', sans-serif;
   --font-sour-gummy: 'Sour Gummy', sans-serif;
@@ -20,6 +20,7 @@ body {
   color: var(--foreground);
   background: linear-gradient(100deg, var(--background), var(--highlight-2nd)) no-repeat fixed;
   font-family: var(--font-barlow);
+  font-size: 1.125rem;
   overflow: overlay;
 }
 
@@ -68,7 +69,7 @@ body {
   background: var(--highlight-2nd);
 }
 ::-webkit-scrollbar-thumb {
-  background: #f13751;
+  background: #ff3b3f;
   border-radius: 10px 0 0 10px;
 }
 
@@ -96,8 +97,8 @@ body {
 
 .input:hover,
 .input:focus {
-  border: 2px solid #4A9DEC;
-  box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
+  border: 2px solid #ff3b3f;
+  box-shadow: 0px 0px 0px 7px rgb(255, 59, 63, 20%);
   background-color: white;
 }
 
@@ -114,7 +115,7 @@ body {
   margin-bottom: 20px;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 16px;
   transition: all .15s ease;
 }
 

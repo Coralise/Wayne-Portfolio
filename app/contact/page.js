@@ -22,10 +22,10 @@ const PHONE_DIGITS = "639279734717";
 const TIME_ZONE = "Asia/Manila";
 
 const REASONS = [
-    { label: "Job Opportunity", color: "#229bff" },
-    { label: "Freelance Project", color: "#47cf5e" },
-    { label: "Collaboration", color: "#f8b248" },
-    { label: "Just Saying Hi", color: "#C082D2" },
+    { label: "Job Opportunity", color: "#ff3b3f" },
+    { label: "Freelance Project", color: "#ff3b3f" },
+    { label: "Collaboration", color: "#ff3b3f" },
+    { label: "Just Saying Hi", color: "#ff3b3f" },
 ];
 
 /** Minimum gap between two sends from the same browser. */
@@ -34,7 +34,7 @@ const LAST_SENT_KEY = "contactLastSent";
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const inputClass =
-    "w-full rounded-lg border border-white/10 bg-black/30 px-4 py-2 text-foreground placeholder:text-white/30 outline-none transition-all duration-300 hover:border-white/20 focus:border-highlighter-2nd focus:shadow-[0_0_0_4px_rgba(34,155,255,0.15)] aria-[invalid=true]:border-highlight";
+    "w-full rounded-lg border border-white/10 bg-black/30 px-4 py-2 text-foreground placeholder:text-white/30 outline-none transition-all duration-300 hover:border-white/20 focus:border-highlighter-2nd focus:shadow-[0_0_0_4px_rgba(255,59,63,0.15)] aria-[invalid=true]:border-highlight";
 
 function readLastSent() {
     try {
@@ -77,7 +77,7 @@ function CopyButton({ value, label }) {
             aria-label={`Copy ${label}`}
             className="flex size-8 shrink-0 items-center justify-center rounded-lg border border-white/10 text-foreground-2nd transition-colors duration-300 hover:border-highlighter-2nd hover:text-highlighter-2nd"
         >
-            {copied ? <CheckIcon className="size-4 text-[#47cf5e]" /> : <CopyIcon className="size-4" />}
+            {copied ? <CheckIcon className="size-4 text-[#ff3b3f]" /> : <CopyIcon className="size-4" />}
         </button>
     );
 }
@@ -179,7 +179,7 @@ function ContactForm() {
                         initial={{ scale: 0, rotate: -45 }}
                         animate={{ scale: 1, rotate: 0 }}
                         transition={{ type: "spring", stiffness: 260, damping: 15, delay: .1 }}
-                        className="flex size-16 items-center justify-center rounded-full bg-[#47cf5e]/20 text-[#47cf5e] shadow-[0_0_25px_rgba(71,207,94,0.35)]"
+                        className="flex size-16 items-center justify-center rounded-full bg-[#ff3b3f]/20 text-[#ff3b3f] shadow-[0_0_25px_rgba(255,59,63,0.35)]"
                     >
                         <CheckIcon className="size-8" />
                     </motion.div>
@@ -348,11 +348,11 @@ export default function Contact() {
 
                     <section className="flex flex-col gap-3 rounded-2xl border border-white/5 bg-white/[3%] p-4 backdrop-blur-sm transition-shadow duration-500 hover:shadow-[0px_0px_15px_var(--highlighter)]">
                         <header className="mb-1 flex items-center gap-4">
-                            <div className="h-2 w-10 rounded-lg bg-[#C082D2]" />
+                            <div className="h-2 w-10 rounded-lg bg-[#ff3b3f]" />
                             <span className="text-lg font-bold">Reach me directly</span>
                         </header>
-                        <InfoRow icon={<IoMdMail />} color="#229bff" label="Email" value={EMAIL} href={`mailto:${EMAIL}`} copyValue={EMAIL} />
-                        <InfoRow icon={<FaWhatsapp />} color="#47cf5e" label="WhatsApp" value={PHONE} href={`https://wa.me/${PHONE_DIGITS}`} copyValue={`+${PHONE_DIGITS}`} />
+                        <InfoRow icon={<IoMdMail />} color="#ff3b3f" label="Email" value={EMAIL} href={`mailto:${EMAIL}`} copyValue={EMAIL} />
+                        <InfoRow icon={<FaWhatsapp />} color="#ff3b3f" label="WhatsApp" value={PHONE} href={`https://wa.me/${PHONE_DIGITS}`} copyValue={`+${PHONE_DIGITS}`} />
                         <InfoRow
                             icon={<FaLocationDot />}
                             color="#ff3b3f"
@@ -363,10 +363,10 @@ export default function Contact() {
 
                     <section className="flex items-center justify-between gap-4 rounded-2xl border border-white/5 bg-white/[3%] p-4 backdrop-blur-sm">
                         <div className="flex gap-2">
-                            <a href="https://discord.com/users/254225248889602048" target="_blank" rel="noreferrer" aria-label="Discord profile" className="flex w-fit rounded-lg bg-neutral-400 p-2 text-background shadow-[transparent_0px_0px_5px_4px] transition-all duration-500 hover:bg-transparent hover:text-[#7289da] hover:shadow-[#7289da_0px_0px_5px_4px]">
+                            <a href="https://discord.com/users/254225248889602048" target="_blank" rel="noreferrer" aria-label="Discord profile" className="flex w-fit rounded-lg bg-neutral-400 p-2 text-background shadow-[transparent_0px_0px_5px_4px] transition-all duration-500 hover:bg-transparent hover:text-[#ff3b3f] hover:shadow-[#ff3b3f_0px_0px_5px_4px]">
                                 <FaDiscord className="size-4" />
                             </a>
-                            <a href="https://github.com/Coralise" target="_blank" rel="noreferrer" aria-label="GitHub profile" className="flex w-fit rounded-lg bg-neutral-400 p-2 text-background shadow-[transparent_0px_0px_5px_4px] transition-all duration-500 hover:bg-transparent hover:text-[#6e5494] hover:shadow-[#6e5494_0px_0px_5px_4px]">
+                            <a href="https://github.com/Coralise" target="_blank" rel="noreferrer" aria-label="GitHub profile" className="flex w-fit rounded-lg bg-neutral-400 p-2 text-background shadow-[transparent_0px_0px_5px_4px] transition-all duration-500 hover:bg-transparent hover:text-[#ff3b3f] hover:shadow-[#ff3b3f_0px_0px_5px_4px]">
                                 <FaGithubAlt className="size-4" />
                             </a>
                         </div>

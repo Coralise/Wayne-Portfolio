@@ -9,6 +9,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+      // One step larger than Tailwind's defaults across the board, for readability.
+      fontSize: {
+        xs: ['0.875rem', '1.25rem'],
+        sm: ['1rem', '1.5rem'],
+        base: ['1.125rem', '1.75rem'],
+        lg: ['1.25rem', '1.875rem'],
+        xl: ['1.375rem', '2rem'],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
