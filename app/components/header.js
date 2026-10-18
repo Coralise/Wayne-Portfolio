@@ -17,15 +17,15 @@ export default function Header() {
         <header className="">
             <div className="p-4 hidden sm:flex gap-4 my-auto fixed z-50 w-full backdrop-blur-sm bg-white/5 border-b-[1px] border-white/10">
                 <Link href={'/'}><Image alt="Logo" src="/images/logo.png" width={40} height={40} className="size-5 hover:size-7 m-1 hover:m-0 transition-all duration-300 ease-out rotate-[-45deg] hover:rotate-[0deg] active:size-5 active:m-1" /></Link>
-                <Link href={'/'} className="hover:text-highlight transition-all ease-out duration-300 my-auto hover:-rotate-6 active:rotate-6 hover:font-semibold">Overview</Link>
+                <Link href={'/'} className="hover:text-highlighter-2nd transition-all ease-out duration-300 my-auto hover:-rotate-6 active:rotate-6 hover:font-semibold">Overview</Link>
                 <span>•</span>
-                <Link href={'/resume'} className="hover:text-highlight transition-all ease-out duration-300 my-auto hover:-rotate-6 active:rotate-6 hover:font-semibold">About</Link>
+                <Link href={'/resume'} className="hover:text-highlighter-2nd transition-all ease-out duration-300 my-auto hover:-rotate-6 active:rotate-6 hover:font-semibold">About</Link>
                 <span>•</span>
-                <Link href={'/programming-portfolio'} className="hover:text-highlight transition-all ease-out duration-300 my-auto hover:-rotate-6 active:rotate-6 hover:font-semibold">Programming</Link>
+                <Link href={'/programming-portfolio'} className="hover:text-highlighter-2nd transition-all ease-out duration-300 my-auto hover:-rotate-6 active:rotate-6 hover:font-semibold">Programming</Link>
                 <span>•</span>
-                <Link href={'/motion-graphics-portfolio'} className="hover:text-highlight transition-all ease-out duration-300 my-auto hover:-rotate-6 active:rotate-6 hover:font-semibold">Motion Graphics</Link>
+                <Link href={'/motion-graphics-portfolio'} className="hover:text-highlighter-2nd transition-all ease-out duration-300 my-auto hover:-rotate-6 active:rotate-6 hover:font-semibold">Motion Graphics</Link>
                 <span>•</span>
-                <Link href={'/contact'} className="hover:text-highlight transition-all ease-out duration-300 my-auto hover:-rotate-6 active:rotate-6 hover:font-semibold">Contact Me</Link>
+                <Link href={'/contact'} className="hover:text-highlighter-2nd transition-all ease-out duration-300 my-auto hover:-rotate-6 active:rotate-6 hover:font-semibold">Contact Me</Link>
             </div>
             <div className={`flex w-screen z-40 justify-end absolute`}>
                 <button onClick={toggleNavBar} className={`${navBarOpened ? "max-sm:opacity-30 sm:opacity-0 sm:pointer-events-none" : "opacity-0 pointer-events-none"} transition-opacity duration-500 fixed w-screen h-screen bg-black -z-50`} />

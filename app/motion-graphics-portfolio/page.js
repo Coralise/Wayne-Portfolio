@@ -23,7 +23,7 @@ function MorePortfolios() {
           target="_blank"
           rel="noreferrer"
           aria-label="Behance profile"
-          className="flex w-fit rounded-lg bg-neutral-400 p-2 text-background shadow-[transparent_0px_0px_5px_4px] transition-all duration-500 hover:bg-transparent hover:text-[#ff3b3f] hover:shadow-[#ff3b3f_0px_0px_5px_4px]"
+          className="flex w-fit rounded-lg bg-neutral-400 p-2 text-background shadow-[transparent_0px_0px_5px_4px] transition-all duration-500 hover:bg-transparent hover:text-[#C082D2] hover:shadow-[#C082D2_0px_0px_5px_4px]"
         >
           <BehanceIcon />
         </a>
@@ -43,7 +43,7 @@ export default function MotionGraphicsPortfolio() {
               <a
                 key={category.name}
                 href={`#${toId(category.name)}`}
-                className="font-barlow-condensed text-sm uppercase tracking-widest text-foreground-2nd transition-colors duration-300 hover:text-highlight"
+                className="font-barlow-condensed text-sm uppercase tracking-widest text-foreground-2nd transition-colors duration-300 hover:text-highlighter-2nd"
               >
                 {category.name}
               </a>

@@ -34,7 +34,7 @@ function MediaView({ media, title, contain = true }) {
 }
 
 const controlClass =
-    "flex size-9 items-center justify-center rounded-full border border-white/15 bg-black/40 text-foreground backdrop-blur-sm transition-colors duration-200 hover:border-[#ff3b3f]/60 hover:text-highlight focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-highlighter-2nd";
+    "flex size-9 items-center justify-center rounded-full border border-white/15 bg-black/40 text-foreground backdrop-blur-sm transition-colors duration-200 hover:border-highlighter-2nd hover:text-highlighter-2nd focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-highlighter-2nd";
 
 export default function ProjectGallery({ media, title, accent }) {
     const [index, setIndex] = useState(0);
@@ -117,7 +117,7 @@ export default function ProjectGallery({ media, title, accent }) {
                             aria-label={`Show media ${i + 1}`}
                             aria-current={i === index}
                             className={`relative aspect-video w-20 shrink-0 overflow-hidden rounded-lg border-2 transition-all duration-300 ${i === index ? "opacity-100" : "border-transparent opacity-40 hover:opacity-80"}`}
-                            style={i === index ? { borderColor: accent } : undefined}
+                            style={i === index ? { borderColor: "var(--highlighter-2nd)" } : undefined}
                         >
                             <Image src={thumbnailOf(item)} alt="" fill className="object-cover" unoptimized />
                             {item.type === "youtube" && (

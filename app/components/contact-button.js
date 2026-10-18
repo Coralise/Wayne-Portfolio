@@ -28,7 +28,7 @@ const StyledWrapper = styled.div`
   }
   .type--C {
     --line_color: var(--foreground);
-    --back_color: var(--highlight);
+    --back_color: var(--highlighter-2nd);
   }
   .button {
     position: relative;

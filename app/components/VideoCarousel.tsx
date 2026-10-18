@@ -183,7 +183,7 @@ export function VideoCarousel({ videos, label }: VideoCarouselProps) {
   }, [stopAutoScroll])
 
   const controlClass =
-    'flex size-9 items-center justify-center rounded-full border border-white/15 bg-white/5 text-foreground-2nd transition-colors duration-200 hover:border-highlight/60 hover:text-highlight focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-highlighter-2nd'
+    'flex size-9 items-center justify-center rounded-full border border-white/15 bg-white/5 text-foreground-2nd transition-colors duration-200 hover:border-highlighter-2nd hover:text-highlighter-2nd focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-highlighter-2nd'
 
   return (
     <div className="relative w-3/4 max-lg:w-full" ref={rootRef}>

@@ -34,7 +34,7 @@ const LAST_SENT_KEY = "contactLastSent";
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const inputClass =
-    "w-full rounded-lg border border-white/10 bg-black/30 px-4 py-2 text-foreground placeholder:text-white/30 outline-none transition-all duration-300 hover:border-white/20 focus:border-highlighter-2nd focus:shadow-[0_0_0_4px_rgba(255,59,63,0.15)] aria-[invalid=true]:border-highlight";
+    "w-full rounded-lg border border-white/10 bg-black/30 px-4 py-2 text-foreground placeholder:text-white/30 outline-none transition-all duration-300 hover:border-white/20 focus:border-highlighter-2nd focus:shadow-[0_0_0_4px_rgba(192,130,210,0.2)] aria-[invalid=true]:border-highlight";
 
 function readLastSent() {
     try {
@@ -211,7 +211,7 @@ function ContactForm() {
                                     <label
                                         key={reason.label}
                                         className={`cursor-pointer select-none rounded-lg border px-3 py-1 text-sm transition-all duration-300 has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-highlighter-2nd ${selected ? "font-semibold text-foreground" : "border-white/10 text-foreground-2nd hover:border-white/25 hover:text-foreground"}`}
-                                        style={selected ? { borderColor: reason.color, backgroundColor: `${reason.color}26` } : undefined}
+                                        style={selected ? { borderColor: "var(--highlighter-2nd)", backgroundColor: "rgba(192,130,210,0.15)" } : undefined}
                                     >
                                         <input type="radio" name="reason" value={reason.label} checked={selected} onChange={update("reason")} className="sr-only" />
                                         {reason.label}
@@ -363,10 +363,10 @@ export default function Contact() {
 
                     <section className="flex items-center justify-between gap-4 rounded-2xl border border-white/5 bg-white/[3%] p-4 backdrop-blur-sm">
                         <div className="flex gap-2">
-                            <a href="https://discord.com/users/254225248889602048" target="_blank" rel="noreferrer" aria-label="Discord profile" className="flex w-fit rounded-lg bg-neutral-400 p-2 text-background shadow-[transparent_0px_0px_5px_4px] transition-all duration-500 hover:bg-transparent hover:text-[#ff3b3f] hover:shadow-[#ff3b3f_0px_0px_5px_4px]">
+                            <a href="https://discord.com/users/254225248889602048" target="_blank" rel="noreferrer" aria-label="Discord profile" className="flex w-fit rounded-lg bg-neutral-400 p-2 text-background shadow-[transparent_0px_0px_5px_4px] transition-all duration-500 hover:bg-transparent hover:text-[#C082D2] hover:shadow-[#C082D2_0px_0px_5px_4px]">
                                 <FaDiscord className="size-4" />
                             </a>
-                            <a href="https://github.com/Coralise" target="_blank" rel="noreferrer" aria-label="GitHub profile" className="flex w-fit rounded-lg bg-neutral-400 p-2 text-background shadow-[transparent_0px_0px_5px_4px] transition-all duration-500 hover:bg-transparent hover:text-[#ff3b3f] hover:shadow-[#ff3b3f_0px_0px_5px_4px]">
+                            <a href="https://github.com/Coralise" target="_blank" rel="noreferrer" aria-label="GitHub profile" className="flex w-fit rounded-lg bg-neutral-400 p-2 text-background shadow-[transparent_0px_0px_5px_4px] transition-all duration-500 hover:bg-transparent hover:text-[#C082D2] hover:shadow-[#C082D2_0px_0px_5px_4px]">
                                 <FaGithubAlt className="size-4" />
                             </a>
                         </div>
@@ -381,7 +381,7 @@ export default function Contact() {
                     className="rounded-2xl border border-white/5 bg-white/[3%] p-4 backdrop-blur-sm transition-shadow duration-500 hover:shadow-[0px_0px_15px_var(--highlighter)] md:p-6 lg:col-span-3"
                 >
                     <header className="mb-4 flex items-center gap-4">
-                        <div className="h-2 w-10 rounded-lg bg-highlighter-2nd" />
+                        <div className="h-2 w-10 rounded-lg bg-highlight" />
                         <span className="text-lg font-bold">Send a message</span>
                     </header>
                     <ContactForm />
