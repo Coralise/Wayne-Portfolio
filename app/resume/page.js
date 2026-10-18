@@ -107,7 +107,7 @@ export default function Resume() {
                         <motion.p transition={defaultTransition}
                         variants={revealXOpacity}
                         className="indent-12 text-foreground-2nd mt-4 lg:w-1/2 text-justify leading-loose">
-                            <span className="text-foreground font-semibold">BS in Information Technology</span> graduate from Ateneo de Davao University with professional experience in <span className="text-foreground font-semibold">full-stack development</span> and <span className="text-foreground font-semibold">motion graphics design</span>. Skilled in building scalable web solutions and creating engaging visual content, with a strong focus on <span className="text-foreground font-semibold">front-end development</span> and <span className="text-foreground font-semibold">multimedia/video production</span>.
+                            Multidisciplinary professional with hands-on experience across <span className="text-foreground font-semibold">software engineering</span>, <span className="text-foreground font-semibold">motion graphics</span>, and <span className="text-foreground font-semibold">social media management</span>. Builds full-stack web applications and Java-based systems — from enterprise features to game plugins with over 22,000 downloads — while producing polished video and motion design for brands. Combines <span className="text-foreground font-semibold">technical problem-solving</span> with <span className="text-foreground font-semibold">creative storytelling</span> to deliver work that is both well-engineered and engaging.
                         </motion.p>
                     </motion.div>
 
