@@ -232,13 +232,13 @@ export default function Home() {
                   <span className="text-foreground-2nd flex gap-2 items-center mt-2"><MdEmail />waynegabule@gmail.com</span>
                   <span className="text-foreground-2nd flex gap-2 items-center"><FaWhatsapp />(+63) 927-973-4717</span>
                   <div className="mt-2 flex gap-2">
-                    <a href="https://discord.com/users/254225248889602048" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#ff3b3f] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#ff3b3f_0px_0px_5px_4px]">
+                    <a href="https://discord.com/users/254225248889602048" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#C082D2] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#C082D2_0px_0px_5px_4px]">
                         <FaDiscord className="size-4" />
                     </a>
-                    <a href="https://github.com/Coralise" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#ff3b3f] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#ff3b3f_0px_0px_5px_4px]">
+                    <a href="https://github.com/Coralise" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#C082D2] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#C082D2_0px_0px_5px_4px]">
                         <FaGithubAlt className="size-4" />
                     </a>
-                    {/* <a href="https://www.linkedin.com/in/sean-wayne-gabule-083a481a6/" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#ff3b3f] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#ff3b3f_0px_0px_5px_4px]">
+                    {/* <a href="https://www.linkedin.com/in/sean-wayne-gabule-083a481a6/" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#C082D2] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#C082D2_0px_0px_5px_4px]">
                         <FaLinkedin className="size-4" />
                     </a> */}
                   </div>
@@ -439,7 +439,7 @@ export default function Home() {
               <FrostedCard id="portfolio-section" className="lg:col-span-4 gap-2 group flex flex-col">
                 <header className="flex justify-between items-center w-full">
                   <div className="flex gap-4 items-center">
-                    <div className="h-2 w-10 rounded-lg bg-highlighter-2nd" />
+                    <div className="h-2 w-10 rounded-lg bg-highlight" />
                     <span className="text-lg font-bold">Programming Portfolio</span>
                   </div>
                   <a href="/programming-portfolio" className="flex items-center">
@@ -506,7 +506,7 @@ export default function Home() {
                     <div className="relative w-full aspect-video rounded-lg overflow-hidden">
                       <Image src="https://img.youtube.com/vi/ynktyH9hB1E/mqdefault.jpg" alt="Motion Graphics Showreel" fill className="w-full h-full object-cover transition-transform duration-500 group-hover/video:scale-105" unoptimized />
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover/video:bg-[#ff3b3f]/80 transition-colors duration-300">
+                        <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover/video:bg-[#C082D2]/80 transition-colors duration-300">
                           <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[12px] border-l-white border-b-[8px] border-b-transparent ml-1" />
                         </div>
                       </div>
@@ -523,7 +523,7 @@ export default function Home() {
                     <div className="relative w-full aspect-video rounded-lg overflow-hidden">
                       <Image src="https://img.youtube.com/vi/9PwLL1MZO8Q/mqdefault.jpg" alt="Logo Animation" fill className="w-full h-full object-cover transition-transform duration-500 group-hover/video:scale-105" unoptimized />
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover/video:bg-[#ff3b3f]/80 transition-colors duration-300">
+                        <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover/video:bg-[#C082D2]/80 transition-colors duration-300">
                           <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[12px] border-l-white border-b-[8px] border-b-transparent ml-1" />
                         </div>
                       </div>
@@ -541,7 +541,7 @@ export default function Home() {
                     <div className="relative w-full aspect-video rounded-lg overflow-hidden">
                       <Image src="https://img.youtube.com/vi/XU4ZbQjpGdU/mqdefault.jpg" alt="Typography Animation" fill className="w-full h-full object-cover transition-transform duration-500 group-hover/video:scale-105" unoptimized />
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover/video:bg-[#ff3b3f]/80 transition-colors duration-300">
+                        <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover/video:bg-[#C082D2]/80 transition-colors duration-300">
                           <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[12px] border-l-white border-b-[8px] border-b-transparent ml-1" />
                         </div>
                       </div>

@@ -53,7 +53,7 @@ function GithubLink() {
                     target="_blank"
                     rel="noreferrer"
                     aria-label="GitHub profile"
-                    className="flex w-fit rounded-lg bg-neutral-400 p-2 text-background shadow-[transparent_0px_0px_5px_4px] transition-all duration-500 hover:bg-transparent hover:text-[#ff3b3f] hover:shadow-[#ff3b3f_0px_0px_5px_4px]"
+                    className="flex w-fit rounded-lg bg-neutral-400 p-2 text-background shadow-[transparent_0px_0px_5px_4px] transition-all duration-500 hover:bg-transparent hover:text-[#C082D2] hover:shadow-[#C082D2_0px_0px_5px_4px]"
                 >
                     <FaGithubAlt className="size-4" />
                 </a>
@@ -102,7 +102,7 @@ export default function ProgrammingPortfolio() {
                             <a
                                 key={project.slug}
                                 href={`#${project.slug}`}
-                                className="group/nav flex items-center gap-2 font-barlow-condensed text-sm uppercase tracking-widest text-foreground-2nd transition-colors duration-300 hover:text-highlight"
+                                className="group/nav flex items-center gap-2 font-barlow-condensed text-sm uppercase tracking-widest text-foreground-2nd transition-colors duration-300 hover:text-highlighter-2nd"
                             >
                                 <span
                                     className="size-1.5 shrink-0 rounded-full opacity-40 transition-opacity duration-300 group-hover/nav:opacity-100"

@@ -121,8 +121,8 @@ export default function ProjectCard({ project, accent }) {
                                 target="_blank"
                                 rel="noreferrer"
                                 className={`flex items-center gap-2 rounded-lg border-2 px-4 py-2 text-sm font-bold transition-all duration-300 ${i === 0
-                                    ? "border-[color:var(--accent)] bg-[color:var(--accent)] text-background hover:bg-transparent hover:text-[color:var(--accent)]"
-                                    : "border-white/15 text-foreground-2nd hover:border-[color:var(--accent)] hover:text-[color:var(--accent)]"}`}
+                                    ? "border-highlighter-2nd bg-highlighter-2nd text-background hover:bg-transparent hover:text-highlighter-2nd"
+                                    : "border-white/15 text-foreground-2nd hover:border-highlighter-2nd hover:text-highlighter-2nd"}`}
                             >
                                 {linkIcons[link.kind]}
                                 {link.label}

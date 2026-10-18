@@ -425,16 +425,16 @@ function ContactMeCard({gradientHover, beforeMail, className, center=false}) {
                         <a href="tel:+639279734717" className="text-sm text-foreground-2nd w-fit mx-2 hover:text-foreground hover:font-semibold transition-all">(+63) 927 973 4717</a>
                     </motion.div>
                     <div className="mt-3 flex gap-2">
-                        <a href="https://discord.com/users/254225248889602048" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#ff3b3f] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#ff3b3f_0px_0px_5px_4px]">
+                        <a href="https://discord.com/users/254225248889602048" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#C082D2] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#C082D2_0px_0px_5px_4px]">
                             <FaDiscord className="size-4" />
                         </a>
-                        <a href="https://github.com/Coralise" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#ff3b3f] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#ff3b3f_0px_0px_5px_4px]">
+                        <a href="https://github.com/Coralise" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#C082D2] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#C082D2_0px_0px_5px_4px]">
                             <FaGithubAlt className="size-4" />
                         </a>
-                        {/* <a href="https://www.linkedin.com/in/sean-wayne-gabule-083a481a6/" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#ff3b3f] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#ff3b3f_0px_0px_5px_4px]">
+                        {/* <a href="https://www.linkedin.com/in/sean-wayne-gabule-083a481a6/" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#C082D2] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#C082D2_0px_0px_5px_4px]">
                             <FaLinkedinIn className="size-4" />
                         </a> */}
-                        {/* <a href="https://www.facebook.com/Waynezki" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#ff3b3f] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#ff3b3f_0px_0px_5px_4px]">
+                        {/* <a href="https://www.facebook.com/Waynezki" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#C082D2] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#C082D2_0px_0px_5px_4px]">
                             <FaFacebookF className="size-4" />
                         </a> */}
                     </div>

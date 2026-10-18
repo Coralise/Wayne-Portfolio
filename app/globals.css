@@ -7,7 +7,7 @@
   --foreground: #dbdbdb;
   --foreground-2nd: #a7a7a7;
   --highlighter: #4a0a0c;
-  --highlighter-2nd: #ff3b3f;
+  --highlighter-2nd: #C082D2;
   --highlight: #ff3b3f;
   --highlight-2nd: #0e0203;
   --font-barlow: 'Barlow', sans-serif;
@@ -200,7 +200,7 @@ body {
   bottom: -1px;
   left: -8px;
   width: 0;
-  background-image: linear-gradient(to bottom right, var(--highlighter), var(--highlighter));
+  background-image: linear-gradient(to bottom right, var(--highlighter-2nd), var(--highlighter-2nd));
   transform: skew(-15deg);
   transition: all .2s ease;
 }
@@ -210,7 +210,7 @@ body {
 }
 
 .download-cv-button:hover {
-  color: var(--foreground);
+  color: var(--background);
 }
 
 .download-cv-button:hover .download-cv-button_sl {
