@@ -179,7 +179,7 @@ function ContactForm() {
                         initial={{ scale: 0, rotate: -45 }}
                         animate={{ scale: 1, rotate: 0 }}
                         transition={{ type: "spring", stiffness: 260, damping: 15, delay: .1 }}
-                        className="flex size-16 items-center justify-center rounded-full bg-[#ff3b3f]/20 text-[#ff3b3f] shadow-[0_0_25px_rgba(255,59,63,0.35)]"
+                        className="flex size-16 items-center justify-center rounded-full border-2 border-[#ff3b3f] bg-[#ff3b3f]/15 text-foreground shadow-[0_0_25px_rgba(255,59,63,0.35)]"
                     >
                         <CheckIcon className="size-8" />
                     </motion.div>
@@ -210,8 +210,8 @@ function ContactForm() {
                                 return (
                                     <label
                                         key={reason.label}
-                                        className={`cursor-pointer select-none rounded-lg border px-3 py-1 text-sm transition-all duration-300 has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-highlighter-2nd ${selected ? "font-semibold" : "border-white/10 text-foreground-2nd hover:border-white/25 hover:text-foreground"}`}
-                                        style={selected ? { borderColor: reason.color, color: reason.color, backgroundColor: `${reason.color}22` } : undefined}
+                                        className={`cursor-pointer select-none rounded-lg border px-3 py-1 text-sm transition-all duration-300 has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-highlighter-2nd ${selected ? "font-semibold text-foreground" : "border-white/10 text-foreground-2nd hover:border-white/25 hover:text-foreground"}`}
+                                        style={selected ? { borderColor: reason.color, backgroundColor: `${reason.color}26` } : undefined}
                                     >
                                         <input type="radio" name="reason" value={reason.label} checked={selected} onChange={update("reason")} className="sr-only" />
                                         {reason.label}
@@ -292,7 +292,7 @@ function ContactForm() {
                                 animate={{ opacity: 1, height: "auto" }}
                                 exit={{ opacity: 0, height: 0 }}
                                 role="alert"
-                                className="rounded-lg border border-[#ff3b3f]/30 bg-[#ff3b3f]/10 px-3 py-2 text-sm text-highlight"
+                                className="rounded-lg border-l-4 border-[#ff3b3f] bg-white/5 px-3 py-2 text-sm text-foreground"
                             >
                                 {configured ? error : "The contact form isn't available right now."}{" "}
                                 You can also email me at{" "}

@@ -210,7 +210,7 @@ body {
 }
 
 .download-cv-button:hover {
-  color: #0f1923;
+  color: var(--foreground);
 }
 
 .download-cv-button:hover .download-cv-button_sl {

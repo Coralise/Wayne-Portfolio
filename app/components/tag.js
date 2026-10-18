@@ -34,27 +34,17 @@ const icons = {
     "gamedesign": <FaGamepad />,
 }
 
-export default function Tag({ text, icon, color }) {
-    // If color is provided, use it for custom styling
-    if (color) {
-        return (
-            <div 
-                className="py-0.5 px-2 rounded-lg w-fit h-fit text-xs select-none flex items-center gap-1 font-barlow-condensed"
-                style={{ 
-                    backgroundColor: `${color}33`, // 20% opacity
-                    color: color 
-                }}
-            >
-                {icon != undefined && icons[icon]}
-                <div>{text}</div>
-            </div>
-        );
-    }
-    
-    // Default styling
+export default function Tag({ text, icon, color = "#ff3b3f" }) {
+    // Accent colour only tints the chip and its icon; the label stays neutral so it reads on the tint.
     return (
-        <div className="py-0.5 px-2 rounded-lg bg-highlighter-2nd text-background font-semibold w-fit h-fit text-xs select-none flex items-center gap-1 font-barlow-condensed">
-            {icon != undefined && icons[icon]}
+        <div
+            className="py-0.5 px-2 rounded-lg w-fit h-fit text-xs text-foreground select-none flex items-center gap-1 font-barlow-condensed border"
+            style={{
+                backgroundColor: `${color}1f`,
+                borderColor: `${color}59`,
+            }}
+        >
+            {icon != undefined && <span style={{ color }}>{icons[icon]}</span>}
             <div>{text}</div>
         </div>
     );
