@@ -216,36 +216,36 @@ export default function Home() {
             >
               <FrostedCard className="lg:col-span-3 grid grid-cols-3 gap-2 group">
                 <header className="flex gap-4 items-center col-span-2">
-                  <div className="h-2 w-10 rounded-lg bg-[#C082D2]" />
+                  <div className="h-2 w-10 rounded-lg bg-[#ff3b3f]" />
                   <span className="text-lg font-bold">Contact</span>
                 </header>
                 <a href="/resume" className="flex justify-end items-center">
-                  <span className="text-end flex items-center justify-end gap-1 text-foreground-2nd w-fit link hover:after:w-full max-lg:text-highlighter-2nd group-hover:text-highlighter-2nd">
+                  <span className="text-end flex items-center justify-end gap-1 whitespace-nowrap text-foreground-2nd w-fit link hover:after:w-full max-lg:text-highlighter-2nd group-hover:text-highlighter-2nd">
                     <span className="max-lg:opacity-100 opacity-0 group-hover:opacity-100 transition-opacity duration-500">View Resume</span>
                     <HiExternalLink className="text-lg transition-all duration-500" />
                   </span>
                 </a>
                     <Image src="/images/winnie.png" alt="Profile" width={200} height={200} className="p-4 w-[25vh] aspect-square rounded-full object-cover md:col-span-1 max-md:col-span-3 place-self-center" />
                 <div className="md:col-span-2 max-md:col-span-3 flex flex-col justify-center max-md:items-center max-md:text-center">
-                  <span className="text-2xl font-bold font-sour-gummy text-transparent bg-clip-text bg-gradient-to-tl from-white to-[#C082D2]">Wen</span>
+                  <span className="text-2xl font-bold font-sour-gummy text-transparent bg-clip-text bg-gradient-to-tl from-white to-[#ff3b3f]">Wen</span>
                   <span className="font-sour-gummy text-foreground flex gap-2 items-center">Full-Stack Developer | Motion Graphic Designer</span>
                   <span className="text-foreground-2nd flex gap-2 items-center mt-2"><MdEmail />waynegabule@gmail.com</span>
                   <span className="text-foreground-2nd flex gap-2 items-center"><FaWhatsapp />(+63) 927-973-4717</span>
                   <div className="mt-2 flex gap-2">
-                    <a href="https://discord.com/users/254225248889602048" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#7289da] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#7289da_0px_0px_5px_4px]">
+                    <a href="https://discord.com/users/254225248889602048" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#ff3b3f] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#ff3b3f_0px_0px_5px_4px]">
                         <FaDiscord className="size-4" />
                     </a>
-                    <a href="https://github.com/Coralise" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#6e5494] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#6e5494_0px_0px_5px_4px]">
+                    <a href="https://github.com/Coralise" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#ff3b3f] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#ff3b3f_0px_0px_5px_4px]">
                         <FaGithubAlt className="size-4" />
                     </a>
-                    {/* <a href="https://www.linkedin.com/in/sean-wayne-gabule-083a481a6/" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#3ea1e2] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#3ea1e2_0px_0px_5px_4px]">
+                    {/* <a href="https://www.linkedin.com/in/sean-wayne-gabule-083a481a6/" target="_blank" className="flex w-fit p-2 bg-neutral-400 rounded-lg transition-all duration-500 hover:bg-transparent text-background hover:text-[#ff3b3f] shadow-[transparent_0px_0px_5px_4px] hover:shadow-[#ff3b3f_0px_0px_5px_4px]">
                         <FaLinkedin className="size-4" />
                     </a> */}
                   </div>
                 </div>
-                <div className="absolute w-[15px] h-[15px] bottom-4 right-4 bg-[#C082D2] max-lg:opacity-100 opacity-30 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="absolute w-[10px] h-[10px] bottom-9 right-6 bg-[#C082D2] max-lg:opacity-100 opacity-30 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="absolute w-[5px] h-[5px] bottom-6 right-9 bg-[#C082D2] max-lg:opacity-100 opacity-30 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute w-[15px] h-[15px] bottom-4 right-4 bg-[#ff3b3f] max-lg:opacity-100 opacity-30 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute w-[10px] h-[10px] bottom-9 right-6 bg-[#ff3b3f] max-lg:opacity-100 opacity-30 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute w-[5px] h-[5px] bottom-6 right-9 bg-[#ff3b3f] max-lg:opacity-100 opacity-30 group-hover:opacity-100 transition-opacity duration-500" />
               </FrostedCard>
               <FrostedCard className="lg:row-span-2 grid grid-cols-2 gap-2 items-start content-start group">
                 <header className="flex gap-4 items-center">
@@ -253,7 +253,7 @@ export default function Home() {
                   <span className="text-lg font-bold">Skills</span>
                 </header>
                 <a href="/resume" className="flex justify-end items-center">
-                  <span className="text-end flex items-center justify-end gap-1 text-foreground-2nd w-fit link hover:after:w-full max-lg:text-highlighter-2nd group-hover:text-highlighter-2nd">
+                  <span className="text-end flex items-center justify-end gap-1 whitespace-nowrap text-foreground-2nd w-fit link hover:after:w-full max-lg:text-highlighter-2nd group-hover:text-highlighter-2nd">
                     <span className="max-lg:opacity-100 opacity-0 group-hover:opacity-100 transition-all duration-500">View more</span>
                     <HiExternalLink className="text-lg transition-all duration-500" />
                   </span>
@@ -278,19 +278,19 @@ export default function Home() {
               </FrostedCard>
               <FrostedCard className="grid grid-cols-2 gap-2 group">
                 <header className="flex gap-4 items-center col-span-2 place-self-start">
-                  <div className="h-2 w-10 rounded-lg bg-[#47cf5e]" />
+                  <div className="h-2 w-10 rounded-lg bg-[#ff3b3f]" />
                   <span className="text-lg font-bold">Communication</span>
                 </header>
                 <div className="flex gap-1 items-center">Filipino</div>
-                <div className="flex gap-1 items-center max-lg:text-[#47cf5e] group-hover:text-[#47cf5e] transition-colors duration-500"><FaStar /><FaStar /><FaStar /><FaStar /><FaStar /></div>
+                <div className="flex gap-1 items-center max-lg:text-[#ff3b3f] group-hover:text-[#ff3b3f] transition-colors duration-500"><FaStar /><FaStar /><FaStar /><FaStar /><FaStar /></div>
                 <div className="flex gap-1 items-center">Written English</div>
-                <div className="flex gap-1 items-center max-lg:text-[#47cf5e] group-hover:text-[#47cf5e] transition-colors duration-500"><FaStar /><FaStar /><FaStar /><FaStar /><FaStarHalfAlt /></div>
+                <div className="flex gap-1 items-center max-lg:text-[#ff3b3f] group-hover:text-[#ff3b3f] transition-colors duration-500"><FaStar /><FaStar /><FaStar /><FaStar /><FaStarHalfAlt /></div>
                 <div className="flex gap-1 items-center">Spoken English</div>
-                <div className="flex gap-1 items-center max-lg:text-[#47cf5e] group-hover:text-[#47cf5e] transition-colors duration-500"><FaStar /><FaStar /><FaStar /><FaStar /><FaRegStar /></div>
+                <div className="flex gap-1 items-center max-lg:text-[#ff3b3f] group-hover:text-[#ff3b3f] transition-colors duration-500"><FaStar /><FaStar /><FaStar /><FaStar /><FaRegStar /></div>
               </FrostedCard>
               <FrostedCard className="lg:col-span-2 flex flex-col gap-2 group">
                 <header className="flex gap-4 items-center place-self-start">
-                  <div className="h-2 w-10 rounded-lg bg-[#f8b248]" />
+                  <div className="h-2 w-10 rounded-lg bg-[#ff3b3f]" />
                   <span className="text-lg font-bold">About me</span>
                 </header>
                 <p className="indent-4">
@@ -300,77 +300,77 @@ export default function Home() {
               <FrostedCard className="lg:col-span-2 gap-2 group flex flex-col">
                 <header className="flex justify-between items-center w-full">
                   <div className="flex gap-4 items-center">
-                    <div className="h-2 w-10 rounded-lg bg-[#3498db]" />
+                    <div className="h-2 w-10 rounded-lg bg-[#ff3b3f]" />
                     <span className="text-lg font-bold">Work Experience</span>
                   </div>
                   <a href="/resume" className="flex items-center">
-                    <span className="text-end flex items-center justify-end gap-1 text-foreground-2nd w-fit link hover:after:w-full max-lg:text-highlighter-2nd group-hover:text-highlighter-2nd">
+                    <span className="text-end flex items-center justify-end gap-1 whitespace-nowrap text-foreground-2nd w-fit link hover:after:w-full max-lg:text-highlighter-2nd group-hover:text-highlighter-2nd">
                       <span className="max-lg:opacity-100 opacity-0 group-hover:opacity-100 transition-opacity duration-500">View Resume</span>
                       <HiExternalLink className="text-lg transition-all duration-500" />
                     </span>
                   </a>
                 </header>
                 <div className="flex flex-col gap-3 mt-2">
-                  <div className="relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-4 hover:border-[#3498db]/50 transition-all duration-300">
+                  <div className="relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-4 hover:border-[#ff3b3f]/50 transition-all duration-300">
                     <div className="flex justify-between items-start mb-2">
                       <div>
                         <span className="text-sm font-bold text-foreground">Social Media Manager</span>
                         <span className="text-xs text-foreground-2nd block">Hyre</span>
                       </div>
-                      <span className="text-xs text-[#3498db] font-medium">September 2026 - Present</span>
+                      <span className="text-xs text-[#ff3b3f] font-medium">September 2026 - Present</span>
                     </div>
                     <p className="text-xs text-foreground-2nd">
                       Manage community engagement, content scheduling, and local SEO across social and Google Business Profiles for a portfolio of home service brands.
                     </p>
                     <div className="flex gap-1 mt-2 flex-wrap">
-                      <Tag text="Community Management" color="#3498db" />
-                      <Tag text="Local SEO" color="#3498db" />
-                      <Tag text="Buffer" color="#3498db" />
+                      <Tag text="Community Management" color="#ff3b3f" />
+                      <Tag text="Local SEO" color="#ff3b3f" />
+                      <Tag text="Buffer" color="#ff3b3f" />
                     </div>
                   </div>
-                  <div className="relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-4 hover:border-[#3498db]/50 transition-all duration-300">
+                  <div className="relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-4 hover:border-[#ff3b3f]/50 transition-all duration-300">
                     <div className="flex justify-between items-start mb-2">
                       <div>
                         <span className="text-sm font-bold text-foreground">Video Editor</span>
                         <span className="text-xs text-foreground-2nd block">Hyre</span>
                       </div>
-                      <span className="text-xs text-[#3498db] font-medium">January 2026 - August 2026</span>
+                      <span className="text-xs text-[#ff3b3f] font-medium">January 2026 - August 2026</span>
                     </div>
                     <p className="text-xs text-foreground-2nd">
                       Edited video content and created motion graphics to support brand identity and digital campaigns.
                     </p>
                     <div className="flex gap-1 mt-2 flex-wrap">
-                      <Tag text="After Effects" icon="aftereffects" color="#3498db" />
-                      <Tag text="Premiere Pro" icon="premierepro" color="#3498db" />
-                      <Tag text="Motion Graphics" icon="sparkles" color="#3498db" />
+                      <Tag text="After Effects" icon="aftereffects" color="#ff3b3f" />
+                      <Tag text="Premiere Pro" icon="premierepro" color="#ff3b3f" />
+                      <Tag text="Motion Graphics" icon="sparkles" color="#ff3b3f" />
                     </div>
                   </div>
-                  <div className="relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-4 hover:border-[#3498db]/50 transition-all duration-300">
+                  <div className="relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-4 hover:border-[#ff3b3f]/50 transition-all duration-300">
                     <div className="flex justify-between items-start mb-2">
                       <div>
                         <span className="text-sm font-bold text-foreground">Associate Engineer 1</span>
                         <span className="text-xs text-foreground-2nd block">Orange & Bronze</span>
                       </div>
-                      <span className="text-xs text-[#3498db] font-medium">July 2024 - December 2025</span>
+                      <span className="text-xs text-[#ff3b3f] font-medium">July 2024 - December 2025</span>
                     </div>
                     <p className="text-xs text-foreground-2nd">Implement features under guidance of senior developers, in compliance with company & client practices.</p>
                     <div className="flex gap-1 mt-2 flex-wrap">
-                      <Tag text="Java" icon="java" color="#3498db" />
-                      <Tag text="Spring Boot" icon="springboot" color="#3498db" />
+                      <Tag text="Java" icon="java" color="#ff3b3f" />
+                      <Tag text="Spring Boot" icon="springboot" color="#ff3b3f" />
                     </div>
                   </div>
-                  <div className="relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-4 hover:border-[#3498db]/50 transition-all duration-300">
+                  <div className="relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-4 hover:border-[#ff3b3f]/50 transition-all duration-300">
                     <div className="flex justify-between items-start mb-2">
                       <div>
                         <span className="text-sm font-bold text-foreground">Admin/Video Editor</span>
                         <span className="text-xs text-foreground-2nd block">Lava Automation</span>
                       </div>
-                      <span className="text-xs text-[#3498db] font-medium">Mar 2023 - Dec 2024</span>
+                      <span className="text-xs text-[#ff3b3f] font-medium">Mar 2023 - Dec 2024</span>
                     </div>
                     <p className="text-xs text-foreground-2nd">In charge of video editing, motion graphics animation, and company logo design.</p>
                     <div className="flex gap-1 mt-2 flex-wrap">
-                      <Tag text="After Effects" icon="aftereffects" color="#3498db" />
-                      <Tag text="Premiere Pro" icon="premierepro" color="#3498db" />
+                      <Tag text="After Effects" icon="aftereffects" color="#ff3b3f" />
+                      <Tag text="Premiere Pro" icon="premierepro" color="#ff3b3f" />
                     </div>
                   </div>
                 </div>
@@ -378,56 +378,56 @@ export default function Home() {
               <FrostedCard className="lg:col-span-2 gap-2 group flex flex-col">
                 <header className="flex justify-between items-center w-full">
                   <div className="flex gap-4 items-center">
-                    <div className="h-2 w-10 rounded-lg bg-[#2ecc71]" />
+                    <div className="h-2 w-10 rounded-lg bg-[#ff3b3f]" />
                     <span className="text-lg font-bold">Education & Certifications</span>
                   </div>
                   <a href="/resume" className="flex items-center">
-                    <span className="text-end flex items-center justify-end gap-1 text-foreground-2nd w-fit link hover:after:w-full max-lg:text-highlighter-2nd group-hover:text-highlighter-2nd">
+                    <span className="text-end flex items-center justify-end gap-1 whitespace-nowrap text-foreground-2nd w-fit link hover:after:w-full max-lg:text-highlighter-2nd group-hover:text-highlighter-2nd">
                       <span className="max-lg:opacity-100 opacity-0 group-hover:opacity-100 transition-opacity duration-500">View Resume</span>
                       <HiExternalLink className="text-lg transition-all duration-500" />
                     </span>
                   </a>
                 </header>
                 <div className="flex flex-col gap-3 mt-2">
-                  <div className="relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-4 hover:border-[#2ecc71]/50 transition-all duration-300">
+                  <div className="relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-4 hover:border-[#ff3b3f]/50 transition-all duration-300">
                     <div className="flex justify-between items-start mb-2">
                       <div>
                         <span className="text-sm font-bold text-foreground">BS Information Technology</span>
                         <span className="text-xs text-foreground-2nd block">Ateneo de Davao University College</span>
                       </div>
-                      <span className="text-xs text-[#2ecc71] font-medium">2020 - 2024</span>
+                      <span className="text-xs text-[#ff3b3f] font-medium">2020 - 2024</span>
                     </div>
                     <div className="flex gap-1 mt-2 flex-wrap">
-                      <Tag text="Honor Student" color="#2ecc71" />
-                      <Tag text="Scholar" color="#2ecc71" />
-                      <Tag text="President's Lister" color="#2ecc71" />
+                      <Tag text="Honor Student" color="#ff3b3f" />
+                      <Tag text="Scholar" color="#ff3b3f" />
+                      <Tag text="President's Lister" color="#ff3b3f" />
                     </div>
                   </div>
-                  <div className="relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-4 hover:border-[#2ecc71]/50 transition-all duration-300">
+                  <div className="relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-4 hover:border-[#ff3b3f]/50 transition-all duration-300">
                     <div className="flex justify-between items-start mb-2">
                       <div>
                         <span className="text-sm font-bold text-foreground">Java Fundamentals</span>
                         <span className="text-xs text-foreground-2nd block">Orange & Bronze</span>
                       </div>
-                      <span className="text-xs text-[#2ecc71] font-medium">June 2025</span>
+                      <span className="text-xs text-[#ff3b3f] font-medium">June 2025</span>
                     </div>
                     <p className="text-xs text-foreground-2nd">Enterprise Java development, OOP design patterns, and coding standards.</p>
                     <div className="flex gap-1 mt-2 flex-wrap">
-                      <Tag text="Java" icon="java" color="#2ecc71" />
+                      <Tag text="Java" icon="java" color="#ff3b3f" />
                     </div>
                   </div>
-                  <div className="relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-4 hover:border-[#2ecc71]/50 transition-all duration-300">
+                  <div className="relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-4 hover:border-[#ff3b3f]/50 transition-all duration-300">
                     <div className="flex justify-between items-start mb-2">
                       <div>
                         <span className="text-sm font-bold text-foreground">TOPCIT Level 3</span>
                         <span className="text-xs text-foreground-2nd block">IITP Korea</span>
                       </div>
-                      <span className="text-xs text-[#2ecc71] font-medium">April 2024</span>
+                      <span className="text-xs text-[#ff3b3f] font-medium">April 2024</span>
                     </div>
                     <p className="text-xs text-foreground-2nd">Scored in the top 30% nationally, exceeding the country average by 140%.</p>
                     <div className="flex gap-1 mt-2 flex-wrap">
-                      <Tag text="IT Competency" color="#2ecc71" />
-                      <Tag text="Top 30%" color="#2ecc71" />
+                      <Tag text="IT Competency" color="#ff3b3f" />
+                      <Tag text="Top 30%" color="#ff3b3f" />
                     </div>
                   </div>
                 </div>
@@ -443,7 +443,7 @@ export default function Home() {
                     <span className="text-lg font-bold">Programming Portfolio</span>
                   </div>
                   <a href="/programming-portfolio" className="flex items-center">
-                  <span className="text-end flex items-center justify-end gap-1 text-foreground-2nd w-fit link hover:after:w-full max-lg:text-highlighter-2nd group-hover:text-highlighter-2nd">
+                  <span className="text-end flex items-center justify-end gap-1 whitespace-nowrap text-foreground-2nd w-fit link hover:after:w-full max-lg:text-highlighter-2nd group-hover:text-highlighter-2nd">
                       <span className="max-lg:opacity-100 opacity-0 group-hover:opacity-100 transition-opacity duration-500">View all</span>
                       <HiExternalLink className="text-lg transition-all duration-500" />
                     </span>
@@ -456,7 +456,7 @@ export default function Home() {
                       <span className="text-sm font-bold text-foreground">Jedis</span>
                       <span className="text-xs text-foreground-2nd line-clamp-2">Redis-like in-memory datastore built from scratch in Java</span>
                       <div className="flex gap-1 mt-1 flex-wrap">
-                        <Tag text="Java" icon="java" color="#00d4ff" />
+                        <Tag text="Java" icon="java" color="#ff3b3f" />
                       </div>
                     </div>
                   </a>
@@ -466,8 +466,8 @@ export default function Home() {
                       <span className="text-sm font-bold text-foreground">Spelling Bee Helper</span>
                       <span className="text-xs text-foreground-2nd line-clamp-2">Practice tool & random-word API for Roblox Spelling Bee</span>
                       <div className="flex gap-1 mt-1 flex-wrap">
-                        <Tag text="Next.js" icon="nextjs" color="#00d4ff" />
-                        <Tag text="React" icon="react" color="#00d4ff" />
+                        <Tag text="Next.js" icon="nextjs" color="#ff3b3f" />
+                        <Tag text="React" icon="react" color="#ff3b3f" />
                       </div>
                     </div>
                   </a>
@@ -477,8 +477,8 @@ export default function Home() {
                       <span className="text-sm font-bold text-foreground">Mandog Driving</span>
                       <span className="text-xs text-foreground-2nd line-clamp-2">Driver&apos;s License Exam Reviewer for Japan</span>
                       <div className="flex gap-1 mt-1 flex-wrap">
-                        <Tag text="Flutter" icon="flutter" color="#00d4ff" />
-                        <Tag text="Firebase" icon="firebase" color="#00d4ff" />
+                        <Tag text="Flutter" icon="flutter" color="#ff3b3f" />
+                        <Tag text="Firebase" icon="firebase" color="#ff3b3f" />
                       </div>
                     </div>
                   </a>
@@ -491,22 +491,22 @@ export default function Home() {
               <FrostedCard className="lg:col-span-4 gap-2 group flex flex-col">
                 <header className="flex justify-between items-center w-full">
                   <div className="flex gap-4 items-center">
-                    <div className="h-2 w-10 rounded-lg bg-[#9b59b6]" />
+                    <div className="h-2 w-10 rounded-lg bg-[#ff3b3f]" />
                     <span className="text-lg font-bold">Motion Graphics Portfolio</span>
                   </div>
                   <a href="/motion-graphics-portfolio" className="flex items-center">
-                  <span className="text-end flex items-center justify-end gap-1 text-foreground-2nd w-fit link hover:after:w-full max-lg:text-highlighter-2nd group-hover:text-highlighter-2nd">
+                  <span className="text-end flex items-center justify-end gap-1 whitespace-nowrap text-foreground-2nd w-fit link hover:after:w-full max-lg:text-highlighter-2nd group-hover:text-highlighter-2nd">
                       <span className="max-lg:opacity-100 opacity-0 group-hover:opacity-100 transition-opacity duration-500">View all</span>
                       <HiExternalLink className="text-lg transition-all duration-500" />
                     </span>
                   </a>
                 </header>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mt-2">
-                  <a href="/motion-graphics-portfolio#motion-graphics" className="group/video relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-3 flex flex-col gap-2 hover:border-[#9b59b6]/50 transition-all duration-300">
+                  <a href="/motion-graphics-portfolio#motion-graphics" className="group/video relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-3 flex flex-col gap-2 hover:border-[#ff3b3f]/50 transition-all duration-300">
                     <div className="relative w-full aspect-video rounded-lg overflow-hidden">
                       <Image src="https://img.youtube.com/vi/ynktyH9hB1E/mqdefault.jpg" alt="Motion Graphics Showreel" fill className="w-full h-full object-cover transition-transform duration-500 group-hover/video:scale-105" unoptimized />
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover/video:bg-[#9b59b6]/80 transition-colors duration-300">
+                        <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover/video:bg-[#ff3b3f]/80 transition-colors duration-300">
                           <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[12px] border-l-white border-b-[8px] border-b-transparent ml-1" />
                         </div>
                       </div>
@@ -515,15 +515,15 @@ export default function Home() {
                       <span className="text-sm font-bold text-foreground">Motion Graphics Showreel</span>
                       <span className="text-xs text-foreground-2nd line-clamp-2">Compilation of animated visuals, kinetic typography & VFX work</span>
                       <div className="flex gap-1 mt-1 flex-wrap">
-                        <Tag text="After Effects" icon="aftereffects" color="#9b59b6" />
+                        <Tag text="After Effects" icon="aftereffects" color="#ff3b3f" />
                       </div>
                     </div>
                   </a>
-                  <a href="/motion-graphics-portfolio#logo-animations" className="group/video relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-3 flex flex-col gap-2 hover:border-[#9b59b6]/50 transition-all duration-300">
+                  <a href="/motion-graphics-portfolio#logo-animations" className="group/video relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-3 flex flex-col gap-2 hover:border-[#ff3b3f]/50 transition-all duration-300">
                     <div className="relative w-full aspect-video rounded-lg overflow-hidden">
                       <Image src="https://img.youtube.com/vi/9PwLL1MZO8Q/mqdefault.jpg" alt="Logo Animation" fill className="w-full h-full object-cover transition-transform duration-500 group-hover/video:scale-105" unoptimized />
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover/video:bg-[#9b59b6]/80 transition-colors duration-300">
+                        <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover/video:bg-[#ff3b3f]/80 transition-colors duration-300">
                           <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[12px] border-l-white border-b-[8px] border-b-transparent ml-1" />
                         </div>
                       </div>
@@ -532,16 +532,16 @@ export default function Home() {
                       <span className="text-sm font-bold text-foreground">Logo Animation</span>
                       <span className="text-xs text-foreground-2nd line-clamp-2">Sleek animated logo reveal with dynamic motion & lighting effects</span>
                       <div className="flex gap-1 mt-1 flex-wrap">
-                        <Tag text="After Effects" icon="aftereffects" color="#9b59b6" />
-                        <Tag text="Illustrator" icon="illustrator" color="#9b59b6" />
+                        <Tag text="After Effects" icon="aftereffects" color="#ff3b3f" />
+                        <Tag text="Illustrator" icon="illustrator" color="#ff3b3f" />
                       </div>
                     </div>
                   </a>
-                  <a href="/motion-graphics-portfolio#typography" className="group/video relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-3 flex flex-col gap-2 hover:border-[#9b59b6]/50 transition-all duration-300">
+                  <a href="/motion-graphics-portfolio#typography" className="group/video relative overflow-hidden rounded-xl bg-background/30 backdrop-blur-sm border-foreground-2nd/20 p-3 flex flex-col gap-2 hover:border-[#ff3b3f]/50 transition-all duration-300">
                     <div className="relative w-full aspect-video rounded-lg overflow-hidden">
                       <Image src="https://img.youtube.com/vi/XU4ZbQjpGdU/mqdefault.jpg" alt="Typography Animation" fill className="w-full h-full object-cover transition-transform duration-500 group-hover/video:scale-105" unoptimized />
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover/video:bg-[#9b59b6]/80 transition-colors duration-300">
+                        <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover/video:bg-[#ff3b3f]/80 transition-colors duration-300">
                           <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[12px] border-l-white border-b-[8px] border-b-transparent ml-1" />
                         </div>
                       </div>
@@ -550,7 +550,7 @@ export default function Home() {
                       <span className="text-sm font-bold text-foreground">Kinetic Typography</span>
                       <span className="text-xs text-foreground-2nd line-clamp-2">Dynamic text animation synced to audio with expressive motion</span>
                       <div className="flex gap-1 mt-1 flex-wrap">
-                        <Tag text="After Effects" icon="aftereffects" color="#9b59b6" />
+                        <Tag text="After Effects" icon="aftereffects" color="#ff3b3f" />
                       </div>
                     </div>
                   </a>

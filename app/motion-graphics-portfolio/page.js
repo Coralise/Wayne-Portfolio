@@ -23,7 +23,7 @@ function MorePortfolios() {
           target="_blank"
           rel="noreferrer"
           aria-label="Behance profile"
-          className="flex w-fit rounded-lg bg-neutral-400 p-2 text-background shadow-[transparent_0px_0px_5px_4px] transition-all duration-500 hover:bg-transparent hover:text-[#053eff] hover:shadow-[#053eff_0px_0px_5px_4px]"
+          className="flex w-fit rounded-lg bg-neutral-400 p-2 text-background shadow-[transparent_0px_0px_5px_4px] transition-all duration-500 hover:bg-transparent hover:text-[#ff3b3f] hover:shadow-[#ff3b3f_0px_0px_5px_4px]"
         >
           <BehanceIcon />
         </a>
